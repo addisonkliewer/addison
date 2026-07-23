@@ -6,10 +6,76 @@
 <title>AI-Assisted Documentation Workflow — Addison Kliewer</title>
 <meta name="description" content="Scaling Enterprise AI Content Analysis and Output — a responsible AI-assisted documentation workflow.">
 <link rel="stylesheet" href="../css/styles.css">
+<style>
+  .callout {
+    background: var(--color-callout-bg, #eef1ea);
+    border: 1px solid var(--color-border, #c9c2b3);
+    border-radius: 12px;
+    padding: var(--space-5, 20px);
+    font-size: 14px;
+  }
+  .preview-flow {
+    background: #fff;
+    border: 1px solid var(--color-border, #c9c2b3);
+    border-radius: 12px;
+    padding: var(--space-6, 24px);
+  }
+  .preview-flow .row-3 { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-3, 12px); }
+  .preview-flow .mini-box {
+    background: var(--color-icon-bg, #eef1ea);
+    border-radius: 8px;
+    padding: var(--space-3, 12px);
+    font-size: 13px;
+  }
+  .preview-flow .mini-box strong { display:block; font-size: 14px; margin-bottom: 4px; }
+  .preview-flow .arrow-down { text-align:center; color: var(--color-muted, #7a7566); margin: var(--space-2, 8px) 0; }
+  .preview-flow .mid-box {
+    background: var(--color-ink, #24291f);
+    color: #f5f2ea;
+    border-radius: 8px;
+    padding: var(--space-4, 16px);
+    font-size: 14px;
+    text-align:center;
+  }
+  .preview-flow .mid-box strong { display:block; margin-bottom: 4px; }
+  .preview-flow .end-box {
+    background: var(--color-icon-bg, #eef1ea);
+    border-radius: 8px;
+    padding: var(--space-4, 16px);
+    font-size: 14px;
+    text-align:center;
+    font-weight:600;
+  }
+  .step-row { display:flex; align-items:center; flex-wrap:wrap; gap: var(--space-3, 12px); background:#fff; border:1px solid var(--color-border,#c9c2b3); border-radius:12px; padding: var(--space-5, 20px); }
+  .step-item { display:flex; align-items:center; gap: var(--space-2, 8px); font-size:14px; font-weight:600; }
+  .step-num { width:24px; height:24px; border-radius:50%; background: var(--color-ink, #24291f); color:#fff; font-size:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .step-arrow { color: var(--color-muted, #7a7566); }
+  .stat-callout {
+    background: var(--color-ink, #24291f);
+    color: #f5f2ea;
+    border-radius: 12px;
+    padding: var(--space-6, 24px);
+  }
+  .stat-callout .big-num { font-size: 40px; font-weight:700; }
+  .stat-callout .eyebrow { color: #c9d6c2; }
+  .callout-dark {
+    background: var(--color-ink, #24291f);
+    color: #f5f2ea;
+    border-radius: 12px;
+    padding: var(--space-5, 20px);
+    font-size: 15px;
+  }
+  .callout-dark .eyebrow { color: #c9d6c2; }
+  .cta-band { display:flex; justify-content:space-between; align-items:center; gap: var(--space-4, 16px); flex-wrap:wrap; padding-top: var(--space-6, 24px); border-top: 1px solid var(--color-border, #c9c2b3); }
+  @media (max-width: 900px) {
+    .preview-flow .row-3 { grid-template-columns: 1fr; }
+    .step-row { flex-direction:column; align-items:flex-start; }
+    .step-arrow { display:none; }
+  }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -25,65 +91,237 @@
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
-
 <main id="main">
 
   <section class="wrap">
-    <h1>Scaling Enterprise AI Content Analysis and Output</h1>
-    <p class="body-lg" style="margin-top: var(--space-4); max-width: 720px;">Two AI projects, one content systems story: piloting AI tools to accelerate drafting and tagging at scale, without losing accuracy, clarity, or brand voice.</p>
-    <div style="margin-top: var(--space-4);">
-      <span class="tag">AI Tools</span>
-      <span class="tag">Information Architecture</span>
-      <span class="tag">Analytics</span>
-      <span class="tag">Content Operations</span>
-      <span class="tag">Team Enablement</span>
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <span class="eyebrow">AI content case study</span>
+        <h1>Scaling Enterprise AI Content Analysis and Output</h1>
+        <p class="body-lg" style="margin-top: var(--space-4);">I designed documentation systems that improved AI search quality and accelerated trusted documentation workflows.</p>
+        <p class="muted" style="margin-top: var(--space-4);">As Scoop Route expanded its documentation ecosystem, I worked on multiple AI content initiatives: improving AI search success through content analysis, and supporting an AI assisted documentation workflow that helped turn structured product knowledge into faster release documentation drafts.</p>
+        <div style="margin-top: var(--space-4);">
+          <span class="tag">50% better AI search responses</span>
+          <span class="tag">AI-ready documentation structure</span>
+          <span class="tag">Faster release documentation workflows</span>
+        </div>
+      </div>
+      <div class="stack" style="gap: var(--space-4);">
+        <div class="preview-flow">
+          <span class="eyebrow">AI content system preview</span>
+          <div class="row-3" style="margin-top: var(--space-4);">
+            <div class="mini-box"><strong>Search analytics</strong>Real user questions</div>
+            <div class="mini-box"><strong>Structured docs</strong>Templates and metadata</div>
+            <div class="mini-box"><strong>Release context</strong>Trusted product updates</div>
+          </div>
+          <div class="arrow-down">↓</div>
+          <div class="mid-box"><strong>AI-assisted answer or draft</strong>Grounded in verified knowledge</div>
+          <div class="arrow-down">↓</div>
+          <div class="end-box">Human review and verification protects trust</div>
+        </div>
+        <div class="callout">
+          <span class="eyebrow">Positioning note</span>
+          <p style="margin-top: var(--space-2);">This page frames AI work as content systems design, not as just as simple prompt engineering.</p>
+        </div>
+      </div>
     </div>
-    <div class="grid grid-2" style="margin-top: var(--space-6);">
-      <div class="stat-box"><div class="num">50%</div><div class="label">Faster first drafts with human-in-the-loop review</div></div>
-      <div class="stat-box"><div class="num">↑</div><div class="label">Scalable tagging and discovery improvements</div></div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <h2>Two AI projects, one content systems story</h2>
+        <p class="muted" style="margin-top: var(--space-4);">I worked on two related AI initiatives, but each one addressed a different problem. The first focused on whether AI could find the right answer. The second focused on whether it could responsibly create a useful first draft.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">My core story</span>
+        <p style="font-size:17px; margin-top: var(--space-2);">I helped make organizational knowledge more accurate, searchable, reusable, and safe to scale across human and AI workflows.</p>
+      </div>
     </div>
   </section>
 
   <section class="wrap">
     <span class="eyebrow">Project 1</span>
-    <h2>AI search optimization</h2>
-    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">As the documentation library scaled past 800 articles, findability became the bottleneck. I applied information architecture and tagging principles to make content easier for both users and AI retrieval systems to surface accurately, improving self-serve search success.</p>
+    <h2>AI Search Optimization</h2>
+    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">My teammate and I analyzed real Doc360 search behavior to improve how AI surfaced documentation answers for common product questions.</p>
+
+    <div class="grid grid-2" style="margin-top: var(--space-6);">
+      <div class="card">
+        <span class="eyebrow">Problem</span>
+        <p style="margin-top: var(--space-2);">Users were asking specific product questions, but our AI search responses were not always successful in answering their questions. We found weak points appeared across missing content, inconsistent terminology, metadata, taxonomy, and article structure.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">My role</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Content strategy</span>
+          <span class="tag">Search analysis</span>
+          <span class="tag">Information architecture</span>
+          <span class="tag">Documentation quality</span>
+          <span class="tag">Collaboration with fellow TW</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-row" style="margin-top: var(--space-6);">
+      <div class="step-item"><span class="step-num">1</span> Analyze search behavior</div>
+      <span class="step-arrow">→</span>
+      <div class="step-item"><span class="step-num">2</span> Identify weak responses</div>
+      <span class="step-arrow">→</span>
+      <div class="step-item"><span class="step-num">3</span> Improve structure &amp; metadata</div>
+      <span class="step-arrow">→</span>
+      <div class="step-item"><span class="step-num">4</span> Measure search success</div>
+    </div>
+
+    <div class="grid grid-2" style="margin-top: var(--space-6); align-items:stretch;">
+      <div class="stat-callout">
+        <span class="eyebrow">Measurable impact</span>
+        <div class="big-num">50%</div>
+        <p>Improvement in our successful AI search responses after content analysis and targeted documentation updates.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Key improvements</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Created or revised missing docs</span>
+          <span class="tag">Improved article structure</span>
+          <span class="tag">Strengthened metadata</span>
+          <span class="tag">Improved titles and terminology</span>
+          <span class="tag">Aligned content with real questions</span>
+          <span class="tag">Improved taxonomy signals</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark" style="margin-top: var(--space-6);">
+      <span class="eyebrow">What we found</span>
+      <p style="margin-top: var(--space-2);">We found that AI search was only as useful as the documentation behind it. By improving content structure, terminology, and metadata, we helped AI return more useful answers for both internal teams and customers.</p>
+    </div>
   </section>
 
   <section class="wrap">
     <span class="eyebrow">Project 2</span>
-    <h2>AI-assisted documentation workflow</h2>
-    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">I piloted AI tools to accelerate first drafts and tagging suggestions, always with human-in-the-loop review. The goal was speed without sacrificing accuracy, clarity, or brand voice — AI as a drafting partner, not a replacement for editorial judgment.</p>
-    <div class="grid grid-3" style="margin-top: var(--space-6);">
-      <div class="card">✓ Faster first drafts with human-in-the-loop review</div>
-      <div class="card">✓ Scalable tagging and discovery improvements</div>
-      <div class="card">✓ Created team guidelines and training</div>
+    <h2>AI-Assisted Documentation Workflow</h2>
+    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">The next problem I tackled was producing content quickly at scale. Drafting release documentation and product updates by hand took a lot of time, especially when we had to pull together reliable information from several different workspaces.</p>
+
+    <div class="grid grid-2" style="margin-top: var(--space-6);">
+      <div class="card">
+        <span class="eyebrow">Problem</span>
+        <p style="margin-top: var(--space-2);">Our documentation leadership wanted to explore how trusted organizational knowledge could accelerate documentation work without removing our human review, product judgment, or editorial ownership.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">My role</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">AI workflow design</span>
+          <span class="tag">Documentation systems thinking</span>
+          <span class="tag">Content governance</span>
+          <span class="tag">Release documentation strategy</span>
+          <span class="tag">Content analysis partnership</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: var(--space-6);">
+      <span class="eyebrow">Abstract system diagram</span>
+      <div class="step-row" style="margin-top: var(--space-4);">
+        <div class="step-item"><span class="step-num">1</span> Trusted documentation</div>
+        <span class="step-arrow">→</span>
+        <div class="step-item"><span class="step-num">2</span> Release information</div>
+        <span class="step-arrow">→</span>
+        <div class="step-item"><span class="step-num">3</span> Connected workspaces</div>
+        <span class="step-arrow">→</span>
+        <div class="step-item"><span class="step-num">4</span> AI assisted draft</div>
+        <span class="step-arrow">→</span>
+        <div class="step-item"><span class="step-num">5</span> Human review</div>
+      </div>
+      <p class="muted" style="margin-top: var(--space-2); font-size:13px;">The diagram stays abstract to avoid exposing proprietary implementation details.</p>
+    </div>
+
+    <div class="grid grid-2" style="margin-top: var(--space-6);">
+      <div class="card">
+        <span class="eyebrow">What the workflow supported</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Release hubs</span>
+          <span class="tag">Release notes</span>
+          <span class="tag">Documentation updates</span>
+          <span class="tag">Suggested revisions</span>
+          <span class="tag">First draft generation</span>
+          <span class="tag">Faster content planning</span>
+        </div>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Continuous human review remained essential</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Technical accuracy</span>
+          <span class="tag">Completeness</span>
+          <span class="tag">Tone and style</span>
+          <span class="tag">Product intent</span>
+          <span class="tag">Avoiding unsupported new information</span>
+          <span class="tag">Final approval</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-dark" style="margin-top: var(--space-6);">
+      <span class="eyebrow">Responsible AI position</span>
+      <p style="margin-top: var(--space-2);">AI usage should accelerate trusted knowledge, not add or invent new unverified product knowledge.</p>
     </div>
   </section>
 
   <section class="wrap">
     <h2>Responsible AI documentation principles</h2>
-    <div class="grid grid-2" style="margin-top: var(--space-6);">
-      <div class="card"><h3 style="font-size:17px;">Human review is non-negotiable</h3><p>Every AI-assisted draft goes through the same SME and editorial review as any other article — no exceptions.</p></div>
-      <div class="card"><h3 style="font-size:17px;">Accuracy and brand voice supersede speed</h3><p>Speed gains only count if the final content still meets our clarity and voice standards.</p></div>
+    <div class="grid grid-4" style="margin-top: var(--space-6);">
+      <div class="card">
+        <h3 style="font-size:17px;">AI accelerates expertise</h3>
+        <p>AI can help writers move faster, but it does not replace product judgment or editorial review, or continuously improve by itself.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Good AI starts with good documentation</h3>
+        <p>Structured, consistent, well tagged documentation improves both search and generation quality.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">AI should retrieve trusted knowledge</h3>
+        <p>AI is strongest when grounded in verified product information, not when asked to invent undocumented or unverified behavior.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Human review and verification protects user trust</h3>
+        <p>Writers remain responsible for accuracy, clarity, product intent, and the final published experience.</p>
+      </div>
     </div>
   </section>
 
   <section class="wrap">
-    <h2>Roles this work supports</h2>
-    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">Writers get faster first drafts, Support gets more findable answers, and Product gets clearer visibility into content coverage gaps — all through the same underlying tagging and AI-assisted workflow.</p>
+    <div class="grid grid-2">
+      <div>
+        <h2>Roles this work supports</h2>
+        <p class="muted" style="margin-top: var(--space-4);">This project shows how I work beyond traditional documentation. I brought together content strategy, knowledge architecture, AI readiness, workflow design, and governance to build a stronger content system.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Role fit</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">AI Content Engineer</span>
+          <span class="tag">Content Engineer</span>
+          <span class="tag">AI Knowledge Engineer</span>
+          <span class="tag">Technical Writer for AI Products</span>
+          <span class="tag">Senior Technical Writer</span>
+          <span class="tag">Information Architect</span>
+          <span class="tag">Content Designer</span>
+          <span class="tag">Documentation Platform Manager</span>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="wrap">
     <div class="impact-banner">
       <div>
         <span class="eyebrow" style="color: var(--color-dark-text-muted);">Impact</span>
-        <h2>Stronger AI readiness through better documentation</h2>
+        <h2>Better AI through better documentation</h2>
       </div>
       <ul>
-        <li>Reduced first-draft turnaround time with human-in-the-loop review.</li>
-        <li>Improved tagging consistency to support AI and human search.</li>
-        <li>Created team guidelines so other writers could adopt AI tools responsibly.</li>
+        <li>Improved AI search success by 50 percent through analytics driven content optimization.</li>
+        <li>Helped turn structured product knowledge into faster release documentation workflows.</li>
+        <li>Demonstrated how documentation systems can become reusable knowledge infrastructure.</li>
+        <li>Kept human review central for accuracy, product intent, and user trust.</li>
+        <li>Connected content strategy, search quality, information architecture, and responsible AI practice.</li>
       </ul>
     </div>
   </section>
@@ -93,24 +331,26 @@
       <div>
         <span class="eyebrow">Reflection</span>
         <h2>What this taught me</h2>
-        <p class="muted" style="margin-top: var(--space-4);">AI tools are only as good as the editorial process around them. The real work was designing guardrails — review steps, tagging standards, and team guidelines — so speed never came at the cost of trust.</p>
+        <p class="muted" style="margin-top: var(--space-4);">The biggest lesson for me was that AI does not magically clean up content debt. It exposes it. When documentation is inconsistent, poorly organized, or missing context, those same problems show up in the AI's output.</p>
+        <p class="muted" style="margin-top: var(--space-4);">I also saw the opposite. When my content is clearly structured, consistently named, properly tagged, and grounded in verified product knowledge, my work becomes useful far beyond the help center. It can support search, drafting, customer support, release communication, and product education.</p>
       </div>
       <blockquote class="quote-card">
-        "AI should make good editorial judgment faster to apply, not something we bypass."
+        "For me, the real focus was not simply using AI. It was building content systems that kept product knowledge accurate, reusable, easy to find, and safe to scale."
       </blockquote>
     </div>
   </section>
 
   <section class="wrap">
-    <div class="card featured" style="text-align:center;">
-      <h2 style="font-size:24px;">Explore the documentation insights behind this work</h2>
-      <p class="muted">See the underlying content systems, tagging model, and style guide.</p>
-      <a href="../artifacts.html" class="btn btn-primary" style="margin-top: var(--space-4);">Browse the artifact library →</a>
+    <div class="cta-band">
+      <p style="font-size:17px; max-width:480px; margin:0;">Explore the documentation systems that made this AI work possible.</p>
+      <div class="row" style="gap: var(--space-4); flex-wrap:wrap;">
+        <a href="../artifacts.html" class="link">View related artifacts →</a>
+        <a href="scooproute.html" class="link">Explore the ScoopRoute documentation system case study →</a>
+      </div>
     </div>
   </section>
 
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -120,7 +360,6 @@
     <div class="footer-location">Austin, Texas, USA</div>
   </div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
 </html>
