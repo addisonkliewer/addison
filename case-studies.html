@@ -7,6 +7,19 @@
 <meta name="description" content="Real projects that demonstrate how I turn complex information into clear, usable content experiences.">
 <link rel="stylesheet" href="css/styles.css">
 <style>
+  /* Case Studies intro row: heading/description left, featured card right */
+  .case-studies-hero {
+    display: grid;
+    grid-template-columns: 0.9fr 2fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+  @media (max-width: 1199px) {
+    .case-studies-hero {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* Featured case study: text | deliverables | image */
   .featured-grid {
     display: grid;
@@ -22,16 +35,16 @@
   }
 
   .case-study-image {
-  border-radius: 12px;
-  overflow: hidden;
-  min-height: 220px;
-}
-.case-study-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 220px;
+  }
+  .case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
 
   /* Other case studies: icon | content | checklist | skills | link */
   .case-study-row {
@@ -149,11 +162,11 @@
   </div>
 </header>
 <main id="main">
-  <section class="wrap">
-    <h1>Case Studies</h1>
-    <p class="body-lg" style="margin-top: var(--space-4); max-width: 640px;">Real projects that demonstrate how I turn complex information into clear, usable content experiences. These case studies highlight documentation strategy, UX writing, release communication, and scalable content systems that support both users and teams.</p>
-  </section>
-  <section class="wrap">
+  <section class="wrap case-studies-hero">
+    <div>
+      <h1>Case Studies</h1>
+      <p class="body-lg" style="margin-top: var(--space-4);">Real projects that demonstrate how I turn complex information into clear, usable content experiences. These case studies highlight documentation strategy, UX writing, release communication, and scalable content systems that support both users and teams.</p>
+    </div>
     <div class="card featured featured-grid">
       <div>
         <span class="eyebrow">Featured case study</span>
@@ -181,7 +194,8 @@
         </div>
       </div>
       <div class="case-study-image">
-<img src="images/HelpCenter.png" alt="ScoopRoute Help Center showing browse-by-category cards for Operations, Mobile App, and Billing &amp; Account, plus FAQs and training videos"></div>
+        <img src="images/HelpCenter.png" alt="ScoopRoute Help Center showing browse-by-category cards for Operations, Mobile App, and Billing &amp; Account, plus FAQs and training videos">
+      </div>
     </div>
   </section>
   <section class="wrap">
