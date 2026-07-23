@@ -6,10 +6,66 @@
 <title>Academy Case Study — Addison Kliewer</title>
 <meta name="description" content="Turning Product Knowledge into Academy-Ready Training.">
 <link rel="stylesheet" href="../css/styles.css">
+<style>
+  .callout {
+    background: var(--color-callout-bg, #eef1ea);
+    border: 1px solid var(--color-border, #c9c2b3);
+    border-radius: 12px;
+    padding: var(--space-5, 20px);
+    font-size: 14px;
+  }
+  .preview-card {
+    background: #fff;
+    border: 1px solid var(--color-border, #c9c2b3);
+    border-radius: 12px;
+    padding: var(--space-6, 24px);
+  }
+  .preview-card h3 { font-size: 17px; margin-top: var(--space-2, 8px); }
+  .preview-tags { display:flex; gap:8px; flex-wrap:wrap; margin-top: var(--space-3, 12px); }
+  .preview-columns { display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-5, 20px); margin-top: var(--space-5, 20px); font-size: 14px; }
+  .preview-columns h4 { font-size: 12px; text-transform: uppercase; letter-spacing:.04em; color: var(--color-muted, #7a7566); margin-bottom: var(--space-2, 8px); }
+  .preview-columns ul { margin: 0; padding-left: 18px; }
+  .knowledge-check { margin-top: var(--space-5, 20px); padding-top: var(--space-4, 16px); border-top: 1px solid var(--color-border, #c9c2b3); font-size: 14px; }
+  .kc-pill { display:inline-block; margin-top: var(--space-2, 8px); padding: 6px 14px; border-radius: 999px; background: var(--color-icon-bg, #eef1ea); font-size: 13px; }
+  .course-preview {
+    background: #fff;
+    border: 1px solid var(--color-border, #c9c2b3);
+    border-radius: 12px;
+    padding: var(--space-6, 24px);
+  }
+  .course-preview .label { font-size: 12px; text-transform: uppercase; letter-spacing:.04em; color: var(--color-muted, #7a7566); margin-top: var(--space-4, 16px); }
+  .course-preview .progress { height:6px; border-radius:4px; background: var(--color-icon-bg, #eef1ea); overflow:hidden; margin-top: var(--space-4, 16px); }
+  .course-preview .progress span { display:block; height:100%; width:60%; background: var(--color-accent, #4a5d43); }
+  .process-steps { display:grid; grid-template-columns: repeat(5, 1fr); gap: var(--space-5, 20px); margin-top: var(--space-6, 24px); }
+  .process-step { position:relative; font-size: 14px; }
+  .process-step:not(:last-child)::after { content:"→"; position:absolute; top:0; right:-14px; color: var(--color-muted, #7a7566); }
+  .process-step .step-num { font-size: 13px; color: var(--color-muted, #7a7566); }
+  .process-step h3 { font-size: 15px; margin-top: var(--space-2, 8px); }
+  .impact-box {
+    background: var(--color-ink, #24291f);
+    color: #f5f2ea;
+    border-radius: 16px;
+    padding: var(--space-8, 40px);
+  }
+  .impact-box h2 { color: #fff; margin-top: var(--space-2, 8px); }
+  .impact-box .eyebrow { color: #c9d6c2; }
+  .impact-list { display:grid; grid-template-columns: 1fr 1fr; gap: var(--space-3, 12px) var(--space-6, 24px); margin-top: var(--space-5, 20px); padding:0; list-style:none; font-size: 14px; }
+  .impact-list li { padding-left: 20px; position:relative; }
+  .impact-list li::before { content:"✓"; position:absolute; left:0; color:#9db894; }
+  .cta-band { display:flex; justify-content:space-between; align-items:center; gap: var(--space-4, 16px); flex-wrap:wrap; padding-top: var(--space-6, 24px); border-top: 1px solid var(--color-border, #c9c2b3); }
+  @media (max-width: 900px) {
+    .preview-columns { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .impact-list { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .process-steps { grid-template-columns: 1fr; }
+    .process-step::after { display:none; }
+  }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -25,33 +81,89 @@
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
-
 <main id="main">
 
   <section class="wrap">
-    <h1>Turning Product Knowledge into Academy-Ready Training</h1>
-    <p class="body-lg" style="margin-top: var(--space-4); max-width: 720px;">Built a reusable system for planning, drafting, reviewing, and publishing training content so product knowledge could translate cleanly into Academy-ready learning material across multiple product teams.</p>
-    <div style="margin-top: var(--space-4);">
-      <span class="tag">Instructional Design</span>
-      <span class="tag">Governance</span>
-      <span class="tag">Content Strategy</span>
-      <span class="tag">Cross-functional Collaboration</span>
-      <span class="tag">Release Communication</span>
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <span class="eyebrow">Academy / Training case study</span>
+        <h1>Turning Product Knowledge into Academy-Ready Training</h1>
+        <p class="body-lg" style="margin-top: var(--space-4);">I helped bridge technical documentation and customer education by creating refined, task-based source content that Academy teams could translate into onboarding, scripts, walkthroughs, and training-ready learning experiences.</p>
+        <div style="margin-top: var(--space-4);">
+          <span class="tag">Technical Writing</span>
+          <span class="tag">Customer Education</span>
+          <span class="tag">Academy Collaboration</span>
+          <span class="tag">SME Review</span>
+          <span class="tag">Script Review</span>
+        </div>
+      </div>
+      <div class="stack" style="gap: var(--space-4);">
+        <div class="preview-card">
+          <span class="eyebrow">Training-ready preview</span>
+          <h3>Academy source-content system</h3>
+          <div class="preview-tags">
+            <span class="tag">Onboarding</span>
+            <span class="tag">Learning Paths</span>
+            <span class="tag">Enablement</span>
+          </div>
+          <div class="preview-columns">
+            <div>
+              <h4>Module outline</h4>
+              <p style="font-weight:600; margin-bottom: var(--space-2);">Mobile Customer Setup</p>
+              <ul>
+                <li>Who this is for</li>
+                <li>What learners will be able to do</li>
+                <li>Before you begin</li>
+                <li>Walkthrough + practice</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Learning path</h4>
+              <p>Learners get access and permissions, then move into customer profile, mobile workflow practice, and support workflow troubleshooting.</p>
+            </div>
+          </div>
+          <div class="knowledge-check">
+            <p><strong>Knowledge check</strong><br>Which permission controls whether a mobile user can create customers?</p>
+            <span class="kc-pill">Mobile access</span>
+          </div>
+        </div>
+        <div class="callout">I did not design the full learning experience. My role was to help Academy teams understand the product and give them clear, reliable content they could build training from.</div>
+      </div>
     </div>
-    <div class="grid grid-3" style="margin-top: var(--space-6);">
-      <div class="stat-box"><div class="num">40%</div><div class="label">Reduction in publish time</div></div>
-      <div class="stat-box"><div class="num">↑</div><div class="label">Improved consistency &amp; stakeholder alignment</div></div>
-      <div class="stat-box"><div class="num">✓</div><div class="label">Standardized templates and workflows</div></div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid grid-2">
+      <div>
+        <span class="eyebrow">Context</span>
+        <h2>When quality documentation becomes learning infrastructure</h2>
+        <p class="muted" style="margin-top: var(--space-4);">ScoopRoute was a complex field service SaaS platform with web, mobile, admin, billing, reporting, and release workflows. As the product grew, users needed more than help articles from me. They needed onboarding, sequencing, role-based guidance, and training support from our content teams.</p>
+        <p class="muted" style="margin-top: var(--space-4);">As I matured the documentation system, my work became a source of truth not only for customers and support teams, but also for Academy and learning partners.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Core story</span>
+        <p style="font-size:17px; margin-top: var(--space-2);">Because my documentation work was structured, task-based, persona-informed, and refined, learning teams could more easily translate product knowledge into scripts, onboarding sequences, walkthroughs, and training-ready materials.</p>
+      </div>
     </div>
   </section>
 
   <section class="wrap">
     <span class="eyebrow">Training gap</span>
     <h2>The training gap</h2>
-    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">The opportunity was not to replace Academy's instructional design work, but to make product knowledge easier for Academy, Support, and customer education teams to translate into accurate, learner-ready training material.</p>
-    <div class="card" style="margin-top: var(--space-6);">
-      <h3 style="font-size:17px;">Complex workflows were hard to translate into training</h3>
-      <p>Product areas required users to understand permission differences, setup steps, mobile behavior, workflow consequences, and exceptions — context that source documentation didn't always spell out clearly for a training audience.</p>
+    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">The opportunity was not to replace Academy work with documentation. It was to create stronger source content so Academy, Support, and customer education partners could teach complex workflows more clearly and consistently.</p>
+    <div class="grid grid-3" style="margin-top: var(--space-6);">
+      <div class="card">
+        <h3 style="font-size:17px;">Complex workflows were hard to teach</h3>
+        <p>Product areas required users to understand permissions, role differences, setup steps, mobile behavior, workflow consequences, and exceptions.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Training needed refined source material</h3>
+        <p>Academy teams needed reliable product explanations that could be easily translated into scripts, lessons, walkthroughs, and onboarding sequences.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Docs and learning needed alignment</h3>
+        <p>Without strong source documentation like mine, training teams had to interpret product behavior manually or rely on scattered SME explanations and multisource documentation.</p>
+      </div>
     </div>
   </section>
 
@@ -60,61 +172,174 @@
       <div>
         <span class="eyebrow">Role</span>
         <h2>My role</h2>
-        <p class="muted" style="margin-top: var(--space-4);">My role was technical writing and Academy support. I supported Academy work by creating refined source content, providing SME context, persona framing, and weighing which product details were essential, so it was easier to translate into learning material because the underlying documentation was already structured and accurate.</p>
+        <p class="muted" style="margin-top: var(--space-4);">My role was technical writing and Academy-adjacent, not primary instructional design ownership. I supported Academy work by creating refined documentation, reviewing scripts, explaining workflows, partnering as a product SME, providing persona context, and weighing in on onboarding sequence. Training teams noted that my documentation was easier to translate into learning material because it was structured, refined, and grounded in user workflows.</p>
       </div>
       <div class="card">
-        <span class="eyebrow">Principle</span>
-        <p style="font-size:17px;">Documentation helps users complete tasks. When my source documentation is structured around real personas and real decisions, it becomes training-ready, not just reference-ready.</p>
+        <span class="eyebrow">Honest positioning</span>
+        <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Source content creator</span>
+          <span class="tag">SME partner</span>
+          <span class="tag">Script review</span>
+          <span class="tag">Workflow explainer</span>
+          <span class="tag">Persona input</span>
+        </div>
+        <p style="margin-top: var(--space-4);">In this case study, I collaborated with the Academy team and considered how the content could support learning, but I did not own the full instructional design process. My role was to connect the pieces by creating reliable source content, working with SMEs, accounting for user roles and needs, and turning product knowledge into material that was ready to support training.</p>
+        <div style="margin-top: var(--space-4); display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="tag">Onboarding sequence input</span>
+          <span class="tag">Training-ready documentation</span>
+          <span class="tag">Academy collaboration</span>
+          <span class="tag">Customer education support</span>
+          <span class="tag">Product knowledge partner</span>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="wrap">
     <span class="eyebrow">Approach</span>
-    <h2>How I supported the training rollout</h2>
-    <div class="grid grid-2" style="margin-top: var(--space-6);">
+    <h2>How I supported training-ready content</h2>
+    <div class="grid grid-3" style="margin-top: var(--space-6);">
       <div class="card">
         <h3 style="font-size:17px;">Start with user roles</h3>
-        <p>Clarify who needed the training: new customers, support agents, Academy partners, or internal teams, and write source content with that persona in mind from the start.</p>
+        <p>Clarify who needed the training: new customers, admins, mobile users, support agents, Academy partners, or internal teams.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Map the workflow</h3>
+        <p>Break the product task into prerequisites, decisions, steps, outcomes, exceptions, and common points of confusion.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Translate docs into learning structure</h3>
+        <p>Convert task and reference content into module-ready sections, walkthrough scripts, onboarding sequences, and job aids.</p>
       </div>
       <div class="card">
         <h3 style="font-size:17px;">Support accuracy through SME review</h3>
-        <p>Use product context, technical review, and documentation standards to keep training aligned with the real product before it reached learners.</p>
+        <p>Use product context, technical review, and documentation standards to keep training aligned with the real product behavior.</p>
       </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Create training-ready source material</h3>
+        <p>Structure documentation so it could be reused by Academy, Support, Product, and Customer Success without heavy reinterpretation.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Connect learning and documentation</h3>
+        <p>Treat documentation as the source of truth and training as the sequenced learning experience built from that source.</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top: var(--space-6);">
+      <span class="eyebrow">Principle</span>
+      <p style="margin-top: var(--space-2);">Documentation helps users complete a task when they need answers. Training helps them build confidence and capability over time. When my source documentation is clear and reliable, it can support both.</p>
     </div>
   </section>
 
   <section class="wrap">
-    <span class="eyebrow">Training-ready mobile · pain example</span>
-    <h2>Mobile customer setup training</h2>
-    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">One example: converting mobile customer-creation documentation into a training-ready module Academy could adapt directly.</p>
+    <span class="eyebrow">Main example</span>
+    <h2>Mobile customer setup learning module</h2>
     <div class="card" style="margin-top: var(--space-6);">
-      <div class="grid grid-2" style="font-size: 14px; gap: var(--space-6);">
-        <div class="stack" style="gap: var(--space-4);">
-          <p><strong>Who this is for</strong><br class="muted">Mobile field reps creating new customers on the go.</p>
-          <p><strong>What learners will be able to do</strong><br>Create a customer record correctly on the first attempt, including required permissions and validation steps.</p>
-          <p><strong>Before you begin</strong><br>Confirm account permissions and required customer fields.</p>
-          <p><strong>Walkthrough</strong><br>Step-by-step mobile screens with field-by-field guidance.</p>
-        </div>
-        <div class="stack" style="gap: var(--space-4);">
-          <p><strong>Common mistakes</strong><br>Missing required fields, incorrect permission assumptions, skipping validation prompts.</p>
-          <p><strong>Practice scenario</strong><br>Create a sample customer end-to-end using realistic field data.</p>
-          <p><strong>Knowledge check</strong><br>Short check confirming learners can identify the correct permission and required fields.</p>
+      <span class="eyebrow">Training-ready module</span>
+      <h3 style="font-size:20px; margin-top: var(--space-2);">Mobile Customer Setup</h3>
+      <div class="grid grid-2" style="margin-top: var(--space-6); gap: var(--space-6); align-items:start;">
+        <div class="stack" style="gap: var(--space-4); font-size:14px;">
+          <p><strong>Who this is for</strong><br>Mobile technicians, sales reps, admins, and support teams learning the customer creation workflow.</p>
+          <p><strong>What learners will be able to do</strong><br>Create a new customer from mobile, identify required permissions, complete key customer fields, and understand what happens after saving.</p>
+          <p><strong>Before you begin</strong><br>Confirm mobile access, customer creation permission, required customer details, and sync expectations.</p>
+          <p><strong>Walkthrough</strong><br>Use a step-by-step task flow based on the mobile documentation pattern.</p>
+          <p><strong>Common mistakes</strong><br>Missing permissions, incomplete customer details, unclear address/location information, or misunderstanding what saves immediately.</p>
+          <p><strong>Practice scenario</strong><br>Create a sample customer from the map and confirm the customer record includes the required details.</p>
+          <p><strong>Knowledge check</strong><br>Which permission controls whether a mobile user can create customers?</p>
           <p><strong>Related help</strong><br>ScoopRoute Mobile: Create a New Customer</p>
         </div>
+        <div class="course-preview">
+          <span class="eyebrow">Course preview</span>
+          <p class="label">Learning objectives</p>
+          <ul style="margin-top: var(--space-2); padding-left:18px; font-size:14px;">
+            <li>Create a customer from the mobile map.</li>
+            <li>Identify the permission required to add customers.</li>
+          </ul>
+          <div class="progress"><span></span></div>
+          <div class="knowledge-check">
+            <p><strong>Knowledge check</strong><br>Which permission controls customer creation on mobile?</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="wrap">
-    <div class="row" style="justify-content:space-between; align-items:baseline;">
-      <h2>Artifacts connected to this case study</h2>
-      <a href="../artifacts.html" class="link" style="white-space:nowrap;">Browse all artifacts →</a>
-    </div>
+    <span class="eyebrow">Supporting examples</span>
+    <h2>How I Supported training contributions</h2>
     <div class="grid grid-3" style="margin-top: var(--space-6);">
-      <div class="card"><span class="tag">Onboarding &amp; Training</span><h3 style="font-size:17px;">Writer Onboarding Guide</h3><p>Step-by-step onboarding plan and resources for new writers.</p></div>
-      <div class="card"><span class="tag">Mobile Documentation</span><h3 style="font-size:17px;">ScoopRoute Mobile: Create a New Customer</h3><p>Source documentation adapted into training-ready content.</p></div>
-      <div class="card"><span class="tag">Governance</span><h3 style="font-size:17px;">Documentation Governance Framework</h3><p>Roles, workflows, and standards that keep content accurate.</p></div>
+      <div class="card">
+        <h3 style="font-size:17px;">Gave Script review</h3>
+        <p>I reviewed Academy scripts for product accuracy, sequencing, terminology, and clarity so training content stayed aligned with the product and documentation.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Provided Persona input</h3>
+        <p>I helped provide persona context from Marketing and documentation work, clarifying how admins, mobile users, support teams, and customers approached product workflows differently.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Guided Onboarding sequence</h3>
+        <p>I weighed in on what users needed to learn first, next, and later so onboarding could follow the way users actually build product understanding.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <span class="eyebrow">Transformation</span>
+    <h2>From help articles to a good learning experience</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3>Source documentation</h3>
+        <p>My refined task-based article explains the workflow, prerequisites, steps, notes, and outcomes.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3>Training structure</h3>
+        <p>The content is reorganized into a module, lesson sequence, learning objectives, and practice scenario.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3>Script and walkthrough</h3>
+        <p>The Academy team translates the source material into spoken guidance, demos, and learner-friendly instruction.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h3>Practice and reinforcement</h3>
+        <p>Knowledge checks, scenarios, and job aids help learners apply the workflow after the lesson.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">05</div>
+        <h3>Maintenance loop</h3>
+        <p>My documentation remains the source of truth as the product, release behavior, and training materials evolve.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Artifacts connected to this case study</h2>
+    <div class="grid grid-2" style="margin-top: var(--space-6);">
+      <div class="card"><span class="tag">Customer Education</span><h3 style="font-size:17px;">Academy Module Outline</h3><p>A training-ready structure based on refined documentation and product workflow knowledge.</p></div>
+      <div class="card"><span class="tag">Learning Design Support</span><h3 style="font-size:17px;">Docs-to-Training Transformation</h3><p>A before-and-after sample showing how a help article can become a learning module with objectives, sequencing, and practice.</p></div>
+      <div class="card"><span class="tag">SME Review</span><h3 style="font-size:17px;">Walkthrough Script Review</h3><p>A review artifact showing how product accuracy, terminology, and plain language were applied to Academy script feedback.</p></div>
+      <div class="card"><span class="tag">Onboarding</span><h3 style="font-size:17px;">Role-Based Learning Path</h3><p>A simple path showing how admins, mobile users, support agents, and customer education teams could learn different parts of the product.</p></div>
+    </div>
+    <div class="row" style="justify-content:flex-end; margin-top: var(--space-4);">
+      <a href="../artifacts.html" class="link">View related artifacts →</a>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="impact-box">
+      <span class="eyebrow">Impact</span>
+      <h2>Training-ready source content for Academy collaboration</h2>
+      <ul class="impact-list">
+        <li>Made complex workflows easier for Academy teams to translate into training.</li>
+        <li>Helped learning partners understand personas, workflow order, and product context.</li>
+        <li>Created stronger source material for customer education.</li>
+        <li>Created training-ready structures that could support onboarding, enablement, and customer education.</li>
+        <li>Helped align documentation, onboarding, and training language.</li>
+        <li>Built transferable skills for Academy, enablement, and learning experience collaboration.</li>
+        <li>Supported script review and SME accuracy.</li>
+      </ul>
     </div>
   </section>
 
@@ -123,16 +348,26 @@
       <div>
         <span class="eyebrow">Reflection</span>
         <h2>What this taught me</h2>
-        <p class="muted" style="margin-top: var(--space-4);">Training and documentation aren't separate disciplines — they're two audiences reading the same underlying knowledge. When I write source documentation with a learner's questions in mind, everyone downstream moves faster.</p>
+        <p class="muted" style="margin-top: var(--space-4);">The biggest lesson was that strong documentation can become learning infrastructure. When documentation is structured around users, workflows, prerequisites, and outcomes, it becomes much easier to turn product knowledge into onboarding, training, and enablement.</p>
+        <p class="muted" style="margin-top: var(--space-4);">I was not the primary learning experience designer, but I learned how to collaborate with learning teams, support script review, provide product context, and create source material that made training work easier to build.</p>
       </div>
       <blockquote class="quote-card">
-        "The best training content starts with documentation that already respects the learner."
+        "My strong documentation does more than answer questions. It gives learning teams a reliable foundation for teaching complex products."
       </blockquote>
     </div>
   </section>
 
-</main>
+  <section class="wrap">
+    <div class="cta-band">
+      <p style="font-size:17px; max-width:480px; margin:0;">Want to see the training-ready artifacts behind this case study?</p>
+      <div class="row" style="gap: var(--space-4); flex-wrap:wrap;">
+        <a href="../artifacts.html" class="link">View related artifacts →</a>
+        <a href="scooproute.html" class="link">Explore the ScoopRoute documentation system case study →</a>
+      </div>
+    </div>
+  </section>
 
+</main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -142,7 +377,6 @@
     <div class="footer-location">Austin, Texas, USA</div>
   </div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
 </html>
