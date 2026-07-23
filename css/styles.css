@@ -7,7 +7,7 @@
 
 :root {
   /* Color tokens */
-  --color-canvas-cream: ##F6F0E2;
+  --color-canvas-cream: #F6F0E2;
   --color-surface-card: #FFFDF8;
   --color-surface-stone: #F8F3E7;
   --color-surface-sage-pale: #E9EEDF;
@@ -312,10 +312,11 @@ a:focus-visible, button:focus-visible {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  background: var(--color-dark-surface);
-  color: var(--color-dark-text);
+  background: var(--color-surface-stone);
+  color: var(--color-text-body);
   padding: var(--space-8) 0;
   margin-top: var(--section-gap);
+  border-top: 1px solid var(--color-border-quiet);
 }
 .site-footer .wrap {
   display: flex;
@@ -325,9 +326,9 @@ a:focus-visible, button:focus-visible {
   gap: var(--space-4);
 }
 .footer-links { display: flex; gap: var(--space-6); align-items: center; }
-.footer-links a { color: var(--color-dark-text); font-weight: 500; }
+.footer-links a { color: var(--color-text-charcoal); font-weight: 500; }
 .footer-links a:hover { color: var(--color-accent-gold); }
-.footer-location { color: var(--color-dark-text-muted); display: flex; align-items: center; gap: var(--space-2); }
+.footer-location { color: var(--color-text-muted); display: flex; align-items: center; gap: var(--space-2); }
 
 @media (max-width: 767px) {
   .site-footer .wrap { flex-direction: column; align-items: flex-start; }
