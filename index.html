@@ -24,10 +24,16 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
   .artifact-grid .card .tag {
     margin-top: auto;
     align-self: flex-start;
+  }
+  .artifact-grid a.card:hover,
+  .artifact-grid a.card:focus-visible {
+    border-color: var(--color-action-sage);
+    box-shadow: 6px 6px 0 rgba(23, 32, 42, 0.14);
   }
 </style>
 </head>
@@ -107,54 +113,54 @@
       <a href="artifacts.html" class="link" style="white-space:nowrap;">Browse all artifacts →</a>
     </div>
     <div class="grid grid-4 artifact-grid">
-      <div class="card">
+      <a class="card" href="artifacts.html">
         <span class="card-icon" aria-hidden="true">📄</span>
         <h3 style="font-size:18px;">Help Center Article</h3>
         <p>Task-based article with embedded best practices for skimmability, structure, and findability.</p>
         <span class="tag">Documentation</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts/documentation-release-tracking-sop.html">
         <span class="card-icon" aria-hidden="true">🔁</span>
         <h3 style="font-size:18px;">Release Communication SOP</h3>
         <p>Reusable workflow for planning, drafting, reviewing, and publishing release notes.</p>
         <span class="tag">Process</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts.html">
         <span class="card-icon" aria-hidden="true">🏷️</span>
         <h3 style="font-size:18px;">Content Tagging System</h3>
         <p>Governance model for scalable tagging across content types, product areas, and audiences.</p>
         <span class="tag">Information Architecture</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts.html">
         <span class="card-icon" aria-hidden="true">↗️</span>
         <h3 style="font-size:18px;">Driver App: Onboarding Flow</h3>
         <p>UX writing and microcopy for a multi-step onboarding experience.</p>
         <span class="tag">UX Writing</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts/scooproute-content-style-guide.html">
         <span class="card-icon" aria-hidden="true">❝</span>
         <h3 style="font-size:18px;">Content Style Guide Excerpt</h3>
         <p>Principles, voice, grammar choices, and UI text patterns for consistency at scale.</p>
         <span class="tag">Content Design</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts.html">
         <span class="card-icon" aria-hidden="true">✏️</span>
         <h3 style="font-size:18px;">Before &amp; After: Content Redesign</h3>
         <p>Examples showing how structure and clarity improved accuracy and task success.</p>
         <span class="tag">Content Strategy</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts.html">
         <span class="card-icon" aria-hidden="true">📖</span>
         <h3 style="font-size:18px;">Term Bank &amp; Glossary</h3>
         <p>Cross-functional term management for product, compliance, and support.</p>
         <span class="tag">Governance</span>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="artifacts.html">
         <span class="card-icon" aria-hidden="true">✨</span>
         <h3 style="font-size:18px;">AI-Assisted Research Workflow</h3>
         <p>My process for using AI tools responsibly in content development.</p>
         <span class="tag">Process</span>
-      </div>
+      </a>
     </div>
   </section>
   <!-- About preview -->
