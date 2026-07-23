@@ -287,7 +287,6 @@ a:focus-visible, button:focus-visible {
   padding: var(--space-6);
   box-shadow: var(--shadow-card);
 }
-}
 .card.featured { background: var(--color-surface-sage-pale); }
 .card h3 { margin-bottom: var(--space-2); }
 .card p { color: var(--color-text-muted); }
@@ -312,6 +311,20 @@ a:focus-visible, button:focus-visible {
 }
 @media (max-width: 767px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ---------- Grouping panel ----------
+   A contrasting surface used to visually group a cluster of smaller
+   cards (e.g. stat boxes + a portfolio note) so they read as one unit. */
+.grouping-panel {
+  background: var(--color-surface-sage-pale);
+  border: 1px solid var(--color-border-quiet);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+}
+.grouping-panel .grid {
+  margin-bottom: var(--space-4);
 }
 
 /* ---------- Footer ---------- */
@@ -357,6 +370,7 @@ a:focus-visible, button:focus-visible {
   border: 1px solid var(--color-border-quiet);
   border-radius: var(--radius-card);
   padding: var(--space-4);
+  box-shadow: var(--shadow-card);
 }
 .stat-box .num { font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--color-action-sage); }
 .stat-box .label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--color-text-muted); }
@@ -435,7 +449,6 @@ a:focus-visible, button:focus-visible {
   font-size: 18px;
 }
 
-
 .portfolio-note {
   background: var(--color-surface-stone);
   border: 1px solid var(--color-border-quiet);
@@ -444,6 +457,34 @@ a:focus-visible, button:focus-visible {
   font-size: 13px;
   color: var(--color-text-muted);
 }
+
+/* ---------- Status list item (sage dot + label) ----------
+   Used anywhere a list of short statements needs a simple sage-green
+   marker instead of an emoji (e.g. "starting point" cards). */
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.status-dot {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-action-sage);
+}
+
+/* ---------- Related artifact link ---------- */
+.related-artifact-link {
+  display: inline-block;
+  margin-top: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-action-cobalt);
+  border-bottom: 1px solid transparent;
+}
+.related-artifact-link:hover { border-bottom-color: currentColor; }
 
 .timeline {
   display: flex;
