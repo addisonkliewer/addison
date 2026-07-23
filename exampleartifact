@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example Artifact — Addison Kliewer</title>
+<meta name="description" content="A sample artifact detail page showing how individual artifacts are documented in this portfolio — purpose, context, design decisions, and value — without reproducing a full deliverable.">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../case-studies.html">Case Studies</a></li>
+        <li><a href="../artifacts.html" aria-current="page">Artifacts</a></li>
+        <li><a href="../about.html">About Me</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+    <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <div class="wrap stack">
+      <span class="eyebrow">Artifact Detail — Sample</span>
+      <h1>Example Artifact</h1>
+      <p class="body-lg">A walkthrough of how every artifact in this library is documented: a short brief, the artifact's metadata, and a Situation–Task–Action–Result narrative that explains the thinking behind the work — without reproducing the full deliverable.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grouping-panel">
+        <div class="grid grid-4">
+
+          <div class="stack">
+            <span class="eyebrow">Artifact Brief</span>
+            <h3 class="h3">Key context for this sample</h3>
+            <p class="muted">This page follows the same format as every artifact in the library: a brief for orientation, scannable metadata, and a four-part story that covers why the work existed, what it needed to do, how it was designed, and what it delivered.</p>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Artifact Type</span>
+              <p>Portfolio template</p>
+            </div>
+            <div>
+              <span class="eyebrow">Primary Audience</span>
+              <p>Hiring managers and content leads reviewing this portfolio</p>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Related Case Study</span>
+              <p>Applies across all case studies</p>
+            </div>
+            <div>
+              <span class="eyebrow">Collaborators</span>
+              <p>N/A — self-directed portfolio work</p>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Product Area</span>
+              <p>Portfolio system</p>
+            </div>
+            <div>
+              <span class="eyebrow">Status</span>
+              <p>Illustrative example</p>
+            </div>
+            <div>
+              <span class="eyebrow">Confidentiality</span>
+              <p>Public — no client or product content</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap stack">
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Situation</h2>
+        <p>This portfolio needed to showcase a wide range of writing: style guides, release notes, in-app microcopy, onboarding flows, and more. Presented inconsistently, that variety reads as clutter rather than range, and a reviewer has no fast way to compare one artifact to another.</p>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Task</h2>
+        <p>Each artifact page needs to orient a reviewer in seconds: what the piece is, who it was for, and where it fits in the larger body of work — then point to the related case study for anyone who wants the full context, without requiring the complete original deliverable to make the case.</p>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Action</h2>
+        <p>I reused the same visual language as the rest of the site: a metadata panel up top for a fast scan, followed by a Situation–Task–Action–Result narrative for anyone who wants the reasoning. Every artifact page shares this shape on purpose, so a reviewer moving between entries never has to relearn how to read one.</p>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Result</h2>
+        <p>Reviewers can assess a dozen very different samples in the time it used to take to read one, the format protects confidential client and product details by design rather than by editing after the fact, and the craft and reasoning behind each piece stays visible even when the deliverable itself can't be shared in full.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap stack">
+      <div class="portfolio-note">
+        This page is a template example, not a real artifact — it's here to show the format reviewers will see on every entry in the library, without standing in for any single piece of work.
+      </div>
+      <a class="link" href="../artifacts.html">← Back to Artifact Library</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="mailto:addkliewer@gmail.com">addkliewer@gmail.com</a>
+      <a href="https://www.linkedin.com/in/addisonkliewer/">LinkedIn</a>
+    </div>
+    <div class="footer-location"><a href="https://www.google.com/search?q=austin+texas">Austin, Texas, USA</a></div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
