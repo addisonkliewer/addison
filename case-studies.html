@@ -6,10 +6,135 @@
 <title>Case Studies — Addison Kliewer</title>
 <meta name="description" content="Real projects that demonstrate how I turn complex information into clear, usable content experiences.">
 <link rel="stylesheet" href="css/styles.css">
+<style>
+  /* Featured case study: text | deliverables | image */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 1.1fr;
+    gap: var(--space-8);
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+  }
+
+  .image-placeholder {
+    border: 2px dashed var(--color-border, #c9c2b3);
+    border-radius: 12px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    background: rgba(0, 0, 0, 0.03);
+    text-align: center;
+    padding: var(--space-4);
+  }
+
+  /* Other case studies: icon | content | checklist | skills | link */
+  .case-study-row {
+    display: grid;
+    grid-template-columns: auto 1.3fr 1fr 1fr auto;
+    grid-template-areas: "icon content checklist skills link";
+    gap: var(--space-6);
+    align-items: center;
+  }
+  .case-icon { grid-area: icon; }
+  .case-content { grid-area: content; }
+  .case-checklist { grid-area: checklist; }
+  .case-skills { grid-area: skills; }
+  .case-links {
+    grid-area: link;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-2);
+    text-align: right;
+  }
+  .case-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-icon-bg, #eef1ea);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .related-artifacts-link {
+    font-size: 13px;
+    color: var(--color-muted, #7a7566);
+  }
+
+  @media (max-width: 1100px) {
+    .case-study-row {
+      grid-template-columns: auto 1fr 1fr;
+      grid-template-areas:
+        "icon content content"
+        "checklist checklist skills"
+        "link link link";
+      align-items: start;
+      row-gap: var(--space-4);
+    }
+    .case-links {
+      align-items: flex-start;
+      text-align: left;
+      flex-direction: row;
+      gap: var(--space-4);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .case-study-row {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "icon"
+        "content"
+        "checklist"
+        "skills"
+        "link";
+    }
+    .case-links {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  /* Bottom stats: one card, dividers between items */
+  .stats-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .stats-card .stat-item {
+    flex: 1 1 0;
+    min-width: 200px;
+    padding: 0 var(--space-6);
+  }
+  .stats-card .stat-item:not(:first-child) {
+    border-left: 1px solid var(--color-border, #ddd6c4);
+  }
+  @media (max-width: 768px) {
+    .stats-card {
+      flex-direction: column;
+    }
+    .stats-card .stat-item {
+      padding: var(--space-4) 0;
+      border-left: none !important;
+    }
+    .stats-card .stat-item:not(:first-child) {
+      border-top: 1px solid var(--color-border, #ddd6c4);
+    }
+  }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
   <div class="wrap">
     <a href="index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -25,16 +150,13 @@
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
-
 <main id="main">
-
   <section class="wrap">
     <h1>Case Studies</h1>
     <p class="body-lg" style="margin-top: var(--space-4); max-width: 640px;">Real projects that demonstrate how I turn complex information into clear, usable content experiences. These case studies highlight documentation strategy, UX writing, release communication, and scalable content systems that support both users and teams.</p>
   </section>
-
   <section class="wrap">
-    <div class="card featured" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-8); align-items:center;">
+    <div class="card featured featured-grid">
       <div>
         <span class="eyebrow">Featured case study</span>
         <h2>Scaling SaaS Docs</h2>
@@ -60,90 +182,122 @@
           <span class="tag">Analytics-Informed Improvements</span>
         </div>
       </div>
+      <div class="image-placeholder">
+        <span aria-hidden="true" style="font-size:32px;">🖼️</span>
+        <span class="muted" style="font-size:14px;">Image placeholder<br>ScoopRoute Help Center screenshot</span>
+      </div>
     </div>
   </section>
-
   <section class="wrap">
     <span class="eyebrow">Other case studies</span>
     <div class="stack" style="gap: var(--space-4); margin-top: var(--space-4);">
-
-      <div class="card" style="display:grid; grid-template-columns: 1.4fr 1fr auto; gap: var(--space-6); align-items:center;">
-        <div>
+      <div class="card case-study-row">
+        <div class="case-icon" aria-hidden="true">🎓</div>
+        <div class="case-content">
           <h3>Turning Product Knowledge into Academy-Ready Training</h3>
           <p>Built a reusable system for planning, drafting, reviewing, and publishing release notes across multiple product teams.</p>
         </div>
-        <div>
+        <div class="case-checklist">
           <ul class="stack" style="gap:2px; font-size:14px;">
             <li>✓ Standardized templates and workflows</li>
             <li>✓ Reduced publish time by 40%</li>
             <li>✓ Improved consistency and stakeholder alignment</li>
           </ul>
         </div>
-        <div style="text-align:right;">
+        <div class="case-skills">
+          <span class="eyebrow">Skills &amp; approach</span>
+          <div>
+            <span class="tag">Instructional Design</span>
+            <span class="tag">Governance</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Cross-functional Collaboration</span>
+            <span class="tag">Release Communication</span>
+          </div>
+        </div>
+        <div class="case-links">
           <a href="case-studies/academy.html" class="link">View case study →</a>
+          <a href="artifacts.html#academy" class="link related-artifacts-link">Related artifacts ↗</a>
         </div>
       </div>
-
-      <div class="card" style="display:grid; grid-template-columns: 1.4fr 1fr auto; gap: var(--space-6); align-items:center;">
-        <div>
+      <div class="card case-study-row">
+        <div class="case-icon" aria-hidden="true">↗</div>
+        <div class="case-content">
           <h3>In-App Guidance &amp; UX Content</h3>
           <p>Wrote in-app guidance, empty states, and microcopy that help users take action with confidence.</p>
         </div>
-        <div>
+        <div class="case-checklist">
           <ul class="stack" style="gap:2px; font-size:14px;">
             <li>✓ Increased task completion and adoption</li>
             <li>✓ Aligned tone and terminology across surfaces</li>
             <li>✓ Collaborated closely with UX and PMM</li>
           </ul>
         </div>
-        <div style="text-align:right;">
+        <div class="case-skills">
+          <span class="eyebrow">Skills &amp; approach</span>
+          <div>
+            <span class="tag">UX Writing</span>
+            <span class="tag">Microcopy</span>
+            <span class="tag">User Research</span>
+            <span class="tag">Content Design</span>
+            <span class="tag">Usability Testing</span>
+          </div>
+        </div>
+        <div class="case-links">
           <a href="case-studies/ux-writing.html" class="link">View case study →</a>
+          <a href="artifacts.html#ux-writing" class="link related-artifacts-link">Related artifacts ↗</a>
         </div>
       </div>
-
-      <div class="card" style="display:grid; grid-template-columns: 1.4fr 1fr auto; gap: var(--space-6); align-items:center;">
-        <div>
+      <div class="card case-study-row">
+        <div class="case-icon" aria-hidden="true">✨</div>
+        <div class="case-content">
           <h3>AI-Assisted Documentation Workflow</h3>
           <p>Piloted AI tools to accelerate drafting and tagging while maintaining accuracy, clarity, and brand voice.</p>
         </div>
-        <div>
+        <div class="case-checklist">
           <ul class="stack" style="gap:2px; font-size:14px;">
             <li>✓ Faster first drafts with human-in-the-loop review</li>
             <li>✓ Scalable tagging and discovery improvements</li>
             <li>✓ Created team guidelines and training</li>
           </ul>
         </div>
-        <div style="text-align:right;">
+        <div class="case-skills">
+          <span class="eyebrow">Skills &amp; approach</span>
+          <div>
+            <span class="tag">AI Tools</span>
+            <span class="tag">Information Architecture</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">Content Operations</span>
+            <span class="tag">Team Enablement</span>
+          </div>
+        </div>
+        <div class="case-links">
           <a href="case-studies/ai-content-engineer.html" class="link">View case study →</a>
+          <a href="artifacts.html#ai-content-engineer" class="link related-artifacts-link">Related artifacts ↗</a>
         </div>
       </div>
-
     </div>
   </section>
-
   <section class="wrap">
-    <div class="grid grid-4">
-      <div class="card">
+    <div class="card stats-card">
+      <div class="stat-item">
         <h3 style="font-size:18px;">📅 6+ years</h3>
         <p>Technical writing and content design experience in SaaS environments.</p>
       </div>
-      <div class="card">
+      <div class="stat-item">
         <h3 style="font-size:18px;">◆ SaaS documentation</h3>
         <p>Help centers, API docs, UX writing, release notes, and in-app guidance for complex products.</p>
       </div>
-      <div class="card">
+      <div class="stat-item">
         <h3 style="font-size:18px;">📊 Pendo + Doc360</h3>
         <p>Leverage analytics and modern platforms to improve discoverability, adoption, and content impact.</p>
       </div>
-      <div class="card">
+      <div class="stat-item">
         <h3 style="font-size:18px;">👥 Cross-functional collaboration</h3>
         <p>Partner with product, engineering, design, and support to ship content that moves the needle.</p>
       </div>
     </div>
   </section>
-
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -153,7 +307,6 @@
     <div class="footer-location"><a href="https://www.google.com/search?q=austin+texas">Austin, Texas, USA</a></div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>
