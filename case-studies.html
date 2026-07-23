@@ -21,19 +21,17 @@
     }
   }
 
-  .image-placeholder {
-    border: 2px dashed var(--color-border, #c9c2b3);
-    border-radius: 12px;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--space-2);
-    background: rgba(0, 0, 0, 0.03);
-    text-align: center;
-    padding: var(--space-4);
-  }
+  .case-study-image {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 220px;
+}
+.case-study-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
   /* Other case studies: icon | content | checklist | skills | link */
   .case-study-row {
@@ -182,10 +180,9 @@
           <span class="tag">Analytics-Informed Improvements</span>
         </div>
       </div>
-      <div class="image-placeholder">
-        <span aria-hidden="true" style="font-size:32px;">🖼️</span>
-        <span class="muted" style="font-size:14px;">Image placeholder<br>ScoopRoute Help Center screenshot</span>
-      </div>
+      <div class="case-study-image">
+  <img src="images/helpcenter.png" alt="ScoopRoute Help Center showing browse-by-category cards for Operations, Mobile App, and Billing &amp; Account, plus FAQs and training videos">
+</div>
     </div>
   </section>
   <section class="wrap">
