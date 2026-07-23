@@ -20,6 +20,15 @@
     line-height: 1;
     margin-bottom: var(--space-2);
   }
+  .artifact-grid .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .artifact-grid .card .tag {
+    margin-top: auto;
+    align-self: flex-start;
+  }
 </style>
 </head>
 <body>
@@ -98,7 +107,7 @@
       </div>
       <a href="artifacts.html" class="link" style="white-space:nowrap;">Browse all artifacts →</a>
     </div>
-    <div class="grid grid-4">
+    <div class="grid grid-4 artifact-grid">
       <div class="card">
         <span class="card-icon" aria-hidden="true">📄</span>
         <h3 style="font-size:18px;">Help Center Article</h3>
