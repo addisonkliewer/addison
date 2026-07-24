@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsible AI Workflow for Documentation — Addison Kliewer</title>
+<meta name="description" content="A fictional documentation workflow showing how I use AI to accelerate research and drafting while preserving source verification, human judgment, peer review, subject matter expertise, and final editorial accountability.">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../case-studies.html">Case Studies</a></li>
+        <li><a href="../artifacts.html" aria-current="page">Artifacts</a></li>
+        <li><a href="../about.html">About Me</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+    <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="section">
+    <div class="wrap stack">
+      <span class="eyebrow">Artifact Detail</span>
+      <h1>Responsible AI Workflow for Documentation</h1>
+      <p class="body-lg">A fictional documentation workflow showing how I use AI to accelerate research and drafting while preserving source verification, human judgment, peer review, subject matter expertise, and final editorial accountability.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="grouping-panel">
+        <div class="grid grid-4">
+
+          <div class="stack">
+            <span class="eyebrow">Artifact Brief</span>
+            <h3 class="h3">Key context for this sample</h3>
+            <p class="muted">This artifact demonstrates the governance side of AI assisted technical writing. The workflow defines when AI can support research, content planning, drafting, and quality analysis, as well as where human review must remain mandatory.</p>
+            <p class="muted">It treats AI as a research and drafting assistant rather than a source of truth. Writers are expected to verify inputs, inspect outputs, resolve conflicts, test product behavior, and retain responsibility for the final content.</p>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Artifact Type</span>
+              <p>Responsible AI workflow and documentation governance reference</p>
+            </div>
+            <div>
+              <span class="eyebrow">Primary Audience</span>
+              <p>Technical writers, documentation managers, content designers, product managers, subject matter experts, and other approved documentation contributors</p>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Related Case Study</span>
+              <p>Designing Content Systems for AI Readiness</p>
+            </div>
+            <div>
+              <span class="eyebrow">Collaborators</span>
+              <p>Documentation, Product, Engineering, Design, Support, Customer Success, Customer Education, Security, Legal, and the company AI tool approval team</p>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div>
+              <span class="eyebrow">Product Area</span>
+              <p>AI assisted research, documentation operations, editorial governance, and content quality</p>
+            </div>
+            <div>
+              <span class="eyebrow">Status</span>
+              <p>Original fictional portfolio sample</p>
+            </div>
+            <div>
+              <span class="eyebrow">Confidentiality</span>
+              <p>Recreated for public use without proprietary prompts, internal AI configurations, confidential product information, customer data, or private company communications</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap stack">
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Situation</h2>
+        <div class="stack">
+          <p>Documentation teams were beginning to use AI for research, content planning, release analysis, drafting, and knowledge base comparison.</p>
+          <p>The tools could help writers review more information and move through repetitive work faster, but they also introduced serious risks. Incomplete source material could produce confident but inaccurate output. Existing documentation could be contradicted without evidence. Product details could be invented, confidential information could be entered into unapproved tools, and generic drafts could appear complete before they had been properly reviewed.</p>
+          <p>The team needed a shared workflow that encouraged useful AI adoption without treating AI output as verified documentation.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Task</h2>
+        <div class="stack">
+          <p>I needed to define a practical AI assisted documentation process that explained what writers could delegate to AI, what information could be used, how sources should be evaluated, and where human review remained required.</p>
+          <p>The workflow also needed to support writers with different levels of product experience. New writers might need AI to begin with research summaries and outlines, while experienced writers might use it to produce a more complete initial draft from trusted sources.</p>
+          <p>In every case, the writer needed to remain accountable for accuracy, terminology, customer impact, and publication quality.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Action</h2>
+        <div class="stack">
+          <p>I organized the workflow around the complete documentation lifecycle, beginning with source collection and ending with publication records.</p>
+          <p>The research stage requires writers to gather trusted information, review existing documentation, evaluate source quality, and identify conflicts before asking AI to draft content. Existing published guides serve as the primary source of truth unless an SME, confirmed product test, or approved product change shows that they are outdated.</p>
+          <p>The AI research stage allows tools to summarize sources, compare release scope with the knowledge base, identify likely documentation gaps, propose questions for SMEs, and suggest affected articles. These outputs remain recommendations until the writer reviews and confirms them.</p>
+          <p>The drafting stage scales according to the writer's experience. Newer writers begin with source summaries, content plans, and outlines. More experienced writers may generate a complete initial draft when the product behavior and source material are well understood.</p>
+          <p>I added explicit guardrails against invented procedures, interface labels, permissions, test results, and specialized product information. Missing details must remain visible through questions, placeholders, or review flags rather than being filled with plausible language.</p>
+          <p>I also defined three human quality checkpoints. The assigned writer verifies facts and assumptions, a peer reviewer checks clarity and publication readiness, and the SME validates technical behavior, exceptions, and limitations.</p>
+          <p>The workflow includes confidentiality rules, approved tool requirements, source traceability, AI quality checks, and internal documentation of major decisions.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="eyebrow">Artifact Story</span>
+        <h2 class="h2">Result</h2>
+        <div class="stack">
+          <p>The workflow creates a repeatable way to use AI without weakening documentation standards.</p>
+          <p>Writers can move faster through source review, release analysis, content planning, and initial drafting while retaining control over the final result. Peer reviewers receive more complete and traceable drafts, and SMEs can focus their attention on unresolved technical questions rather than reviewing unsupported AI output.</p>
+          <p>The workflow also reduces the risk of hallucinated product details, conflicting terminology, generic content, confidential data exposure, and overreliance on AI confidence.</p>
+          <p>Most importantly, it makes responsibility clear. AI may help produce the content, but the writer and human review team remain accountable for what is published.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap stack">
+      <div class="portfolio-note">
+        This sample was recreated for public use without proprietary prompts, internal AI configurations, confidential product information, customer data, or private company communications.
+      </div>
+      <a class="link" href="../artifacts.html">← Back to Artifact Library</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links">
+      <a href="mailto:addkliewer@gmail.com">addkliewer@gmail.com</a>
+      <a href="https://www.linkedin.com/in/addisonkliewer/">LinkedIn</a>
+    </div>
+    <div class="footer-location"><a href="https://www.google.com/search?q=austin+texas">Austin, Texas, USA</a></div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
