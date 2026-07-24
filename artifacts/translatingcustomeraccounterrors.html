@@ -1,165 +1,198 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Translating Customer Account Errors into Plain Language — Addison Kliewer</title>
-<meta name="description" content="A fictional collection of account and billing messages showing how I translate complex system behavior into clear explanations, consequences, prevention guidance, and next steps for busy administrative users.">
-<link rel="stylesheet" href="../css/styles.css">
+<title>Addison Kliewer — Senior Technical Writer &amp; Content Designer</title>
+<meta name="description" content="Addison Kliewer designs content systems that help SaaS product teams and users succeed — documentation strategy, UX writing, and scalable content systems.">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+  .featured-truck-image {
+    display: block;
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    margin: var(--space-6) auto;
+  }
+  .card-icon {
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    margin-bottom: var(--space-2);
+  }
+  .artifact-grid .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .artifact-grid .card .tag {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  .artifact-grid a.card:hover,
+  .artifact-grid a.card:focus-visible {
+    border-color: var(--color-action-sage);
+    box-shadow: 6px 6px 0 rgba(23, 32, 42, 0.14);
+  }
+</style>
 </head>
 <body>
-
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
+    <a href="index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
     <nav class="main-nav" aria-label="Primary">
       <ul>
-        <li><a href="../case-studies.html">Case Studies</a></li>
-        <li><a href="../artifacts.html" aria-current="page">Artifacts</a></li>
-        <li><a href="../about.html">About Me</a></li>
-        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="artifacts.html">Artifacts</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="resume.html">Resume</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     </nav>
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
-
-<main>
-
-  <section class="section">
-    <div class="wrap stack">
-      <span class="eyebrow">Artifact Detail</span>
-      <h1>Translating Customer Account Errors into Plain Language</h1>
-      <p class="body-lg">A fictional collection of account and billing messages showing how I translate complex system behavior into clear explanations, consequences, prevention guidance, and next steps for busy administrative users.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <div class="grouping-panel">
-        <div class="grid grid-4">
-
-          <div class="stack">
-            <span class="eyebrow">Artifact Brief</span>
-            <h3 class="h3">Key context for this sample</h3>
-            <p class="muted">This artifact demonstrates my approach to error messaging, recovery guidance, and documentation support for complex SaaS account workflows.</p>
-            <p class="muted">The sample focuses on uncommon situations that could affect customer delivery services, subscription plans, account settings, or billing. These situations required more than a generic warning because users needed to understand what would change, how the change could affect the customer, and what action they should take next.</p>
-            <p class="muted">The examples are adapted from previous SaaS UX writing work and recreated using the fictional ScoopRoute product.</p>
+<main id="main">
+  <!-- Hero -->
+  <section class="wrap hero">
+    <div>
+      <h1>I design content systems that help product teams and users succeed.</h1>
+      <p class="body-lg" style="margin-top: var(--space-4);">I turn complex workflows and systems into clear, usable content across documentation, UX writing, and in-app experiences.</p>
+     <div class="stack" style="margin-top: var(--space-8); gap: var(--space-6);">
+        <div class="row" style="align-items:flex-start;">
+          <span class="icon-badge">🤝</span>
+          <div>
+            <strong>Partnership</strong>
+            <p class="muted">I collaborate across product, design, engineering, support, and marketing.</p>
           </div>
-
-          <div class="stack">
-            <div>
-              <span class="eyebrow">Artifact Type</span>
-              <p>Error message framework, recovery content, confirmation messaging, and UX copy review</p>
-            </div>
-            <div>
-              <span class="eyebrow">Primary Audience</span>
-              <p>Content designers, UX writers, product designers, technical writers, product managers, engineers, support teams, and SaaS administrators</p>
-            </div>
-          </div>
-
-          <div class="stack">
-            <div>
-              <span class="eyebrow">Related Case Study</span>
-              <p>Designing Content Across SaaS Product Workflows</p>
-            </div>
-            <div>
-              <span class="eyebrow">Collaborators</span>
-              <p>Product Design, Product Management, Engineering, Documentation, Support, and account management subject matter experts</p>
-            </div>
-          </div>
-
-          <div class="stack">
-            <div>
-              <span class="eyebrow">Product Area</span>
-              <p>Customer accounts, delivery subscriptions, billing, service plans, reporting, and account configuration</p>
-            </div>
-            <div>
-              <span class="eyebrow">Status</span>
-              <p>Original fictional portfolio sample adapted from previous SaaS UX writing and documentation work</p>
-            </div>
-            <div>
-              <span class="eyebrow">Confidentiality</span>
-              <p>Recreated for public use with fictional product terminology, generalized workflows, representative scenarios, and modified interface examples. It does not include proprietary product designs, customer information, internal billing logic, private Jira records, or confidential product requirements.</p>
-            </div>
-          </div>
-
         </div>
+        <div class="row" style="align-items:flex-start;">
+          <span class="icon-badge">◎</span>
+          <div>
+            <strong>Clarity</strong>
+            <p class="muted">I make the hard things easy to find, understand, and use.</p>
+          </div>
+        </div>
+        <div class="row" style="align-items:flex-start;">
+          <span class="icon-badge">📈</span>
+          <div>
+            <strong>Impact</strong>
+            <p class="muted">I use data and insight to improve content health and drive adoption.</p>
+          </div>
+        </div>
+</div>
+      <div class="row" style="margin-top: var(--space-8); flex-wrap: wrap;">
+        <a href="case-studies/scooproute.html" class="btn btn-primary">View ScoopRoute case study →</a>
+        <a href="artifacts.html" class="btn btn-secondary">Browse all artifacts →</a>
+      </div>
+    </div>
+    <div class="card featured">
+      <span class="eyebrow">Featured case study</span>
+      <h3 style="font-size: 24px;">ScoopRoute</h3>
+      <p>A routing and mobile operations platform for ice cream delivery teams.</p>
+      <a href="case-studies/scooproute.html" class="link">View case study →</a>
+<img src="images/IcecreamTruck.png" alt="Illustration of a ScoopRoute ice cream delivery truck with route markers" class="featured-truck-image">      <div style="margin-top: var(--space-6);">
+        <span class="tag">Content Strategy</span>
+        <span class="tag">UX Writing</span>
+        <span class="tag">Information Architecture</span>
+        <span class="tag">Documentation Systems</span>
+        <span class="tag">AI-Assisted Workflows</span>
       </div>
     </div>
   </section>
-
-  <section class="section">
-    <div class="wrap stack">
-
-      <div class="card">
-        <span class="eyebrow">Artifact Story</span>
-        <h2 class="h2">Situation</h2>
-        <div class="stack">
-          <p>ScoopRoute administrators managed customer accounts, delivery plans, billing settings, subscriptions, and service information.</p>
-          <p>Certain actions could create significant changes to a customer account. An administrator might update a setting that affected billing, changed an active delivery plan, altered a subscription, or produced an unexpected result in a customer report.</p>
-          <p>These situations were often uncommon edge cases. The underlying behavior could require deep product knowledge to understand, but the person encountering the message was usually a busy administrator who needed to make a safe decision quickly.</p>
-          <p>Placeholder messages did not always explain what had happened, what would change, or how the administrator could avoid creating the issue again. A generic message could leave users unsure whether information had been saved, whether upcoming deliveries would be affected, or whether they should continue.</p>
-        </div>
+  <!-- Selected artifacts -->
+  <section class="wrap">
+    <div class="row" style="justify-content: space-between; align-items: baseline; margin-bottom: var(--space-8);">
+      <div>
+        <span class="eyebrow">Selected artifacts</span>
+        <h2>Samples of the systems I build</h2>
+        <p class="muted">My documentation, content, and processes that scale.</p>
       </div>
-
-      <div class="card">
-        <span class="eyebrow">Artifact Story</span>
-        <h2 class="h2">Task</h2>
-        <div class="stack">
-          <p>I needed to translate complex system behavior into concise interface content that helped administrators understand both the immediate issue and the larger consequence.</p>
-          <p>Each message needed to explain what was happening, why it mattered, and what the administrator should do next without overwhelming them with technical details.</p>
-          <p>I also needed to determine when the interface could provide enough information on its own and when the issue required a supporting FAQ or help article using matching terminology.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <span class="eyebrow">Artifact Story</span>
-        <h2 class="h2">Action</h2>
-        <div class="stack">
-          <p>Juno, the product designer for the account operations experience, contacted me directly and tagged me in Jira when an error or confirmation message needed review.</p>
-          <p>I reviewed the placeholder copy, the intended system behavior, and the point in the workflow where the administrator would encounter the message. When necessary, I worked with Product or Engineering to confirm what would happen to the customer account, subscription, delivery plan, or billing information.</p>
-          <p>I generally structured each message around five elements:</p>
-          <ol>
-            <li>A title that named the issue</li>
-            <li>A plain language explanation</li>
-            <li>The consequence of continuing</li>
-            <li>Guidance for preventing the issue</li>
-            <li>A specific action such as Continue, Save, or Review Changes</li>
-          </ol>
-          <p>I replaced technical descriptions with language that reflected what the administrator could observe and control. I included the technical cause only when it helped the administrator resolve the issue or avoid repeating it.</p>
-          <p>I also avoided placing blame on the user. Instead of describing an action as invalid, I explained the condition that prevented completion and described how the administrator could correct it.</p>
-          <p>I documented recommendations in a before and after table within Jira so stakeholders could compare the original copy with the revised version and understand the reasoning behind the change. I then followed up with Juno in Slack to resolve questions or discuss alternatives.</p>
-          <p>When the issue required more context than the interface could reasonably contain, I recommended an expanded FAQ or support article. I used matching terminology so administrators could move from the message to documentation without having to reinterpret the problem.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <span class="eyebrow">Artifact Story</span>
-        <h2 class="h2">Result</h2>
-        <div class="stack">
-          <p>The revised messages created clearer recovery paths for administrators managing sensitive customer account changes.</p>
-          <p>Users received more useful explanations of what had happened, what information could change, and how to proceed safely. The messages also reduced ambiguity around billing, delivery subscriptions, customer services, and report behavior.</p>
-          <p>The collaboration created stronger consistency between the ScoopRoute interface and its supporting documentation. Designers gained a repeatable structure for future error messages, while Documentation gained clearer signals about which complex states required additional support content.</p>
-          <p>The work also demonstrated how error messaging can support the complete customer journey. A strong message does not only report a problem. It helps the administrator understand the consequence, recover confidently, and avoid creating the same issue again.</p>
-        </div>
-      </div>
-
+      <a href="artifacts.html" class="link" style="white-space:nowrap;">Browse all artifacts →</a>
+    </div>
+    <div class="grid grid-4 artifact-grid">
+      <a class="card" href="artifacts.html">
+        <span class="card-icon" aria-hidden="true">📄</span>
+        <h3 style="font-size:18px;">Help Center Article</h3>
+        <p>Task-based article with embedded best practices for skimmability, structure, and findability.</p>
+        <span class="tag">Documentation</span>
+      </a>
+      <a class="card" href="artifacts/documentationreleasetrackingsop.html">
+        <span class="card-icon" aria-hidden="true">🔁</span>
+        <h3 style="font-size:18px;">Release Communication SOP</h3>
+        <p>Reusable workflow for planning, drafting, reviewing, and publishing release notes.</p>
+        <span class="tag">Process</span>
+      </a>
+      <a class="card" href="artifacts.html">
+        <span class="card-icon" aria-hidden="true">🏷️</span>
+        <h3 style="font-size:18px;">Content Tagging System</h3>
+        <p>Governance model for scalable tagging across content types, product areas, and audiences.</p>
+        <span class="tag">Information Architecture</span>
+      </a>
+      <a class="card" href="artifacts.html">
+        <span class="card-icon" aria-hidden="true">↗️</span>
+        <h3 style="font-size:18px;">Driver App: Onboarding Flow</h3>
+        <p>UX writing and microcopy for a multi-step onboarding experience.</p>
+        <span class="tag">UX Writing</span>
+      </a>
+      <a class="card" href="artifacts/scooproutecontentstyleguide.html">
+        <span class="card-icon" aria-hidden="true">❝</span>
+        <h3 style="font-size:18px;">Content Style Guide Excerpt</h3>
+        <p>Principles, voice, grammar choices, and UI text patterns for consistency at scale.</p>
+        <span class="tag">Content Design</span>
+      </a>
+      <a class="card" href="artifacts.html">
+        <span class="card-icon" aria-hidden="true">✏️</span>
+        <h3 style="font-size:18px;">Before &amp; After: Content Redesign</h3>
+        <p>Examples showing how structure and clarity improved accuracy and task success.</p>
+        <span class="tag">Content Strategy</span>
+      </a>
+      <a class="card" href="artifacts.html">
+        <span class="card-icon" aria-hidden="true">📖</span>
+        <h3 style="font-size:18px;">Term Bank &amp; Glossary</h3>
+        <p>Cross-functional term management for product, compliance, and support.</p>
+        <span class="tag">Governance</span>
+      </a>
+      <a class="card" href="artifacts.html">
+        <span class="card-icon" aria-hidden="true">✨</span>
+        <h3 style="font-size:18px;">AI-Assisted Research Workflow</h3>
+        <p>My process for using AI tools responsibly in content development.</p>
+        <span class="tag">Process</span>
+      </a>
     </div>
   </section>
-
-  <section class="section">
-    <div class="wrap stack">
-      <div class="portfolio-note">
-        This sample was recreated for public use with fictional product terminology, generalized workflows, representative scenarios, and modified interface examples — it does not include proprietary product designs, customer information, internal billing logic, private Jira records, or confidential product requirements.
+  <!-- About preview -->
+  <section class="wrap">
+    <div class="grid grid-2" style="align-items: center;">
+      <div>
+        <span class="eyebrow">About me</span>
+        <h2>Clear communicator. Systems thinker. Team player.</h2>
+        <p class="body-lg" style="margin-top: var(--space-4);">With 6+ years of experience in SaaS documentation, UX writing, and in-app guidance, I partner with teams to deliver content that reduces friction and drives results.</p>
+        <a href="about.html" class="link" style="display:inline-block; margin-top: var(--space-4);">Learn more about me →</a>
       </div>
-      <a class="link" href="../artifacts.html">← Back to Artifact Library</a>
+      <div class="grid grid-2">
+        <div>
+          <strong style="color: var(--color-action-sage); display:block; font-size: 20px;">📅 6+ years</strong>
+          <p class="muted">Technical writing and content design experience</p>
+        </div>
+        <div>
+          <strong style="color: var(--color-action-sage); display:block; font-size: 20px;">◆ SaaS focus</strong>
+          <p class="muted">Product documentation, UX writing, and in-app guidance</p>
+        </div>
+        <div>
+          <strong style="color: var(--color-action-sage); display:block; font-size: 20px;">📊 Data-informed</strong>
+          <p class="muted">Leverage Pendo analytics to prioritize and continuously improve content</p>
+        </div>
+        <div>
+          <strong style="color: var(--color-action-sage); display:block; font-size: 20px;">👥 Mentor &amp; collaborator</strong>
+          <p class="muted">I elevate writers and strengthen content consistency across teams</p>
+        </div>
+      </div>
     </div>
   </section>
-
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -169,7 +202,6 @@
     <div class="footer-location"><a href="https://www.google.com/search?q=austin+texas">Austin, Texas, USA</a></div>
   </div>
 </footer>
-
-<script src="../js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
