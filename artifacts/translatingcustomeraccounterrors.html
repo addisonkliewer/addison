@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
- 
+
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -24,9 +24,9 @@
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
- 
+
 <main>
- 
+
   <section class="section">
     <div class="wrap stack">
       <span class="eyebrow">Artifact Detail</span>
@@ -34,12 +34,12 @@
       <p class="body-lg">A fictional collection of account and billing messages showing how I translate complex system behavior into clear explanations, consequences, prevention guidance, and next steps for busy administrative users.</p>
     </div>
   </section>
- 
+
   <section class="section">
     <div class="wrap">
       <div class="grouping-panel">
         <div class="grid grid-4">
- 
+
           <div class="stack">
             <span class="eyebrow">Artifact Brief</span>
             <h3 class="h3">Key context for this sample</h3>
@@ -47,7 +47,7 @@
             <p class="muted">The sample focuses on uncommon situations that could affect customer delivery services, subscription plans, account settings, or billing. These situations required more than a generic warning because users needed to understand what would change, how the change could affect the customer, and what action they should take next.</p>
             <p class="muted">The examples are adapted from previous SaaS UX writing work and recreated using the fictional ScoopRoute product.</p>
           </div>
- 
+
           <div class="stack">
             <div>
               <span class="eyebrow">Artifact Type</span>
@@ -58,7 +58,7 @@
               <p>Content designers, UX writers, product designers, technical writers, product managers, engineers, support teams, and SaaS administrators</p>
             </div>
           </div>
- 
+
           <div class="stack">
             <div>
               <span class="eyebrow">Related Case Study</span>
@@ -69,7 +69,7 @@
               <p>Product Design, Product Management, Engineering, Documentation, Support, and account management subject matter experts</p>
             </div>
           </div>
- 
+
           <div class="stack">
             <div>
               <span class="eyebrow">Product Area</span>
@@ -84,66 +84,55 @@
               <p>Recreated for public use with fictional product terminology, generalized workflows, representative scenarios, and modified interface examples. It does not include proprietary product designs, customer information, internal billing logic, private Jira records, or confidential product requirements.</p>
             </div>
           </div>
- 
+
         </div>
       </div>
     </div>
   </section>
- 
+
   <section class="section">
     <div class="wrap stack">
- 
+
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Situation</h2>
         <div class="stack">
-          <p>ScoopRoute administrators managed customer accounts, delivery plans, billing settings, subscriptions, and service information. Certain actions could create significant changes to a customer account. An administrator might update a setting that affected billing, changed an active delivery plan, altered a subscription, or produced an unexpected result in a customer report.</p>
-          <p>These situations were often uncommon edge cases. The underlying behavior could require deep product knowledge to understand, but the person encountering the message was usually a busy administrator who needed to make a safe decision quickly. Placeholder messages did not always explain what had happened, what would change, or how the administrator could avoid creating the issue again. A generic message could leave users unsure whether information had been saved, whether upcoming deliveries would be affected, or whether they should continue.</p>
+          <p>ScoopRoute administrators managed customer accounts, delivery plans, billing, subscriptions, and service details. Some actions could create major changes, such as updating a customer's bill, changing an active plan, or affecting future deliveries.</p>
+          <p>Many of these issues were uncommon and difficult to explain. Placeholder messages often did not tell administrators what happened, what would change, or what they should do next.</p>
         </div>
       </div>
- 
+
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Task</h2>
         <div class="stack">
-          <p>I needed to translate complex system behavior into concise interface content that helped administrators understand both the immediate issue and the larger consequence. Each message needed to explain what was happening, why it mattered, and what the administrator should do next without overwhelming them with technical details.</p>
-          <p>I also needed to determine when the interface could provide enough information on its own and when the issue required a supporting FAQ or help article using matching terminology.</p>
+          <p>I needed to turn complex system behavior into clear, concise messages. Each message had to explain the issue, the possible impact, and the next step without overwhelming the administrator.</p>
+          <p>I also needed to decide when the interface could explain the issue on its own and when a supporting help article was needed.</p>
         </div>
       </div>
- 
+
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Action</h2>
         <div class="stack">
-          <p>Juno, the product designer for the account operations experience, contacted me directly and tagged me in Jira when an error or confirmation message needed review.</p>
-          <p>I reviewed the placeholder copy, the intended system behavior, and the point in the workflow where the administrator would encounter the message. When necessary, I worked with Product or Engineering to confirm what would happen to the customer account, subscription, delivery plan, or billing information.</p>
-          <p>I generally structured each message around five elements:</p>
-          <ol>
-            <li>A title that named the issue</li>
-            <li>A plain language explanation</li>
-            <li>The consequence of continuing</li>
-            <li>Guidance for preventing the issue</li>
-            <li>A specific action such as Continue, Save, or Review Changes</li>
-          </ol>
-          <p>I replaced technical descriptions with language that reflected what the administrator could observe and control. I included the technical cause only when it helped the administrator resolve the issue or avoid repeating it.</p>
-          <p>I also avoided placing blame on the user. Instead of describing an action as invalid, I explained the condition that prevented completion and described how the administrator could correct it.</p>
-          <p>I documented recommendations in a before and after table within Jira so stakeholders could compare the original copy with the revised version and understand the reasoning behind the change. I then followed up with Juno in Slack to resolve questions or discuss alternatives.</p>
-          <p>When the issue required more context than the interface could reasonably contain, I recommended an expanded FAQ or support article. I used matching terminology so administrators could move from the message to documentation without having to reinterpret the problem.</p>
+          <p>Juno, the product designer, contacted me directly or tagged me in Jira when a message needed review. I checked the placeholder copy, the workflow, and the expected system behavior. When needed, I worked with Product or Engineering to confirm how the action would affect billing, subscriptions, delivery plans, or customer reports.</p>
+          <p>I usually organized each message around a clear title, a simple explanation, the consequence, and a specific next step. I avoided technical language unless it helped the administrator solve the problem. I also avoided blaming the user and focused instead on explaining what prevented the action and how to fix it.</p>
+          <p>I documented my recommendations in before and after tables in Jira, then followed up with Juno in Slack. For more complex issues, I recommended an FAQ or help article that used the same terminology as the interface.</p>
         </div>
       </div>
- 
+
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Result</h2>
         <div class="stack">
-          <p>My revised messages created clearer recovery paths for administrators managing sensitive customer account changes. Users received more useful explanations of what had happened, what information could change, and how to proceed safely. The messages also reduced ambiguity around billing, delivery subscriptions, customer services, and report behavior.</p>
-          <p>The collaboration created stronger consistency between the ScoopRoute interface and its supporting documentation. Designers gained a repeatable structure for future error messages, while Documentation gained clearer signals about which complex states required additional support content. The work also demonstrated how error messaging can support the complete customer journey. A strong message does not only report a problem. It helps the administrator understand the consequence, recover confidently, and avoid creating the same issue again.</p>
+          <p>The revised messages gave administrators clearer recovery paths and helped them understand what had happened, what could change, and how to move forward safely.</p>
+          <p>The work also created stronger consistency between the ScoopRoute interface and its documentation. It showed that a good error message should do more than report a problem. It should help the user recover and avoid the same issue in the future.</p>
         </div>
       </div>
- 
+
     </div>
   </section>
- 
+
   <section class="section">
     <div class="wrap stack">
       <div class="portfolio-note">
@@ -152,9 +141,9 @@
       <a class="link" href="../artifacts.html">← Back to Artifact Library</a>
     </div>
   </section>
- 
+
 </main>
- 
+
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -164,7 +153,7 @@
     <div class="footer-location"><a href="https://www.google.com/search?q=austin+texas">Austin, Texas, USA</a></div>
   </div>
 </footer>
- 
+
 <script src="../js/main.js"></script>
 </body>
 </html>
