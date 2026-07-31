@@ -486,7 +486,7 @@ a:focus-visible, button:focus-visible {
 }
 .related-artifact-link:hover { border-bottom-color: currentColor; }
 
-.timeline {
+timeline {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -495,9 +495,9 @@ a:focus-visible, button:focus-visible {
 .timeline::before {
   content: '';
   position: absolute;
-  top: 46px;
-  left: 5%;
-  right: 5%;
+  top: calc(var(--space-8) + 6px);
+  left: calc(100% / 12);
+  right: calc(100% / 12);
   height: 1px;
   background: var(--color-border-quiet);
 }
