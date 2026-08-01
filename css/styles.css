@@ -526,3 +526,44 @@ a:focus-visible, button:focus-visible {
   z-index: 100;
 }
 .skip-link:focus { left: 0; }
+
+/* ---------- Avatar scene (About page profile) ---------- */
+.avatar-scene {
+  --scene-bg: var(--color-canvas-cream);
+  --scene-outline: var(--color-text-charcoal);
+  --scene-mtn-back: #E9EEDF;
+  --scene-mtn-mid: #CBD8BE;
+  --scene-mtn-front: #AABB9B;
+  --scene-tree: #7C8B71;
+
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+}
+html[data-theme="dark"] .avatar-scene {
+  --scene-mtn-back: #23301F;
+  --scene-mtn-mid: #3C4F33;
+  --scene-mtn-front: #56704A;
+  --scene-tree: #33421F;
+}
+.avatar-scene__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.avatar-scene__portrait {
+  position: absolute;
+  left: 50%;
+  bottom: -2%;
+  width: 82%;
+  height: auto;
+  transform: translateX(-50%);
+  display: block;
+}
