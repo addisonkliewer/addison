@@ -174,7 +174,7 @@ h3, .h3 { font-family: var(--font-serif); font-size: var(--size-h3); line-height
 .btn-primary { background: var(--color-action-sage); color: var(--color-white); }
 .btn-primary:hover { background: #3d5a35; }
 .btn-secondary {
-  background: transparent;
+  background: var(--color-surface-card);
   border-color: var(--color-border-quiet);
   color: var(--color-text-charcoal);
 }
@@ -486,12 +486,6 @@ a:focus-visible, button:focus-visible {
 }
 .related-artifact-link:hover { border-bottom-color: currentColor; }
 
-timeline {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  padding-top: var(--space-8);
-}
 .timeline {
   display: flex;
   justify-content: space-between;
