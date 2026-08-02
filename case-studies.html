@@ -13,6 +13,7 @@
     grid-template-columns: 0.9fr 2fr;
     gap: var(--space-8);
     align-items: start;
+    position: relative;
   }
   @media (max-width: 1199px) {
     .case-studies-hero {
@@ -20,29 +21,78 @@
     }
   }
 
+  /* Decorative mountain graphic under the intro copy, bleeding off the page edge */
+  .hero-mountain-wrap {
+    margin: var(--space-8) 0 0 -32px;
+    width: calc(100% + 32px);
+    overflow: hidden;
+    line-height: 0;
+  }
+  .hero-mountain {
+    --mtn-fill: #DDE4D5;
+    --mtn-outline: rgba(23, 32, 42, 0.35);
+    --mtn-tree: #8CA07E;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  html[data-theme="dark"] .hero-mountain {
+    --mtn-fill: #263323;
+    --mtn-outline: rgba(245, 242, 234, 0.25);
+    --mtn-tree: #4C6642;
+  }
+
   /* Featured case study: text | deliverables | image */
   .featured-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.9fr 1.1fr;
-  gap: var(--space-8);
-  align-items: start;
-}
+    display: grid;
+    grid-template-columns: 1fr 0.85fr 1.25fr;
+    gap: var(--space-8);
+    align-items: stretch;
+  }
   @media (max-width: 900px) {
     .featured-grid {
       grid-template-columns: 1fr;
       gap: var(--space-6);
     }
   }
-
+  .case-study-tagline {
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--color-text-charcoal);
+    line-height: 1.4;
+    margin-top: var(--space-2);
+  }
+  .case-study-detail {
+    font-size: 14.5px;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+    margin-top: var(--space-4);
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+  }
+  .tag-row .tag {
+    white-space: normal;
+    max-width: 100%;
+    margin: 0;
+    text-align: center;
+  }
   .case-study-image {
-  border-radius: 12px;
-  overflow: hidden;
-}
-.case-study-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 220px;
+  }
+  .case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
 
   /* Other case studies: icon | content | checklist | skills | link */
   .case-study-row {
@@ -55,7 +105,7 @@
   .case-icon { grid-area: icon; }
   .case-content { grid-area: content; }
   .case-checklist { grid-area: checklist; }
-  .case-skills { grid-area: skills; }
+  .case-skills { grid-area: skills; min-width: 0; }
   .case-links {
     grid-area: link;
     display: flex;
@@ -79,7 +129,6 @@
     font-size: 13px;
     color: var(--color-muted, #7a7566);
   }
-
   @media (max-width: 1100px) {
     .case-study-row {
       grid-template-columns: auto 1fr 1fr;
@@ -97,7 +146,6 @@
       gap: var(--space-4);
     }
   }
-
   @media (max-width: 768px) {
     .case-study-row {
       grid-template-columns: 1fr;
@@ -114,7 +162,6 @@
       text-align: left;
     }
   }
-
   /* Bottom stats: one card, dividers between items */
   .stats-card {
     display: flex;
@@ -164,25 +211,33 @@
     <div>
       <h1>Case Studies</h1>
       <p class="body-lg" style="margin-top: var(--space-4);">Real projects that demonstrate how I turn complex information into clear, usable content experiences. These case studies highlight documentation strategy, UX writing, release communication, and scalable content systems that support both users and teams.</p>
+      <div class="hero-mountain-wrap">
+        <svg class="hero-mountain" viewBox="0 0 400 130" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <polygon points="-20,120 70,60 130,95 230,35 400,120 400,130 -20,130"
+                   fill="var(--mtn-fill)" stroke="var(--mtn-outline)" stroke-width="1.5" stroke-linejoin="round" />
+          <path d="M-20,130 l4,-11 l4,11 l4,-10 l4,10 l4,-13 l4,13 l4,-9 l4,9 l4,-12 l4,12 l4,-11 l4,11 l4,-9 l4,9 l4,-12 l4,12 l4,-9 l4,9 l4,-12 l4,12 l4,-9 l4,9 l4,-10 l4,10 l4,-12 l4,12 l4,-14 l4,14 l4,-10 l4,10 l4,-10 l4,10 l4,-13 l4,13 l4,-15 l4,15 l4,-12 l4,12 l4,-11 l4,11 l4,-15 l4,15 l4,-9 l4,9 l4,-14 l4,14 l4,-11 l4,11 l4,-10 l4,10 l4,-10 l4,10 l4,-11 l4,11 l4,-14 l4,14 l4,-10 l4,10 l4,-12 l4,12 l4,-13 l4,13 l4,-11 l4,11 l4,-12 l4,12 l4,-9 l4,9 l4,-9 l4,9 l4,-10 l4,10 l4,-13 l4,13 l4,-12 l4,12 l4,-11 l4,11 l4,-13 l4,13 l4,-12 l4,12 l4,-11 l4,11 l4,-14 l4,14 l4,-13 l4,13 l4,-10 l4,10 l4,-12 l4,12 l4,-12 l4,12 l4,-14 l4,14 l4,-13 l4,13 l4,-11 l4,11 l4,-15 l4,15 l4,-10 l4,10 l4,-12 l4,12 l4,-14 l4,14 l4,-10 l4,10 l4,-12 l4,12 l4,-9 l4,9 l4,-13 l4,13 l4,-14 l4,14 l4,-12 l4,12 l4,-14 l4,14 l4,-11 l4,11 l4,-13 l4,13 L420,130 Z"
+                fill="var(--mtn-tree)" opacity="0.9" />
+        </svg>
+      </div>
     </div>
     <div class="card featured featured-grid">
       <div>
         <span class="eyebrow">Featured case study</span>
         <h2>Scaling SaaS Docs</h2>
-        <p class="muted">A routing and mobile operations platform for ice cream delivery teams.</p>
-        <p style="margin-top: var(--space-4);">I partnered with product and engineering to build a documentation and UX content experience that reduced support volume and helped new users get up to speed—fast.</p>
+        <p class="case-study-tagline">A routing and mobile operations platform for ice cream delivery teams.</p>
+        <p class="case-study-detail">I partnered with product and engineering to build a documentation and UX content experience that reduced support volume and helped new users get up to speed—fast.</p>
         <a href="case-studies/scooproute.html" class="btn btn-primary" style="margin-top: var(--space-6);">View full case study →</a>
       </div>
       <div>
         <span class="eyebrow">Deliverables</span>
-        <ul class="stack" style="gap: var(--space-2);">
+        <ul class="stack" style="gap: var(--space-2); margin-top: var(--space-2);">
           <li>✓ Documentation strategy &amp; IA</li>
           <li>✓ Help Center &amp; API docs</li>
           <li>✓ In-app guidance &amp; microcopy</li>
           <li>✓ Release notes &amp; comms templates</li>
         </ul>
-        <span class="eyebrow" style="margin-top: var(--space-6);">Focus areas</span>
-        <div>
+        <span class="eyebrow" style="display:block; margin-top: var(--space-6);">Focus areas</span>
+        <div class="tag-row">
           <span class="tag">Content Strategy</span>
           <span class="tag">UX Writing</span>
           <span class="tag">Information Architecture</span>
@@ -207,14 +262,14 @@
         </div>
         <div class="case-checklist">
           <ul class="stack" style="gap:2px; font-size:14px;">
-            <li>✓ Structured complex workflows for Academy reuse/li>
+            <li>✓ Structured complex workflows for Academy reuse</li>
             <li>✓ Reviewed scripts for product accuracy and clarity</li>
             <li>✓ Provided persona and onboarding sequence input</li>
           </ul>
         </div>
         <div class="case-skills">
           <span class="eyebrow">Skills &amp; approach</span>
-          <div>
+          <div class="tag-row">
             <span class="tag">Instructional Design</span>
             <span class="tag">Governance</span>
             <span class="tag">Content Strategy</span>
@@ -242,7 +297,7 @@
         </div>
         <div class="case-skills">
           <span class="eyebrow">Skills &amp; approach</span>
-          <div>
+          <div class="tag-row">
             <span class="tag">UX Writing</span>
             <span class="tag">Microcopy</span>
             <span class="tag">User Research</span>
@@ -270,7 +325,7 @@
         </div>
         <div class="case-skills">
           <span class="eyebrow">Skills &amp; approach</span>
-          <div>
+          <div class="tag-row">
             <span class="tag">AI Tools</span>
             <span class="tag">Information Architecture</span>
             <span class="tag">Analytics</span>
