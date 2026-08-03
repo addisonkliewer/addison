@@ -20,11 +20,12 @@
       grid-template-columns: 1fr;
     }
   }
-
-  /* Decorative mountain graphic under the intro copy, bleeding off the page edge */
+  /* Decorative mountain graphic under the intro copy — raised, smaller footprint,
+     reads as a subtle divider rather than a standalone visual */
   .hero-mountain-wrap {
-    margin: var(--space-8) 0 0 -32px;
-    width: calc(100% + 32px);
+    margin: var(--space-3) 0 0 -32px;
+    width: calc(55% + 32px);
+    max-width: 320px;
     overflow: hidden;
     line-height: 0;
   }
@@ -42,18 +43,26 @@
     --mtn-tree: #4C6642;
   }
 
-  /* Featured case study: text | deliverables | image */
-  .featured-grid {
+  /* Featured case study card: content | screenshot up top, deliverables + focus
+     areas as a secondary metadata row below a divider */
+  .featured-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .featured-main {
     display: grid;
-    grid-template-columns: 1fr 0.85fr 1.25fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: var(--space-8);
     align-items: stretch;
   }
   @media (max-width: 900px) {
-    .featured-grid {
+    .featured-main {
       grid-template-columns: 1fr;
-      gap: var(--space-6);
     }
+  }
+  .featured-content {
+    display: flex;
+    flex-direction: column;
   }
   .case-study-tagline {
     font-size: 17px;
@@ -68,6 +77,56 @@
     line-height: 1.55;
     margin-top: var(--space-4);
   }
+  .featured-metric {
+    margin-top: var(--space-4);
+    font-size: 15px;
+    color: var(--color-text-charcoal);
+    line-height: 1.5;
+  }
+  .featured-metric strong {
+    color: var(--color-action-sage);
+  }
+  .featured-content .btn {
+    margin-top: var(--space-6);
+    align-self: flex-start;
+  }
+  .case-study-image {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    min-height: 260px;
+  }
+  .case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
+
+  /* Lower metadata row: deliverables + focus areas, visually secondary */
+  .featured-meta {
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border-quiet);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+  @media (max-width: 700px) {
+    .featured-meta {
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+  }
+  .featured-meta ul {
+    gap: var(--space-2);
+    margin-top: var(--space-2);
+  }
+  .featured-meta ul li {
+    font-size: 14px;
+    color: var(--color-text-muted);
+  }
   .tag-row {
     display: flex;
     flex-wrap: wrap;
@@ -80,57 +139,56 @@
     margin: 0;
     text-align: center;
   }
-  .case-study-image {
-    border-radius: 12px;
-    overflow: hidden;
-    height: 100%;
-    min-height: 220px;
-  }
-  .case-study-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-  }
 
-  /* Other case studies: icon | content | checklist | skills | link */
-  .case-study-row {
+  /* Other case studies: icon | content | checklist | skills | cta — whole card is a link */
+  a.case-study-row {
     display: grid;
     grid-template-columns: auto 1.3fr 1fr 1fr auto;
     grid-template-areas: "icon content checklist skills link";
     gap: var(--space-6);
     align-items: center;
+    transition:
+      transform 160ms ease,
+      border-color 160ms ease,
+      background-color 160ms ease;
+  }
+  a.case-study-row:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-action-sage);
+  }
+  a.case-study-row:focus-visible {
+    outline: 2px solid var(--color-action-sage);
+    outline-offset: 3px;
   }
   .case-icon { grid-area: icon; }
   .case-content { grid-area: content; }
   .case-checklist { grid-area: checklist; }
   .case-skills { grid-area: skills; min-width: 0; }
-  .case-links {
+  .case-cta {
     grid-area: link;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--space-2);
-    text-align: right;
+    justify-self: end;
+    align-self: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-action-cobalt);
+    white-space: nowrap;
+  }
+  a.case-study-row:hover .case-cta {
+    text-decoration: underline;
   }
   .case-icon {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: var(--color-icon-bg, #eef1ea);
+    background: var(--color-surface-stone);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     flex-shrink: 0;
   }
-  .related-artifacts-link {
-    font-size: 13px;
-    color: var(--color-muted, #7a7566);
-  }
   @media (max-width: 1100px) {
-    .case-study-row {
+    a.case-study-row {
       grid-template-columns: auto 1fr 1fr;
       grid-template-areas:
         "icon content content"
@@ -139,15 +197,12 @@
       align-items: start;
       row-gap: var(--space-4);
     }
-    .case-links {
-      align-items: flex-start;
-      text-align: left;
-      flex-direction: row;
-      gap: var(--space-4);
+    .case-cta {
+      justify-self: start;
     }
   }
   @media (max-width: 768px) {
-    .case-study-row {
+    a.case-study-row {
       grid-template-columns: 1fr;
       grid-template-areas:
         "icon"
@@ -156,36 +211,36 @@
         "skills"
         "link";
     }
-    .case-links {
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
   }
-  /* Bottom stats: one card, dividers between items */
-  .stats-card {
+
+  /* About page transition — replaces the old experience/stats strip */
+  .about-cta-card {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
     flex-wrap: wrap;
   }
-  .stats-card .stat-item {
-    flex: 1 1 0;
-    min-width: 200px;
-    padding: 0 var(--space-6);
+  .about-cta-text {
+    max-width: 560px;
   }
-  .stats-card .stat-item:not(:first-child) {
-    border-left: 1px solid var(--color-border, #ddd6c4);
+  .about-cta-card .btn {
+    flex-shrink: 0;
   }
-  @media (max-width: 768px) {
-    .stats-card {
+  @media (max-width: 600px) {
+    .about-cta-card {
       flex-direction: column;
+      align-items: flex-start;
     }
-    .stats-card .stat-item {
-      padding: var(--space-4) 0;
-      border-left: none !important;
-    }
-    .stats-card .stat-item:not(:first-child) {
-      border-top: 1px solid var(--color-border, #ddd6c4);
-    }
+  }
+
+  /* Page-scoped spacing tightening — bring the footer closer without
+     touching the shared --section-gap token used sitewide */
+  body main > section:last-of-type {
+    padding-bottom: var(--space-6);
+  }
+  body .site-footer {
+    margin-top: var(--space-6);
   }
 </style>
 </head>
@@ -210,7 +265,8 @@
   <section class="wrap case-studies-hero">
     <div>
       <h1>Case Studies</h1>
-      <p class="body-lg" style="margin-top: var(--space-4);">Real projects that demonstrate how I turn complex information into clear, usable content experiences. These case studies highlight documentation strategy, UX writing, release communication, and scalable content systems that support both users and teams.</p>
+      <p class="body-lg" style="margin-top: var(--space-4);">Selected projects showing how I turn complex information into clear, usable content experiences.</p>
+      <p class="body-lg muted" style="margin-top: var(--space-3);">The work spans documentation strategy, UX writing, release communication, and scalable content systems that support both users and product teams.</p>
       <div class="hero-mountain-wrap">
         <svg class="hero-mountain" viewBox="0 0 400 130" preserveAspectRatio="none" aria-hidden="true" focusable="false">
           <polygon points="-20,120 70,60 130,95 230,35 400,120 400,130 -20,130"
@@ -220,41 +276,47 @@
         </svg>
       </div>
     </div>
-    <div class="card featured featured-grid">
-      <div>
-        <span class="eyebrow">Featured case study</span>
-        <h2>Scaling SaaS Docs</h2>
-        <p class="case-study-tagline">A routing and mobile operations platform for ice cream delivery teams.</p>
-        <p class="case-study-detail">I partnered with product and engineering to build a documentation and UX content experience that reduced support volume and helped new users get up to speed—fast.</p>
-        <a href="case-studies/scooproute.html" class="btn btn-primary" style="margin-top: var(--space-6);">View full case study →</a>
-      </div>
-      <div>
-        <span class="eyebrow">Deliverables</span>
-        <ul class="stack" style="gap: var(--space-2); margin-top: var(--space-2);">
-          <li>✓ Documentation strategy &amp; IA</li>
-          <li>✓ Help Center &amp; API docs</li>
-          <li>✓ In-app guidance &amp; microcopy</li>
-          <li>✓ Release notes &amp; comms templates</li>
-        </ul>
-        <span class="eyebrow" style="display:block; margin-top: var(--space-6);">Focus areas</span>
-        <div class="tag-row">
-          <span class="tag">Content Strategy</span>
-          <span class="tag">UX Writing</span>
-          <span class="tag">Information Architecture</span>
-          <span class="tag">User Enablement</span>
-          <span class="tag">Release Communication</span>
-          <span class="tag">Analytics-Informed Improvements</span>
+    <div class="card featured featured-card">
+      <div class="featured-main">
+        <div class="featured-content">
+          <span class="eyebrow">Featured case study</span>
+          <h2>Scaling SaaS Docs</h2>
+          <p class="case-study-tagline">A routing and mobile operations platform for ice cream delivery teams.</p>
+          <p class="case-study-detail">I partnered with product and engineering to build a documentation and UX content experience that reduced support volume and helped new users get up to speed—fast.</p>
+          <p class="featured-metric"><strong>40% drop</strong> in related support tickets in the first quarter after launch.</p>
+          <a href="case-studies/scooproute.html" class="btn btn-primary">View full case study →</a>
+        </div>
+        <div class="case-study-image">
+          <img src="images/HelpCenter.png" alt="ScoopRoute Help Center showing browse-by-category cards for Operations, Mobile App, and Billing &amp; Account, plus FAQs and training videos">
         </div>
       </div>
-      <div class="case-study-image">
-        <img src="images/HelpCenter.png" alt="ScoopRoute Help Center showing browse-by-category cards for Operations, Mobile App, and Billing &amp; Account, plus FAQs and training videos">
+      <div class="featured-meta">
+        <div>
+          <span class="eyebrow">Deliverables</span>
+          <ul class="stack">
+            <li>✓ Documentation strategy &amp; IA</li>
+            <li>✓ Help Center &amp; API docs</li>
+            <li>✓ In-app guidance &amp; microcopy</li>
+            <li>✓ Release notes &amp; comms templates</li>
+          </ul>
+        </div>
+        <div>
+          <span class="eyebrow">Focus areas</span>
+          <div class="tag-row">
+            <span class="tag">Content Strategy</span>
+            <span class="tag">UX Writing</span>
+            <span class="tag">Information Architecture</span>
+            <span class="tag">User Enablement</span>
+            <span class="tag">Release Communication</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <section class="wrap">
     <span class="eyebrow">Other case studies</span>
     <div class="stack" style="gap: var(--space-4); margin-top: var(--space-4);">
-      <div class="card case-study-row">
+      <a class="card case-study-row" href="case-studies/academy.html">
         <div class="case-icon" aria-hidden="true">🎓</div>
         <div class="case-content">
           <h3>Turning Product Knowledge into Academy-Ready Training</h3>
@@ -264,25 +326,20 @@
           <ul class="stack" style="gap:2px; font-size:14px;">
             <li>✓ Structured complex workflows for Academy reuse</li>
             <li>✓ Reviewed scripts for product accuracy and clarity</li>
-            <li>✓ Provided persona and onboarding sequence input</li>
           </ul>
         </div>
         <div class="case-skills">
           <span class="eyebrow">Skills &amp; approach</span>
           <div class="tag-row">
             <span class="tag">Instructional Design</span>
-            <span class="tag">Governance</span>
             <span class="tag">Content Strategy</span>
             <span class="tag">Cross-functional Collaboration</span>
             <span class="tag">Release Communication</span>
           </div>
         </div>
-        <div class="case-links">
-          <a href="case-studies/academy.html" class="link">View case study →</a>
-          <a href="artifacts.html#academy" class="link related-artifacts-link">Related artifacts ↗</a>
-        </div>
-      </div>
-      <div class="card case-study-row">
+        <span class="case-cta">View case study →</span>
+      </a>
+      <a class="card case-study-row" href="case-studies/ux-writing.html">
         <div class="case-icon" aria-hidden="true">📱</div>
         <div class="case-content">
           <h3>In-App Guidance &amp; UX Content</h3>
@@ -292,7 +349,6 @@
           <ul class="stack" style="gap:2px; font-size:14px;">
             <li>✓ Increased task completion and adoption</li>
             <li>✓ Aligned tone and terminology across surfaces</li>
-            <li>✓ Collaborated closely with UX and PMM</li>
           </ul>
         </div>
         <div class="case-skills">
@@ -300,17 +356,13 @@
           <div class="tag-row">
             <span class="tag">UX Writing</span>
             <span class="tag">Microcopy</span>
-            <span class="tag">User Research</span>
             <span class="tag">Content Design</span>
             <span class="tag">Usability Testing</span>
           </div>
         </div>
-        <div class="case-links">
-          <a href="case-studies/ux-writing.html" class="link">View case study →</a>
-          <a href="artifacts.html#ux-writing" class="link related-artifacts-link">Related artifacts ↗</a>
-        </div>
-      </div>
-      <div class="card case-study-row">
+        <span class="case-cta">View case study →</span>
+      </a>
+      <a class="card case-study-row" href="case-studies/ai-content-engineer.html">
         <div class="case-icon" aria-hidden="true">🦾</div>
         <div class="case-content">
           <h3>AI-Assisted Documentation Workflow</h3>
@@ -320,7 +372,6 @@
           <ul class="stack" style="gap:2px; font-size:14px;">
             <li>✓ Faster first drafts with human-in-the-loop review</li>
             <li>✓ Scalable tagging and discovery improvements</li>
-            <li>✓ Created team guidelines and training</li>
           </ul>
         </div>
         <div class="case-skills">
@@ -328,36 +379,22 @@
           <div class="tag-row">
             <span class="tag">AI Tools</span>
             <span class="tag">Information Architecture</span>
-            <span class="tag">Analytics</span>
             <span class="tag">Content Operations</span>
             <span class="tag">Team Enablement</span>
           </div>
         </div>
-        <div class="case-links">
-          <a href="case-studies/ai-content-engineer.html" class="link">View case study →</a>
-          <a href="artifacts.html#ai-content-engineer" class="link related-artifacts-link">Related artifacts ↗</a>
-        </div>
-      </div>
+        <span class="case-cta">View case study →</span>
+      </a>
     </div>
   </section>
   <section class="wrap">
-    <div class="card stats-card">
-      <div class="stat-item">
-        <h3 style="font-size:18px;">📅 6+ years</h3>
-        <p>Technical writing and content design experience in SaaS environments.</p>
+    <div class="card about-cta-card">
+      <div class="about-cta-text">
+        <span class="eyebrow">Continue exploring</span>
+        <h2 style="margin-top: var(--space-2);">The work behind the work</h2>
+        <p class="muted" style="margin-top: var(--space-2);">I build documentation systems by partnering with product, design, engineering, support, and subject matter experts.</p>
       </div>
-      <div class="stat-item">
-        <h3 style="font-size:18px;">💻 SaaS documentation</h3>
-        <p>Help centers, API docs, UX writing, release notes, and in-app guidance for complex products.</p>
-      </div>
-      <div class="stat-item">
-        <h3 style="font-size:18px;">📊 Pendo + Doc360</h3>
-        <p>Leverage analytics and modern platforms to improve discoverability, adoption, and content impact.</p>
-      </div>
-      <div class="stat-item">
-        <h3 style="font-size:18px;">👥 Cross-functional collaboration</h3>
-        <p>Partner with product, engineering, design, and support to ship content that moves the needle.</p>
-      </div>
+      <a href="about.html" class="btn btn-primary">About Me</a>
     </div>
   </section>
 </main>
