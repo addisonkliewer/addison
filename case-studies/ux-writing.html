@@ -203,48 +203,90 @@
       <div class="card">
         <span class="eyebrow">Example 1</span>
         <h3>Clarifying billing and admin warning messages</h3>
-        <div class="grid grid-2" style="margin-top: var(--space-4); font-size: 14px;">
-          <div>
-            <p><strong>Situation</strong><br class="muted">Complex billing and admin actions needed clearer user-facing warnings.</p>
-            <p style="margin-top: var(--space-3);"><strong>Before pattern</strong><br>"Continue?" or a dense system-centered warning.</p>
-            <p style="margin-top: var(--space-3);"><strong>After pattern</strong><br>"This will update billing rules for selected customers. Review affected records before continuing."</p>
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--space-6); margin-top: var(--space-4); align-items:start;">
+          <div class="grid grid-2" style="font-size: 14px;">
+            <div>
+              <p><strong>Situation</strong><br>Complex billing and admin actions needed clearer user-facing warnings.</p>
+              <p style="margin-top: var(--space-3);"><strong>Before pattern</strong><br>"Continue?" or a dense system-centered warning.</p>
+              <p style="margin-top: var(--space-3);"><strong>After pattern</strong><br>"This will update billing rules for selected customers. Review affected records before continuing."</p>
+            </div>
+            <div>
+              <p><strong>Context: problem</strong><br>Warnings and continue messages could be dense, inconsistent, or written in developer-speak.</p>
+              <p style="margin-top: var(--space-3);"><strong>Context: decision</strong><br>Name the action, explain the consequence, clarify what is affected, and use a specific CTA.</p>
+              <p style="margin-top: var(--space-3);"><strong>Why it worked</strong><br>The message helped users understand what would happen next before committing to a high-impact action.</p>
+            </div>
           </div>
-          <div>
-            <p><strong>Context: problem</strong><br>Warnings and continue messages could be dense, inconsistent, or written in developer-speak.</p>
-            <p style="margin-top: var(--space-3);"><strong>Context: decision</strong><br>Name the action, explain the consequence, clarify what is affected, and use a specific CTA.</p>
-            <p style="margin-top: var(--space-3);"><strong>Why it worked</strong><br>The message helped users understand what would happen next before committing to a high-impact action.</p>
+          <div class="mini-card">
+            <div class="grid grid-2" style="gap: var(--space-3);">
+              <div>
+                <span class="eyebrow">Before</span>
+                <div class="card" style="margin-top: var(--space-2); padding: var(--space-3);">
+                  <p style="font-size:13px;">This action cannot be undone.</p>
+                  <span class="btn btn-primary" style="margin-top: var(--space-3); padding:6px 14px; font-size:12px; display:inline-block;">Continue</span>
+                </div>
+              </div>
+              <div>
+                <span class="eyebrow">After</span>
+                <div class="card" style="margin-top: var(--space-2); padding: var(--space-3);">
+                  <p style="font-size:13px;">Update billing rules?</p>
+                  <p class="muted" style="font-size:12px; font-style:italic; margin-top:4px;">Review affected records before continuing.</p>
+                  <span class="btn btn-primary" style="margin-top: var(--space-3); padding:6px 14px; font-size:12px; display:inline-block;">Review first</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="card">
         <span class="eyebrow">Example 2</span>
         <h3>Improving mobile permission and action guidance</h3>
-        <div class="grid grid-2" style="margin-top: var(--space-4); font-size: 14px;">
-          <div>
-            <p><strong>Situation</strong><br>Mobile users needed clearer guidance when actions were unavailable or controlled by admin permissions.</p>
-            <p style="margin-top: var(--space-3);"><strong>Before pattern</strong><br>"Action unavailable."</p>
-            <p style="margin-top: var(--space-3);"><strong>After pattern</strong><br>"You need mobile customer creation permission to add customers from the map. Contact your admin to update your access."</p>
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--space-6); margin-top: var(--space-4); align-items:start;">
+          <div class="grid grid-2" style="font-size: 14px;">
+            <div>
+              <p><strong>Situation</strong><br>Mobile users needed clearer guidance when actions were unavailable or controlled by admin permissions.</p>
+              <p style="margin-top: var(--space-3);"><strong>Before pattern</strong><br>"Action unavailable."</p>
+              <p style="margin-top: var(--space-3);"><strong>After pattern</strong><br>"You need mobile customer creation permission to add customers from the map. Contact your admin to update your access."</p>
+            </div>
+            <div>
+              <p><strong>Context: problem</strong><br>Users could encounter blocked actions without enough context about why the action was unavailable.</p>
+              <p style="margin-top: var(--space-3);"><strong>Context: decision</strong><br>Explain what is blocked, why it is blocked, and who can resolve it.</p>
+              <p style="margin-top: var(--space-3);"><strong>Why it worked</strong><br>The message reduced ambiguity and gave users a clear next step.</p>
+            </div>
           </div>
-          <div>
-            <p><strong>Context: problem</strong><br>Users could encounter blocked actions without enough context about why the action was unavailable.</p>
-            <p style="margin-top: var(--space-3);"><strong>Context: decision</strong><br>Explain what is blocked, why it is blocked, and who can resolve it.</p>
-            <p style="margin-top: var(--space-3);"><strong>Why it worked</strong><br>The message reduced ambiguity and gave users a clear next step.</p>
+          <div class="mini-card">
+            <div class="card" style="padding: var(--space-4); text-align:center;">
+              <div style="height:10px; width:70%; margin:0 auto; background: var(--color-border, #c9c2b3); border-radius:6px; opacity:0.5;"></div>
+              <span class="tag" style="margin-top: var(--space-4); display:inline-block;">Action unavailable</span>
+            </div>
+            <div class="mini-card--accent" style="margin-top: var(--space-3); padding: var(--space-3);">
+              <p class="muted-note" style="font-size:12px; margin:0;">You need mobile customer creation permission to add customers from the map. Contact your admin to update your access.</p>
+            </div>
           </div>
         </div>
       </div>
       <div class="card">
         <span class="eyebrow">Example 3</span>
         <h3>Creating in-app guidance patterns for new releases</h3>
-        <div class="grid grid-2" style="margin-top: var(--space-4); font-size: 14px;">
-          <div>
-            <p><strong>Situation</strong><br>New workflows and releases needed consistent in-app introductions instead of one-off, ad hoc callouts.</p>
-            <p style="margin-top: var(--space-3);"><strong>Before pattern</strong><br>Inconsistent tooltips and banners with varying tone and structure release to release.</p>
-            <p style="margin-top: var(--space-3);"><strong>After pattern</strong><br>A repeatable guidance pattern: what's new, why it matters, and what to do next.</p>
+        <div class="grid" style="grid-template-columns: 2fr 1fr; gap: var(--space-6); margin-top: var(--space-4); align-items:start;">
+          <div class="grid grid-2" style="font-size: 14px;">
+            <div>
+              <p><strong>Situation</strong><br>New workflows and releases needed consistent in-app introductions instead of one-off, ad hoc callouts.</p>
+              <p style="margin-top: var(--space-3);"><strong>Before pattern</strong><br>Inconsistent tooltips and banners with varying tone and structure release to release.</p>
+              <p style="margin-top: var(--space-3);"><strong>After pattern</strong><br>A repeatable guidance pattern: what's new, why it matters, and what to do next.</p>
+            </div>
+            <div>
+              <p><strong>Context: problem</strong><br>Each release reinvented its own in-app messaging, adding inconsistency and review overhead.</p>
+              <p style="margin-top: var(--space-3);"><strong>Context: decision</strong><br>Standardize a reusable guidance template that Product and Design could apply to any release.</p>
+              <p style="margin-top: var(--space-3);"><strong>Why it worked</strong><br>Users encountered a familiar pattern release after release, and teams shipped guidance faster.</p>
+            </div>
           </div>
-          <div>
-            <p><strong>Context: problem</strong><br>Each release reinvented its own in-app messaging, adding inconsistency and review overhead.</p>
-            <p style="margin-top: var(--space-3);"><strong>Context: decision</strong><br>Standardize a reusable guidance template that Product and Design could apply to any release.</p>
-            <p style="margin-top: var(--space-3);"><strong>Why it worked</strong><br>Users encountered a familiar pattern release after release, and teams shipped guidance faster.</p>
+          <div class="mini-card">
+            <div class="card" style="padding: var(--space-4);">
+              <span class="tag" style="font-size:11px;">Step 2 of 3</span>
+              <h4 style="margin-top: var(--space-3); font-size:17px;">Review billing changes</h4>
+              <p class="muted" style="margin-top: var(--space-2); font-size:13px;">Check affected customers, then confirm when you're ready.</p>
+              <span class="btn btn-primary" style="margin-top: var(--space-3); padding:6px 14px; font-size:12px; display:inline-block;">Continue</span>
+            </div>
           </div>
         </div>
       </div>
