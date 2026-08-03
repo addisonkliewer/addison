@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: border-color 0.15s, box-shadow 0.15s;
+    transition: border-color 0.15s, box-shadow 0.15s, background-color 0.15s, transform 0.15s;
   }
   .artifact-grid .card .tag {
     margin-top: auto;
@@ -34,6 +34,12 @@
   .artifact-grid a.card:focus-visible {
     border-color: var(--color-action-sage);
     box-shadow: 6px 6px 0 rgba(23, 32, 42, 0.14);
+  }
+  html[data-theme="dark"] .artifact-grid a.card:hover,
+  html[data-theme="dark"] .artifact-grid a.card:focus-visible {
+    background: var(--color-surface-card-hover);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
   }
 </style>
 </head>
