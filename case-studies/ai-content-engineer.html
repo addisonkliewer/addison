@@ -8,21 +8,15 @@
 <link rel="stylesheet" href="../css/styles.css">
 <style>
   .callout {
-    background: var(--color-callout-bg, #eef1ea);
+    background: var(--color-canvas-cream);
     border: 1px solid var(--color-border, #c9c2b3);
     border-radius: 12px;
     padding: var(--space-5, 20px);
     font-size: 14px;
   }
-  .preview-flow {
-    background: #fff;
-    border: 1px solid var(--color-border, #c9c2b3);
-    border-radius: 12px;
-    padding: var(--space-6, 24px);
-  }
   .preview-flow .row-3 { display:grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-3, 12px); }
   .preview-flow .mini-box {
-    background: var(--color-icon-bg, #eef1ea);
+    background: var(--color-canvas-cream);
     border-radius: 8px;
     padding: var(--space-3, 12px);
     font-size: 13px;
@@ -39,14 +33,14 @@
   }
   .preview-flow .mid-box strong { display:block; margin-bottom: 4px; }
   .preview-flow .end-box {
-    background: var(--color-icon-bg, #eef1ea);
+    background: var(--color-canvas-cream);
     border-radius: 8px;
     padding: var(--space-4, 16px);
     font-size: 14px;
     text-align:center;
     font-weight:600;
   }
-  .step-row { display:flex; align-items:center; flex-wrap:wrap; gap: var(--space-3, 12px); background:#fff; border:1px solid var(--color-border,#c9c2b3); border-radius:12px; padding: var(--space-5, 20px); }
+  .step-row { display:flex; align-items:center; flex-wrap:wrap; gap: var(--space-3, 12px); }
   .step-item { display:flex; align-items:center; gap: var(--space-2, 8px); font-size:14px; font-weight:600; }
   .step-num { width:24px; height:24px; border-radius:50%; background: var(--color-ink, #24291f); color:#fff; font-size:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
   .step-arrow { color: var(--color-muted, #7a7566); }
@@ -67,6 +61,13 @@
   }
   .callout-dark .eyebrow { color: #c9d6c2; }
   .cta-band { display:flex; justify-content:space-between; align-items:center; gap: var(--space-4, 16px); flex-wrap:wrap; padding-top: var(--space-6, 24px); border-top: 1px solid var(--color-border, #c9c2b3); }
+  .grid a.card { display:block; }
+  .grid a.card:hover,
+  .grid a.card:focus-visible {
+    border-color: var(--color-action-sage);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    outline: none;
+  }
   @media (max-width: 900px) {
     .preview-flow .row-3 { grid-template-columns: 1fr; }
     .step-row { flex-direction:column; align-items:flex-start; }
@@ -92,7 +93,6 @@
   </div>
 </header>
 <main id="main">
-
   <section class="wrap">
     <div class="grid grid-2" style="align-items:start;">
       <div>
@@ -107,7 +107,7 @@
         </div>
       </div>
       <div class="stack" style="gap: var(--space-4);">
-        <div class="preview-flow">
+        <div class="preview-flow card">
           <span class="eyebrow">AI content system preview</span>
           <div class="row-3" style="margin-top: var(--space-4);">
             <div class="mini-box"><strong>Search analytics</strong>Real user questions</div>
@@ -126,7 +126,6 @@
       </div>
     </div>
   </section>
-
   <section class="wrap">
     <div class="grid grid-2">
       <div>
@@ -139,12 +138,10 @@
       </div>
     </div>
   </section>
-
   <section class="wrap">
     <span class="eyebrow">Project 1</span>
     <h2>AI Search Optimization</h2>
     <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">My teammate and I analyzed real Doc360 search behavior to improve how AI surfaced documentation answers for common product questions.</p>
-
     <div class="grid grid-2" style="margin-top: var(--space-6);">
       <div class="card">
         <span class="eyebrow">Problem</span>
@@ -161,8 +158,7 @@
         </div>
       </div>
     </div>
-
-    <div class="step-row" style="margin-top: var(--space-6);">
+    <div class="step-row card" style="margin-top: var(--space-6); padding: var(--space-5, 20px);">
       <div class="step-item"><span class="step-num">1</span> Analyze search behavior</div>
       <span class="step-arrow">→</span>
       <div class="step-item"><span class="step-num">2</span> Identify weak responses</div>
@@ -171,7 +167,6 @@
       <span class="step-arrow">→</span>
       <div class="step-item"><span class="step-num">4</span> Measure search success</div>
     </div>
-
     <div class="grid grid-2" style="margin-top: var(--space-6); align-items:stretch;">
       <div class="stat-callout">
         <span class="eyebrow">Measurable impact</span>
@@ -190,18 +185,15 @@
         </div>
       </div>
     </div>
-
     <div class="callout-dark" style="margin-top: var(--space-6);">
       <span class="eyebrow">What we found</span>
       <p style="margin-top: var(--space-2);">We found that AI search was only as useful as the documentation behind it. By improving content structure, terminology, and metadata, we helped AI return more useful answers for both internal teams and customers.</p>
     </div>
   </section>
-
   <section class="wrap">
     <span class="eyebrow">Project 2</span>
     <h2>AI-Assisted Documentation Workflow</h2>
     <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">The next problem I tackled was producing content quickly at scale. Drafting release documentation and product updates by hand took a lot of time, especially when we had to pull together reliable information from several different workspaces.</p>
-
     <div class="grid grid-2" style="margin-top: var(--space-6);">
       <div class="card">
         <span class="eyebrow">Problem</span>
@@ -218,10 +210,9 @@
         </div>
       </div>
     </div>
-
     <div style="margin-top: var(--space-6);">
       <span class="eyebrow">Abstract system diagram</span>
-      <div class="step-row" style="margin-top: var(--space-4);">
+      <div class="step-row card" style="margin-top: var(--space-4); padding: var(--space-5, 20px);">
         <div class="step-item"><span class="step-num">1</span> Trusted documentation</div>
         <span class="step-arrow">→</span>
         <div class="step-item"><span class="step-num">2</span> Release information</div>
@@ -234,7 +225,6 @@
       </div>
       <p class="muted" style="margin-top: var(--space-2); font-size:13px;">The diagram stays abstract to avoid exposing proprietary implementation details.</p>
     </div>
-
     <div class="grid grid-2" style="margin-top: var(--space-6);">
       <div class="card">
         <span class="eyebrow">What the workflow supported</span>
@@ -259,13 +249,11 @@
         </div>
       </div>
     </div>
-
     <div class="callout-dark" style="margin-top: var(--space-6);">
       <span class="eyebrow">Responsible AI position</span>
       <p style="margin-top: var(--space-2);">AI usage should accelerate trusted knowledge, not add or invent new unverified product knowledge.</p>
     </div>
   </section>
-
   <section class="wrap">
     <h2>Responsible AI documentation principles</h2>
     <div class="grid grid-4" style="margin-top: var(--space-6);">
@@ -287,7 +275,6 @@
       </div>
     </div>
   </section>
-
   <section class="wrap">
     <div class="grid grid-2">
       <div>
@@ -309,7 +296,34 @@
       </div>
     </div>
   </section>
-
+  <section class="wrap">
+    <div class="row" style="justify-content:space-between; align-items:baseline;">
+      <h2>Artifacts connected to this case study</h2>
+      <a href="../artifacts.html" class="link" style="white-space:nowrap;">View related artifacts →</a>
+    </div>
+    <div class="grid grid-4" style="margin-top: var(--space-6);">
+      <a class="card" href="../artifacts/aireadiness.html">
+        <span class="tag">AI Readiness</span>
+        <h3 style="font-size:17px;">Responsible AI Workflow for Documentation</h3>
+        <p>A framework for using AI responsibly in documentation work, covering trusted retrieval, human review, and editorial judgment.</p>
+      </a>
+      <a class="card" href="../artifacts.html">
+        <span class="tag">AI Search</span>
+        <h3 style="font-size:17px;">AI Search Optimization</h3>
+        <p>How search analytics, content structure, and metadata improvements raised successful AI search responses by 50 percent.</p>
+      </a>
+      <a class="card" href="../artifacts.html">
+        <span class="tag">Analytics</span>
+        <h3 style="font-size:17px;">Pendo Analytics Dashboard Summary</h3>
+        <p>A summary of in-app guidance engagement and adoption metrics used to inform content and workflow decisions.</p>
+      </a>
+      <a class="card" href="../artifacts.html">
+        <span class="tag">Analytics</span>
+        <h3 style="font-size:17px;">Doc360 Insights Report Sample</h3>
+        <p>A report on content performance, search trends, and article engagement across the Doc360 knowledge base.</p>
+      </a>
+    </div>
+  </section>
   <section class="wrap">
     <div class="impact-banner">
       <div>
@@ -325,7 +339,6 @@
       </ul>
     </div>
   </section>
-
   <section class="wrap">
     <div class="grid grid-2">
       <div>
@@ -339,7 +352,6 @@
       </blockquote>
     </div>
   </section>
-
   <section class="wrap">
     <div class="cta-band">
       <p style="font-size:17px; max-width:480px; margin:0;">Explore the documentation systems that made this AI work possible.</p>
@@ -349,7 +361,6 @@
       </div>
     </div>
   </section>
-
 </main>
 <footer class="site-footer">
   <div class="wrap">
