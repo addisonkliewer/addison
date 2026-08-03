@@ -33,6 +33,21 @@
     font-size: 13px;
     color: #2F3B27;
   }
+  .mini-card {
+    background: var(--color-canvas-cream, #F6F0E2);
+    border: 1px solid var(--color-border, #DDD5C9);
+    border-radius: 10px;
+    padding: var(--space-4, 16px);
+  }
+  .grid a.card {
+    display: block;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .grid a.card:hover,
+  .grid a.card:focus-visible {
+    border-color: var(--color-action-sage, #496B40);
+    box-shadow: 6px 6px 0 rgba(23, 32, 42, 0.14);
+  }
   .course-preview {
     background: #fff;
     border: 1px solid var(--color-border, #c9c2b3);
@@ -91,27 +106,23 @@
         <span class="eyebrow">Academy / Training case study</span>
         <h1>Turning Product Knowledge into Academy-Ready Training</h1>
         <p class="body-lg" style="margin-top: var(--space-4);">I helped bridge technical documentation and customer education by creating refined, task-based source content that Academy teams could translate into onboarding, scripts, walkthroughs, and training-ready learning experiences.</p>
-        <div style="margin-top: var(--space-4);">
+        <div style="margin-top: var(--space-4); display:flex; gap:8px; flex-wrap:wrap;">
           <span class="tag">Technical Writing</span>
           <span class="tag">Customer Education</span>
           <span class="tag">Academy Collaboration</span>
           <span class="tag">SME Review</span>
           <span class="tag">Script Review</span>
-           <span class="tag">Onboarding</span>
+          <span class="tag">Onboarding</span>
           <span class="tag">Learning Paths</span>
           <span class="tag">Enablement</span>
         </div>
       </div>
       <div class="stack" style="gap: var(--space-4);">
-        <div>
+        <div class="card">
           <span class="eyebrow">Training-ready preview</span>
           <h3 style="font-size:17px; margin-top: var(--space-2);">Academy source-content system</h3>
-          <div style="margin-top: var(--space-3); display:flex; gap:8px; flex-wrap:wrap;">
-          </div>
-        </div>
-        <div class="card">
-          <div class="grid grid-2" style="gap: var(--space-4);">
-            <div>
+          <div class="grid grid-2" style="gap: var(--space-4); margin-top: var(--space-4);">
+            <div class="mini-card">
               <h4 class="mini-card-label">Module outline</h4>
               <p style="font-weight:600; margin-top: var(--space-2); margin-bottom: var(--space-2);">Mobile Customer Setup</p>
               <ul style="margin:0; padding-left:18px; font-size:14px;">
@@ -121,7 +132,7 @@
                 <li>Walkthrough + practice</li>
               </ul>
             </div>
-            <div>
+            <div class="mini-card">
               <h4 class="mini-card-label">Learning path</h4>
               <p style="margin-top: var(--space-2); font-size:14px;">Learners get access and permissions, then move into customer profile, mobile workflow practice, and support workflow troubleshooting.</p>
             </div>
@@ -141,11 +152,11 @@
     </div>
   </section>
   <section class="wrap">
-    <div class="grid grid-2" style="align-items: start;">
+    <span class="eyebrow">Context</span>
+    <h2>When quality documentation becomes learning infrastructure</h2>
+    <div class="grid grid-2" style="margin-top: var(--space-4); align-items:start;">
       <div>
-        <span class="eyebrow">Context</span>
-        <h2>When quality documentation becomes learning infrastructure</h2>
-        <p class="muted" style="margin-top: var(--space-4);">ScoopRoute was a complex field service SaaS platform with web, mobile, admin, billing, reporting, and release workflows. As the product grew, users needed more than help articles from me. They needed onboarding, sequencing, role-based guidance, and training support from our content teams.</p>
+        <p class="muted">ScoopRoute was a complex field service SaaS platform with web, mobile, admin, billing, reporting, and release workflows. As the product grew, users needed more than help articles from me. They needed onboarding, sequencing, role-based guidance, and training support from our content teams.</p>
         <p class="muted" style="margin-top: var(--space-4);">As I matured the documentation system, my work became a source of truth not only for customers and support teams, but also for Academy and learning partners.</p>
       </div>
       <div class="card">
@@ -174,11 +185,12 @@
     </div>
   </section>
   <section class="wrap">
-    <div class="grid grid-2" style="align-items:start;">
+    <span class="eyebrow">Role</span>
+    <h2>My role</h2>
+    <div class="grid grid-2" style="margin-top: var(--space-4); align-items:start;">
       <div>
-        <span class="eyebrow">Role</span>
-        <h2>My role</h2>
-        <p class="muted" style="margin-top: var(--space-4);">My role was technical writing and Academy-adjacent, not primary instructional design ownership. I supported Academy work by creating refined documentation, reviewing scripts, explaining workflows, partnering as a product SME, providing persona context, and weighing in on onboarding sequence. Training teams noted that my documentation was easier to translate into learning material because it was structured, refined, and grounded in user workflows.</p>
+        <p class="muted">My role was technical writing and Academy-adjacent, not primary instructional design ownership.</p>
+        <p class="muted" style="margin-top: var(--space-4);">I supported Academy work by creating refined documentation, reviewing scripts, explaining workflows, partnering as a product SME, providing persona context, and weighing in on onboarding sequence. Training teams noted that my documentation was easier to translate into learning material because it was structured, refined, and grounded in user workflows.</p>
         <div style="margin-top: var(--space-4); display:flex; gap:8px; flex-wrap:wrap;">
           <span class="tag">Source content creator</span>
           <span class="tag">SME partner</span>
@@ -322,10 +334,10 @@
   <section class="wrap">
     <h2>Artifacts connected to this case study</h2>
     <div class="grid grid-2" style="margin-top: var(--space-6);">
-      <div class="card"><span class="tag">Customer Education</span><h3 style="font-size:17px;">Academy Module Outline</h3><p>A training-ready structure based on refined documentation and product workflow knowledge.</p></div>
-      <div class="card"><span class="tag">Learning Design Support</span><h3 style="font-size:17px;">Docs-to-Training Transformation</h3><p>A before-and-after sample showing how a help article can become a learning module with objectives, sequencing, and practice.</p></div>
-      <div class="card"><span class="tag">SME Review</span><h3 style="font-size:17px;">Walkthrough Script Review</h3><p>A review artifact showing how product accuracy, terminology, and plain language were applied to Academy script feedback.</p></div>
-      <div class="card"><span class="tag">Onboarding</span><h3 style="font-size:17px;">Role-Based Learning Path</h3><p>A simple path showing how admins, mobile users, support agents, and customer education teams could learn different parts of the product.</p></div>
+      <a class="card" href="../artifacts.html"><span class="tag">Customer Education</span><h3 style="font-size:17px;">Academy Module Outline</h3><p>A training-ready structure based on refined documentation and product workflow knowledge.</p></a>
+      <a class="card" href="../artifacts.html"><span class="tag">Learning Design Support</span><h3 style="font-size:17px;">Docs-to-Training Transformation</h3><p>A before-and-after sample showing how a help article can become a learning module with objectives, sequencing, and practice.</p></a>
+      <a class="card" href="../artifacts.html"><span class="tag">SME Review</span><h3 style="font-size:17px;">Walkthrough Script Review</h3><p>A review artifact showing how product accuracy, terminology, and plain language were applied to Academy script feedback.</p></a>
+      <a class="card" href="../artifacts.html"><span class="tag">Onboarding</span><h3 style="font-size:17px;">Role-Based Learning Path</h3><p>A simple path showing how admins, mobile users, support agents, and customer education teams could learn different parts of the product.</p></a>
     </div>
     <div class="row" style="justify-content:flex-end; margin-top: var(--space-4);">
       <a href="../artifacts.html" class="link">View related artifacts →</a>
