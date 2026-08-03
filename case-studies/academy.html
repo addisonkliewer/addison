@@ -57,12 +57,14 @@
   .course-preview .label { font-size: 12px; text-transform: uppercase; letter-spacing:.04em; color: var(--color-muted, #7a7566); margin-top: var(--space-4, 16px); }
   .course-preview .progress { height:6px; border-radius:4px; background: var(--color-icon-bg, #eef1ea); overflow:hidden; margin-top: var(--space-4, 16px); }
   .course-preview .progress span { display:block; height:100%; width:60%; background: #4a5d43; }
-  .process-steps { display:flex; align-items:center; gap: var(--space-4, 16px); margin-top: var(--space-6, 24px); flex-wrap:wrap; }
-  .process-step { flex:1 1 180px; background:#fff; border:1px solid var(--color-border, #c9c2b3); border-radius:12px; padding: var(--space-5, 20px); }
-  .process-step .step-num { font-size: 13px; color: var(--color-muted, #7a7566); }
-  .process-step h3 { font-size: 15px; margin-top: var(--space-2, 8px); }
-  .process-step p { font-size: 13px; margin-top: var(--space-2, 8px); }
-  .process-arrow { color: var(--color-muted, #7a7566); font-size: 18px; flex-shrink:0; }
+  .process-steps { display:flex; align-items:stretch; gap: var(--space-4, 16px); margin-top: var(--space-6, 24px); flex-wrap:wrap; }
+.process-step { flex:1 1 180px; }
+.process-step .step-top { display:flex; align-items:center; gap: var(--space-2, 8px); }
+.process-step .step-num { font-family: var(--font-serif); font-size: 26px; font-weight:600; color: var(--color-action-sage); line-height:1; }
+.process-step .step-icon { font-size: 22px; line-height:1; }
+.process-step h3 { font-size: 15px; margin-top: var(--space-3, 12px); }
+.process-step p { font-size: 13px; margin-top: var(--space-2, 8px); }
+.process-arrow { color: var(--color-muted, #7a7566); font-size: 18px; flex-shrink:0; align-self:center; }
   .impact-box {
     background: var(--color-ink, #24291f);
     color: #f5f2ea;
@@ -300,32 +302,47 @@
     <span class="eyebrow">Transformation</span>
     <h2>From help articles to a good learning experience</h2>
     <div class="process-steps">
-      <div class="process-step">
-        <div class="step-num">01</div>
+      <div class="process-step card">
+        <div class="step-top">
+          <span class="step-num">01</span>
+          <span class="step-icon" aria-hidden="true">📄</span>
+        </div>
         <h3>Source documentation</h3>
         <p>My refined task-based article explains the workflow, prerequisites, steps, notes, and outcomes.</p>
       </div>
       <span class="process-arrow">→</span>
-      <div class="process-step">
-        <div class="step-num">02</div>
+      <div class="process-step card">
+        <div class="step-top">
+          <span class="step-num">02</span>
+          <span class="step-icon" aria-hidden="true">🧩</span>
+        </div>
         <h3>Training structure</h3>
         <p>The content is reorganized into a module, lesson sequence, learning objectives, and practice scenario.</p>
       </div>
       <span class="process-arrow">→</span>
-      <div class="process-step">
-        <div class="step-num">03</div>
+      <div class="process-step card">
+        <div class="step-top">
+          <span class="step-num">03</span>
+          <span class="step-icon" aria-hidden="true">🎬</span>
+        </div>
         <h3>Script and walkthrough</h3>
         <p>The Academy team translates the source material into spoken guidance, demos, and learner-friendly instruction.</p>
       </div>
       <span class="process-arrow">→</span>
-      <div class="process-step">
-        <div class="step-num">04</div>
+      <div class="process-step card">
+        <div class="step-top">
+          <span class="step-num">04</span>
+          <span class="step-icon" aria-hidden="true">✅</span>
+        </div>
         <h3>Practice and reinforcement</h3>
         <p>Knowledge checks, scenarios, and job aids help learners apply the workflow after the lesson.</p>
       </div>
       <span class="process-arrow">→</span>
-      <div class="process-step">
-        <div class="step-num">05</div>
+      <div class="process-step card">
+        <div class="step-top">
+          <span class="step-num">05</span>
+          <span class="step-icon" aria-hidden="true">🔄</span>
+        </div>
         <h3>Maintenance loop</h3>
         <p>My documentation remains the source of truth as the product, release behavior, and training materials evolve.</p>
       </div>
