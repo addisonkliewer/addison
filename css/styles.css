@@ -84,18 +84,33 @@
 }
 /* ---------- Dark mode ---------- */
 html[data-theme="dark"] {
-  --color-canvas-cream: #12181f;
-  --color-surface-card: #1a2129;
-  --color-surface-stone: #171d24;
-  --color-surface-sage-pale: #16201a;
+  --color-canvas-cream: #10161c;
+  --color-surface-card: #1c252e;
+  --color-surface-card-hover: #232e38;
+  --color-surface-stone: #1a222a;
+  --color-surface-sage-pale: #223529;
   --color-text-charcoal: #F5F2EA;
   --color-text-body: #EDE9DF;
-  --color-text-muted: #9CA6A0;
-  --color-border-quiet: #2c343c;
-  --color-action-sage: #6f9a63;
+  --color-text-muted: #AEB8AE;
+  --color-accent-sage-muted: #93a889;
+  --color-border-quiet: #39424c;
+  --color-border-featured: rgba(150, 190, 130, 0.35);
+  --color-action-sage: #7fae70;
   --color-action-cobalt: #6fa1ff;
   --color-white: #1a2129;
   --shadow-card: 4px 4px 0 rgba(0, 0, 0, 0.4);
+  --tag-bg-dark: rgba(127, 174, 112, 0.16);
+  --tag-border-dark: rgba(127, 174, 112, 0.3);
+}
+/* Dark-mode component refinements: clearer surface separation for the
+   featured case study card, and a visible background/border for tags
+   (both were previously nearly invisible against the page background). */
+html[data-theme="dark"] .card.featured {
+  border-color: var(--color-border-featured);
+}
+html[data-theme="dark"] .tag {
+  background: var(--tag-bg-dark);
+  border: 1px solid var(--tag-border-dark);
 }
 /* ---------- Reset ---------- */
 * { box-sizing: border-box; }
