@@ -6,10 +6,40 @@
 <title>UX Writing Case Study — Addison Kliewer</title>
 <meta name="description" content="Content Design for Complex SaaS Workflows — in-app guidance and UX writing case study.">
 <link rel="stylesheet" href="../css/styles.css">
+<style>
+  .tag-row { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .tag-row .tag { white-space: normal; max-width: 100%; }
+
+  .mini-card {
+    background: var(--color-canvas-cream);
+    border: 1px solid var(--color-border, #c9c2b3);
+    border-radius: 10px;
+    padding: var(--space-4);
+  }
+
+  .mini-card--accent {
+    background: var(--color-dark-surface);
+    color: var(--color-dark-text);
+    border-radius: 10px;
+    padding: var(--space-4);
+  }
+  .mini-card--accent .muted-note { color: var(--color-dark-text-muted); }
+
+  .dot-row { display: flex; align-items: center; gap: 6px; margin-top: var(--space-3); }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.35); display: inline-block; }
+  .dot.is-active { background: #fff; }
+
+  .grid a.card { display: block; }
+  .grid a.card:hover,
+  .grid a.card:focus-visible {
+    border-color: var(--color-action-sage);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    outline: none;
+  }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -25,13 +55,67 @@
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
-
 <main id="main">
 
   <section class="wrap">
-    <h1>Content Design for Complex SaaS Workflows</h1>
-    <p class="body-lg" style="margin-top: var(--space-4); max-width: 720px;">ScoopRoute was a complex field service SaaS platform with web and mobile settings. Users had to navigate permissions, billing settings, workflow changes, and frequent product releases, often while moving quickly in the field or managing time-sensitive operations.</p>
-    <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">When the product copy was unclear, the help center had to do extra work. I used my knowledge of the platform, support ticket patterns, and UX writing principles to help Product and Engineering clarify the language users saw at key decision points, especially when they needed to understand what was blocked, why it mattered, or what action they should take.</p>
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <span class="eyebrow">Content design case study</span>
+        <h1>Content Design for Complex SaaS Workflows</h1>
+        <p class="body-lg" style="margin-top: var(--space-4); max-width: 560px;">I used my documentation insight, platform knowledge, support-ticket patterns, and UX writing principles to help Product and Engineering make complex billing, admin, and mobile workflows clearer in the product experience.</p>
+        <div class="tag-row" style="margin-top: var(--space-5);">
+          <span class="tag">Content Design</span>
+          <span class="tag">UX Writing</span>
+          <span class="tag">Microcopy</span>
+          <span class="tag">In-App Guidance</span>
+          <span class="tag">Billing Workflows</span>
+          <span class="tag">Mobile Permissions</span>
+          <span class="tag">Plain Language</span>
+          <span class="tag">Pendo Guidance</span>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Product content preview</span>
+        <div class="card" style="margin-top: var(--space-3);">
+          <div class="grid grid-2" style="gap: var(--space-3); align-items:start;">
+            <div class="mini-card">
+              <p style="font-weight:600; margin:0;">Update billing rules?</p>
+              <p class="muted" style="font-size:13px; margin-top:6px;">Review affected customers before continuing.</p>
+              <span class="btn btn-primary" style="margin-top:10px; padding:6px 14px; font-size:13px; display:inline-block;">Review first</span>
+            </div>
+            <div class="mini-card">
+              <p style="font-weight:600; margin:0;">Permission needed</p>
+              <p class="muted" style="font-size:13px; margin-top:6px;">Contact your admin to update mobile access.</p>
+            </div>
+          </div>
+          <div class="mini-card--accent" style="margin-top: var(--space-3);">
+            <p style="font-weight:600; margin:0;">Review changes</p>
+            <p class="muted-note" style="font-size:13px; margin-top:6px;">Check affected customers, then confirm when you're ready.</p>
+            <div class="dot-row">
+              <span class="dot is-active"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+        </div>
+        <div class="mini-card" style="margin-top: var(--space-4);">
+          <span class="eyebrow">Positioning note</span>
+          <p class="muted" style="margin-top: var(--space-2); font-size:14px;">This case study focuses on the product-facing side of my work: the moments where documentation insight became UX content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <h2>Where my documentation insights became product guidance</h2>
+        <p class="muted" style="margin-top: var(--space-4);">ScoopRoute was a complex frozen dessert delivery SaaS platform with web and mobile workflows. Users had to navigate permissions, billing rules, admin settings, workflow changes, and frequent product releases, often while moving quickly in the field or managing time sensitive operations.</p>
+        <p class="muted" style="margin-top: var(--space-4);">When the product copy was unclear, the help center had to do extra work. I used my knowledge of the platform, support ticket patterns, and UX writing principles to help Product and Engineering clarify the language users saw at key decision points, especially when they needed to understand what was blocked, what would happen next, or what action they should take.</p>
+      </div>
+      <div class="card">
+        <span class="eyebrow">Core story</span>
+        <p style="margin-top: var(--space-3);">As our product workflows became more complex, Product and Engineering increasingly relied on me to make product language clearer, more concise, and easier for users to act on.</p>
+      </div>
+    </div>
   </section>
 
   <section class="wrap">
@@ -46,7 +130,7 @@
   </section>
 
   <section class="wrap">
-    <div class="grid grid-2">
+    <div class="grid grid-2" style="align-items:start;">
       <div>
         <span class="eyebrow">My role</span>
         <h2>My role</h2>
@@ -54,18 +138,20 @@
         <p class="muted" style="margin-top: var(--space-4);">As product managers, designers, and engineers on respective teams came to trust my input, they started inviting me into Jira tickets and meetings to review placeholder copy, warnings, helper text, tooltips, and in-app guidance. What began as occasional copy feedback eventually became a more established content design role across some of ScoopRoute's more complex workflows.</p>
       </div>
       <div class="card">
-        <span class="tag">UX copy review</span>
-        <span class="tag">Warning messages</span>
-        <span class="tag">Helper text</span>
-        <span class="tag">Field labels</span>
-        <span class="tag">Tooltips</span>
-        <span class="tag">Permission guidance</span>
-        <span class="tag">Empty-state guidance</span>
-        <span class="tag">Release messaging</span>
-        <span class="tag">Plain language</span>
-        <span class="tag">Product terminology</span>
-        <span class="tag">Documentation-informed UX</span>
-        <span class="tag">Jira copy review</span>
+        <div class="tag-row">
+          <span class="tag">UX copy review</span>
+          <span class="tag">Warning messages</span>
+          <span class="tag">Helper text</span>
+          <span class="tag">Field labels</span>
+          <span class="tag">Tooltips</span>
+          <span class="tag">Permission guidance</span>
+          <span class="tag">Empty-state guidance</span>
+          <span class="tag">Release messaging</span>
+          <span class="tag">Plain language</span>
+          <span class="tag">Product terminology</span>
+          <span class="tag">Documentation-informed UX</span>
+          <span class="tag">Jira copy review</span>
+        </div>
       </div>
     </div>
   </section>
@@ -74,12 +160,36 @@
     <span class="eyebrow">Approach</span>
     <h2>How I made content decisions</h2>
     <div class="grid grid-3" style="margin-top: var(--space-6);">
-      <div class="card"><h3 style="font-size:17px;">Use documentation friction as evidence</h3><p>When help articles had to over-explain the UI, I treated that as a signal that the product experience needed clearer language.</p></div>
-      <div class="card"><h3 style="font-size:17px;">Write for the moment of action</h3><p>If users needed information before clicking, saving, continuing, or changing a setting, the UI needed to carry that guidance.</p></div>
-      <div class="card"><h3 style="font-size:17px;">Use docs for deeper learning</h3><p>If users needed procedural, conceptual, or exception-heavy context, documentation supported the workflow without overloading the interface.</p></div>
-      <div class="card"><h3 style="font-size:17px;">Use plain language and UX writing principles</h3><p>I applied principles from Strategic Writing for UX, Microcopy: The Complete Guide, plain language practice, and my own platform knowledge.</p></div>
-      <div class="card"><h3 style="font-size:17px;">Ground recommendations in product context</h3><p>I used support-ticket patterns, Jira discussions, product walkthroughs, SME feedback, and release planning conversations to shape recommendations.</p></div>
-      <div class="card"><h3 style="font-size:17px;">Create reusable patterns</h3><p>As the work matured, I began turning one-off copy improvements into repeatable guidance for Product, Design, Engineering, and other writers.</p></div>
+      <div class="card">
+        <div style="text-align:center;"><span class="icon-badge">🔍</span></div>
+        <h3 style="font-size:17px; text-align:center; margin-top: var(--space-3);">Use documentation friction as evidence</h3>
+        <p style="margin-top: var(--space-2);">When help articles had to over-explain the UI, I treated that as a signal that the product experience needed clearer language.</p>
+      </div>
+      <div class="card">
+        <div style="text-align:center;"><span class="icon-badge">⚡</span></div>
+        <h3 style="font-size:17px; text-align:center; margin-top: var(--space-3);">Write for the moment of action</h3>
+        <p style="margin-top: var(--space-2);">If users needed information before clicking, saving, continuing, or changing a setting, the UI needed to carry that guidance.</p>
+      </div>
+      <div class="card">
+        <div style="text-align:center;"><span class="icon-badge">📚</span></div>
+        <h3 style="font-size:17px; text-align:center; margin-top: var(--space-3);">Use docs for deeper learning</h3>
+        <p style="margin-top: var(--space-2);">If users needed procedural, conceptual, or exception-heavy context, documentation supported the workflow without overloading the interface.</p>
+      </div>
+      <div class="card">
+        <div style="text-align:center;"><span class="icon-badge">✍️</span></div>
+        <h3 style="font-size:17px; text-align:center; margin-top: var(--space-3);">Use plain language and UX writing principles</h3>
+        <p style="margin-top: var(--space-2);">I applied principles from Strategic Writing for UX, Microcopy: The Complete Guide, plain language practice, and my own platform knowledge.</p>
+      </div>
+      <div class="card">
+        <div style="text-align:center;"><span class="icon-badge">🧭</span></div>
+        <h3 style="font-size:17px; text-align:center; margin-top: var(--space-3);">Ground recommendations in product context</h3>
+        <p style="margin-top: var(--space-2);">I used support-ticket patterns, Jira discussions, product walkthroughs, SME feedback, and release planning conversations to shape recommendations.</p>
+      </div>
+      <div class="card">
+        <div style="text-align:center;"><span class="icon-badge">🧩</span></div>
+        <h3 style="font-size:17px; text-align:center; margin-top: var(--space-3);">Create reusable patterns</h3>
+        <p style="margin-top: var(--space-2);">As the work matured, I began turning one-off copy improvements into repeatable guidance for Product, Design, Engineering, and other writers.</p>
+      </div>
     </div>
     <div class="card" style="background: var(--color-dark-surface); color: var(--color-dark-text); margin-top: var(--space-6);">
       <span class="eyebrow" style="color: var(--color-dark-text-muted);">Decision rule</span>
@@ -90,7 +200,6 @@
   <section class="wrap">
     <h2>Three UX content examples</h2>
     <div class="stack" style="gap: var(--space-6); margin-top: var(--space-6);">
-
       <div class="card">
         <span class="eyebrow">Example 1</span>
         <h3>Clarifying billing and admin warning messages</h3>
@@ -107,7 +216,6 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <span class="eyebrow">Example 2</span>
         <h3>Improving mobile permission and action guidance</h3>
@@ -124,7 +232,6 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <span class="eyebrow">Example 3</span>
         <h3>Creating in-app guidance patterns for new releases</h3>
@@ -141,7 +248,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -149,6 +255,32 @@
     <span class="eyebrow">Reusable patterns</span>
     <h2>Reusable UX writing patterns</h2>
     <p class="muted" style="margin-top: var(--space-4); max-width: 720px;">Over time, these examples became reference patterns other writers and designers could apply directly, reducing rework and keeping tone and structure consistent across ScoopRoute's web and mobile experiences.</p>
+    <div class="grid grid-3" style="margin-top: var(--space-6);">
+      <div class="card">
+        <h3 style="font-size:17px;">Warning messages</h3>
+        <p style="margin-top: var(--space-2);">Name the action, explain the consequence, identify what is affected, and make the CTA specific.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Permission messages</h3>
+        <p style="margin-top: var(--space-2);">Explain what is blocked, why it is blocked, and who can resolve it.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Tooltips</h3>
+        <p style="margin-top: var(--space-2);">Clarify a term or field at the moment of need. Do not use tooltips to replace documentation.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">In-app guidance</h3>
+        <p style="margin-top: var(--space-2);">Keep guidance short, action-oriented, and connected to the user's next step.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">Plain language</h3>
+        <p style="margin-top: var(--space-2);">Use user-centered language instead of implementation language or developer-speak.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:17px;">UI and docs relationship</h3>
+        <p style="margin-top: var(--space-2);">Use UI copy for immediate action guidance and documentation for deeper procedural or conceptual support.</p>
+      </div>
+    </div>
   </section>
 
   <section class="wrap">
@@ -157,9 +289,21 @@
       <a href="../artifacts.html" class="link" style="white-space:nowrap;">Browse all artifacts →</a>
     </div>
     <div class="grid grid-3" style="margin-top: var(--space-6);">
-      <div class="card"><span class="tag">UX Writing</span><h3 style="font-size:17px;">In-App Guidance Flow Sample: First Run</h3><p>Microcopy and workflow guidance for first-time setup.</p></div>
-      <div class="card"><span class="tag">UX Writing</span><h3 style="font-size:17px;">Style Guide Excerpt</h3><p>Voice, tone, and UX writing standards for consistency.</p></div>
-      <div class="card"><span class="tag">Content Design</span><h3 style="font-size:17px;">Before &amp; After: Content Redesign</h3><p>Examples showing improved clarity and task success.</p></div>
+      <a class="card" href="../artifacts.html">
+        <span class="tag">UX Writing</span>
+        <h3 style="font-size:17px;">In-App Guidance Flow Sample: First Run</h3>
+        <p>Microcopy and workflow guidance for first-time setup.</p>
+      </a>
+      <a class="card" href="../artifacts.html">
+        <span class="tag">UX Writing</span>
+        <h3 style="font-size:17px;">Style Guide Excerpt</h3>
+        <p>Voice, tone, and UX writing standards for consistency.</p>
+      </a>
+      <a class="card" href="../artifacts.html">
+        <span class="tag">Content Design</span>
+        <h3 style="font-size:17px;">Before &amp; After: Content Redesign</h3>
+        <p>Examples showing improved clarity and task success.</p>
+      </a>
     </div>
   </section>
 
@@ -171,7 +315,6 @@
   </section>
 
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -190,7 +333,6 @@
     </div>
   </div>
 </footer>
-
 <script src="../js/main.js"></script>
 </body>
 </html>
