@@ -2,9 +2,7 @@
    Addison Kliewer — Portfolio
    Design tokens sourced from the "Web UI Foundations" reference page
    ========================================================================== */
-
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
 :root {
   /* Color tokens */
   --color-canvas-cream: #F6F0E2;
@@ -22,19 +20,16 @@
   --color-accent-sage-muted: #6F7E6A;
   --color-white: #FFFFFF;
   --shadow-card: 4px 4px 0 rgba(23, 32, 42, 0.14);
-
   /* Dark mode surfaces (footer is always dark; full dark theme reuses it) */
   --color-dark-surface: #101820;
   --color-dark-surface-2: #17202A;
   --color-dark-text: #FBF8F1;
   --color-dark-text-muted: #A9B0A5;
   --color-dark-border: #2b3540;
-
   /* Typography */
   --font-serif: 'IBM Plex Serif', Georgia, serif;
   --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
-
   --size-display: 64px;
   --lh-display: 68px;
   --size-h1: 52px;
@@ -49,7 +44,6 @@
   --lh-body: 24px;
   --size-label: 12px;
   --lh-label: 16px;
-
   /* Spacing scale */
   --space-1: 4px;
   --space-2: 8px;
@@ -61,29 +55,25 @@
   --space-16: 64px;
   --space-20: 80px;
   --space-24: 96px;
-
   /* Radius */
   --radius-card: 10px;
   --radius-button: 7px;
   --radius-pill: 999px;
-
   /* Layout */
   --page-padding: 64px;
-  --section-gap: 96px;
+  --section-gap: 64px;
   --max-width: 1200px;
 }
-
 @media (max-width: 1199px) {
   :root {
     --page-padding: 40px;
-    --section-gap: 72px;
+    --section-gap: 48px;
   }
 }
-
 @media (max-width: 767px) {
   :root {
     --page-padding: 24px;
-    --section-gap: 56px;
+    --section-gap: 40px;
     --size-display: 40px;
     --lh-display: 46px;
     --size-h1: 34px;
@@ -92,7 +82,6 @@
     --lh-h2: 34px;
   }
 }
-
 /* ---------- Dark mode ---------- */
 html[data-theme="dark"] {
   --color-canvas-cream: #12181f;
@@ -108,7 +97,6 @@ html[data-theme="dark"] {
   --color-white: #1a2129;
   --shadow-card: 4px 4px 0 rgba(0, 0, 0, 0.4);
 }
-
 /* ---------- Reset ---------- */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -127,17 +115,14 @@ a { color: inherit; text-decoration: none; }
 ul { margin: 0; padding: 0; list-style: none; }
 h1, h2, h3, h4, p { margin: 0; }
 button { font-family: inherit; cursor: pointer; }
-
 .wrap {
   max-width: var(--max-width);
   margin: 0 auto;
   padding-left: var(--page-padding);
   padding-right: var(--page-padding);
 }
-
 section, .section { padding-top: var(--section-gap); padding-bottom: 0; }
 main > section:last-of-type, main > .section:last-of-type { padding-bottom: var(--section-gap); }
-
 .eyebrow {
   font-family: var(--font-mono);
   font-size: var(--size-label);
@@ -148,14 +133,12 @@ main > section:last-of-type, main > .section:last-of-type { padding-bottom: var(
   display: block;
   margin-bottom: var(--space-3);
 }
-
 h1, .h1 { font-family: var(--font-serif); font-size: var(--size-h1); line-height: var(--lh-h1); font-weight: 600; color: var(--color-text-charcoal); }
 h2, .h2 { font-family: var(--font-serif); font-size: var(--size-h2); line-height: var(--lh-h2); font-weight: 600; color: var(--color-text-charcoal); }
 h3, .h3 { font-family: var(--font-serif); font-size: var(--size-h3); line-height: var(--lh-h3); font-weight: 600; color: var(--color-text-charcoal); }
 .display { font-family: var(--font-serif); font-size: var(--size-display); line-height: var(--lh-display); font-weight: 600; color: var(--color-text-charcoal); }
 .body-lg { font-size: var(--size-body-lg); line-height: var(--lh-body-lg); color: var(--color-text-muted); }
 .muted { color: var(--color-text-muted); }
-
 /* ---------- Buttons & links ---------- */
 .btn {
   display: inline-flex;
@@ -189,7 +172,6 @@ a:focus-visible, button:focus-visible {
   outline: 3px solid var(--color-action-cobalt);
   outline-offset: 2px;
 }
-
 /* ---------- Header / nav ---------- */
 .site-header {
   position: sticky;
@@ -257,7 +239,6 @@ a:focus-visible, button:focus-visible {
   color: var(--color-text-charcoal);
   font-size: 22px;
 }
-
 @media (max-width: 1199px) {
   .brand .role { display: none; }
 }
@@ -278,7 +259,6 @@ a:focus-visible, button:focus-visible {
   }
   .main-nav { position: relative; }
 }
-
 /* ---------- Cards ---------- */
 .card {
   background: var(--color-surface-card);
@@ -300,7 +280,6 @@ a:focus-visible, button:focus-visible {
   color: var(--color-action-sage);
   margin: 0 var(--space-2) var(--space-2) 0;
 }
-
 .grid { display: grid; gap: var(--space-6); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -312,7 +291,6 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 767px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
 }
-
 /* ---------- Grouping panel ----------
    A contrasting surface used to visually group a cluster of smaller
    cards (e.g. stat boxes + a portfolio note) so they read as one unit. */
@@ -326,7 +304,6 @@ a:focus-visible, button:focus-visible {
 .grouping-panel .grid {
   margin-bottom: var(--space-4);
 }
-
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--color-surface-stone);
@@ -346,12 +323,10 @@ a:focus-visible, button:focus-visible {
 .footer-links a { color: var(--color-text-charcoal); font-weight: 500; }
 .footer-links a:hover { color: var(--color-accent-gold); }
 .footer-location { color: var(--color-text-muted); display: flex; align-items: center; gap: var(--space-2); }
-
 @media (max-width: 767px) {
   .site-footer .wrap { flex-direction: column; align-items: flex-start; }
   .footer-links { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
 }
-
 /* ---------- Utility ---------- */
 .stack { display: flex; flex-direction: column; gap: var(--space-4); }
 .row { display: flex; gap: var(--space-4); align-items: center; }
@@ -374,7 +349,6 @@ a:focus-visible, button:focus-visible {
 }
 .stat-box .num { font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--color-action-sage); }
 .stat-box .label { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; color: var(--color-text-muted); }
-
 .impact-banner {
   background: var(--color-dark-surface);
   color: var(--color-dark-text);
@@ -403,7 +377,6 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 1199px) {
   .impact-banner { grid-template-columns: 1fr; }
 }
-
 .quote-card {
   background: var(--color-surface-card);
   border: 1px solid var(--color-border-quiet);
@@ -414,9 +387,7 @@ a:focus-visible, button:focus-visible {
   line-height: 30px;
   color: var(--color-text-charcoal);
 }
-
 .divider { border: none; border-top: 1px solid var(--color-border-quiet); margin: var(--space-8) 0; }
-
 .numbered-step {
   display: flex;
   gap: var(--space-3);
@@ -435,7 +406,6 @@ a:focus-visible, button:focus-visible {
   font-size: 13px;
   font-weight: 700;
 }
-
 .icon-badge {
   flex-shrink: 0;
   width: 40px;
@@ -448,7 +418,6 @@ a:focus-visible, button:focus-visible {
   justify-content: center;
   font-size: 18px;
 }
-
 .portfolio-note {
   background: var(--color-surface-stone);
   border: 1px solid var(--color-border-quiet);
@@ -457,7 +426,6 @@ a:focus-visible, button:focus-visible {
   font-size: 13px;
   color: var(--color-text-muted);
 }
-
 /* ---------- Status list item (sage dot + label) ----------
    Used anywhere a list of short statements needs a simple sage-green
    marker instead of an emoji (e.g. "starting point" cards). */
@@ -473,7 +441,6 @@ a:focus-visible, button:focus-visible {
   border-radius: 50%;
   background: var(--color-action-sage);
 }
-
 /* ---------- Related artifact link ---------- */
 .related-artifact-link {
   display: inline-block;
@@ -485,7 +452,6 @@ a:focus-visible, button:focus-visible {
   border-bottom: 1px solid transparent;
 }
 .related-artifact-link:hover { border-bottom-color: currentColor; }
-
 .timeline {
   display: flex;
   justify-content: space-between;
@@ -515,7 +481,6 @@ a:focus-visible, button:focus-visible {
   .timeline { flex-direction: column; gap: var(--space-6); }
   .timeline::before { display: none; }
 }
-
 .skip-link {
   position: absolute;
   left: -999px;
@@ -526,7 +491,6 @@ a:focus-visible, button:focus-visible {
   z-index: 100;
 }
 .skip-link:focus { left: 0; }
-
 /* ---------- Avatar scene (About page profile) ---------- */
 .avatar-scene {
   --scene-bg: var(--color-canvas-cream);
@@ -535,7 +499,6 @@ a:focus-visible, button:focus-visible {
   --scene-mtn-mid: #CBD8BE;
   --scene-mtn-front: #AABB9B;
   --scene-tree: #7C8B71;
-
   position: relative;
   width: 100%;
   max-width: 480px;
