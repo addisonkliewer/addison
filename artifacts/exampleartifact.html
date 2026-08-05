@@ -7,8 +7,7 @@
 <meta name="description" content="A sample artifact detail page showing how individual artifacts are documented in this portfolio — purpose, context, design decisions, and value — without reproducing a full deliverable.">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-
+<body data-artifact-slug="exampleartifact">
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -24,9 +23,7 @@
     <button class="theme-toggle" aria-label="Switch to dark mode">☾</button>
   </div>
 </header>
-
 <main>
-
   <section class="section">
     <div class="wrap stack">
       <span class="eyebrow">Artifact Detail — Sample</span>
@@ -34,18 +31,15 @@
       <p class="body-lg">A walkthrough of how every artifact in this library is documented: a short brief, the artifact's metadata, and a Situation–Task–Action–Result narrative that explains the thinking behind the work — without reproducing the full deliverable.</p>
     </div>
   </section>
-
   <section class="section">
     <div class="wrap">
       <div class="grouping-panel">
         <div class="grid grid-4">
-
           <div class="stack">
             <span class="eyebrow">Artifact Brief</span>
             <h3 class="h3">Key context for this sample</h3>
             <p class="muted">This page follows the same format as every artifact in the library: a brief for orientation, scannable metadata, and a four-part story that covers why the work existed, what it needed to do, how it was designed, and what it delivered.</p>
           </div>
-
           <div class="stack">
             <div>
               <span class="eyebrow">Artifact Type</span>
@@ -56,7 +50,6 @@
               <p>Hiring managers and content leads reviewing this portfolio</p>
             </div>
           </div>
-
           <div class="stack">
             <div>
               <span class="eyebrow">Related Case Study</span>
@@ -67,7 +60,6 @@
               <p>N/A — self-directed portfolio work</p>
             </div>
           </div>
-
           <div class="stack">
             <div>
               <span class="eyebrow">Product Area</span>
@@ -82,42 +74,50 @@
               <p>Public — no client or product content</p>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </section>
-
+  <!-- Shared hero composition image — rendered by js/artifact-images.js from the
+       artifact image registry. Do not add hero markup by hand; edit the
+       registry entry for this page's data-artifact-slug instead. -->
+  <section class="section artifact-hero-section">
+    <div class="wrap">
+      <div id="artifact-hero-slot" class="artifact-hero-slot"></div>
+    </div>
+  </section>
   <section class="section">
     <div class="wrap stack">
-
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Situation</h2>
         <p>This portfolio needed to showcase a wide range of writing: style guides, release notes, in-app microcopy, onboarding flows, and more. Presented inconsistently, that variety reads as clutter rather than range, and a reviewer has no fast way to compare one artifact to another.</p>
       </div>
-
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Task</h2>
         <p>Each artifact page needs to orient a reviewer in seconds: what the piece is, who it was for, and where it fits in the larger body of work — then point to the related case study for anyone who wants the full context, without requiring the complete original deliverable to make the case.</p>
       </div>
-
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Action</h2>
         <p>I reused the same visual language as the rest of the site: a metadata panel up top for a fast scan, followed by a Situation–Task–Action–Result narrative for anyone who wants the reasoning. Every artifact page shares this shape on purpose, so a reviewer moving between entries never has to relearn how to read one.</p>
       </div>
-
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Result</h2>
         <p>Reviewers can assess a dozen very different samples in the time it used to take to read one, the format protects confidential client and product details by design rather than by editing after the fact, and the craft and reasoning behind each piece stays visible even when the deliverable itself can't be shared in full.</p>
       </div>
-
     </div>
   </section>
-
+  <!-- Shared supporting image gallery — rendered by js/artifact-images.js.
+       Do not add gallery markup by hand; edit the registry entry for this
+       page's data-artifact-slug instead. -->
+  <section class="section">
+    <div class="wrap">
+      <div id="artifact-gallery-slot" class="artifact-gallery-slot"></div>
+    </div>
+  </section>
   <section class="section">
     <div class="wrap stack">
       <div class="portfolio-note">
@@ -126,9 +126,7 @@
       <a class="link" href="../artifacts.html">← Back to Artifact Library</a>
     </div>
   </section>
-
 </main>
-
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-links">
@@ -147,7 +145,7 @@
     </div>
   </div>
 </footer>
-
 <script src="../js/main.js"></script>
+<script src="../js/artifact-images.js"></script>
 </body>
 </html>
