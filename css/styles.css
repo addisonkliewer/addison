@@ -545,3 +545,165 @@ html[data-theme="dark"] .avatar-scene {
   transform: translateX(-50%);
   display: block;
 }
+
+/* ==========================================================================
+   Artifact hero + gallery image system
+   Shared by every artifact detail page via js/artifact-images.js.
+   Append this block to css/styles.css (anywhere after the :root token
+   definitions — it only reads existing tokens, it doesn't define new ones).
+   ========================================================================== */
+ 
+/* Hero composition image */
+ 
+.artifact-hero {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-quiet);
+  box-shadow: var(--shadow-card);
+  background: var(--color-surface-card);
+}
+ 
+.artifact-hero-media,
+.artifact-hero-placeholder {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+ 
+.artifact-hero-media {
+  display: block;
+}
+ 
+.artifact-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+@media (max-width: 480px) {
+  /* Keep the full hero image visible rather than cropping it on small screens. */
+  .artifact-hero-media {
+    aspect-ratio: auto;
+  }
+  .artifact-hero-media img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+ 
+.artifact-hero-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  text-align: center;
+  padding: var(--space-6);
+  background: var(--color-surface-stone);
+  color: var(--color-text-muted);
+}
+ 
+.artifact-placeholder-label {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--color-text-charcoal);
+}
+ 
+.artifact-placeholder-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-charcoal);
+}
+ 
+.artifact-placeholder-meta,
+.artifact-placeholder-note {
+  font-size: 0.9rem;
+}
+ 
+.artifact-image-caption {
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+ 
+/* Supporting gallery */
+ 
+.artifact-gallery-eyebrow {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+ 
+.artifact-gallery {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 1fr;
+}
+ 
+.artifact-gallery-item {
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-quiet);
+  box-shadow: var(--shadow-card);
+  background: var(--color-surface-card);
+  aspect-ratio: 4 / 3;
+}
+ 
+.artifact-gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.artifact-gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-stone);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: var(--space-4);
+}
+ 
+/* Desktop gallery layouts, keyed off how many images actually exist (1-5) */
+@media (min-width: 768px) {
+  .artifact-gallery[data-count="2"] {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .artifact-gallery[data-count="3"],
+  .artifact-gallery[data-count="4"],
+  .artifact-gallery[data-count="5"] {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  /* 3 images: one larger image on top, two smaller below.
+     5 images: one featured image on top, 2x2 grid below. */
+  .artifact-gallery[data-count="3"] .artifact-gallery-item:first-child,
+  .artifact-gallery[data-count="5"] .artifact-gallery-item:first-child {
+    grid-column: 1 / 3;
+    aspect-ratio: 16 / 9;
+  }
+}
+ 
+/* Shared protected-image behavior, applied by js/artifact-images.js to
+   every real hero and gallery <img>. Deliberately does NOT use
+   pointer-events:none so a future lightbox/expanded viewer can still
+   attach click handlers. This is a basic deterrent only, not real
+   copy protection. */
+.protectedArtifactImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+ 
