@@ -7,7 +7,7 @@
 <meta name="description" content="A reusable system of article structures that helped ScoopRoute writers create clearer, more consistent how to, troubleshooting, and conceptual documentation across a growing knowledge base.">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-artifact-slug="articletemplates">
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -38,7 +38,8 @@
           <div class="stack">
             <span class="eyebrow">Artifact Brief</span>
             <h3 class="h3">Key context for this sample</h3>
-            <p class="muted">This artifact demonstrates how I turned informal writing patterns into a documented template system that writers could apply consistently across ScoopRoute documentation. The knowledge base contained roughly 300 to 500 articles written by a team of three to five writers. Similar topics were often organized differently, and new writers had difficulty identifying the expected structure for each content type. Reviewers also spent time requesting the same structural revisions instead of focusing on technical accuracy and user needs. I created three core templates for task based articles, troubleshooting content, and conceptual or overview articles. Each template defined required sections, recommended heading order, introductory patterns, note and warning placement, and expected next steps while still allowing writers to adapt the structure when the content required it.</p>
+            <p class="muted">I turned informal writing patterns into a documented template system that writers could apply consistently across ScoopRoute documentation. Our knowledge base held roughly 300 to 500 articles written by a team of three to five writers, and similar topics were often organized differently — new writers struggled to identify the expected structure for each content type, and reviewers spent time requesting the same structural revisions instead of focusing on technical accuracy and user needs.</p>
+            <p class="muted">I created three core templates for task based articles, troubleshooting content, and conceptual or overview articles. Each template defined required sections, recommended heading order, introductory patterns, note and warning placement, and expected next steps, while still letting writers adapt the structure when the content required it.</p>
           </div>
           <div class="stack">
             <div>
@@ -78,50 +79,60 @@
       </div>
     </div>
   </section>
+  <section class="section artifact-hero-section">
+    <div class="wrap">
+      <div id="artifact-hero-slot" class="artifact-hero-slot"></div>
+    </div>
+  </section>
   <section class="section">
     <div class="wrap stack">
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Situation</h2>
         <div class="stack">
-          <p>ScoopRoute documentation had grown into a knowledge base of several hundred articles created and maintained by multiple writers.</p>
-          <p>Writers had developed useful structural habits over time, but those patterns were not consistently documented or applied. Similar articles could introduce a task differently, place prerequisites in different locations, use inconsistent heading orders, or omit context that another writer would normally include.</p>
-          <p>The inconsistency made articles harder for users to scan and compare. It also created extra work for writers and reviewers. New team members had difficulty understanding which structure to follow, while reviews often focused on organization, formatting, and missing sections instead of product accuracy and clarity.</p>
+          <p>Our knowledge base at ScoopRoutes that had grown to several hundred articles created and maintained by multiple writers.</p>
+          <p>I noticed that writers had developed useful structural habits over time, but we hadn't documented or applied those patterns consistently. Similar articles introduced a task differently, placed prerequisites in different locations, used inconsistent heading orders, or omitted context that another writer would normally include.</p>
+          <p>I saw that this inconsistency made articles harder for SR users to scan and compare, and it created extra work for our writers and reviewers. Our new team members struggled to know which structure to follow, while our team peer reviews often more focused on organization, formatting, and missing sections instead of product accuracy and clarity.</p>
         </div>
       </div>
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Task</h2>
         <div class="stack">
-          <p>I needed to create a small set of reusable templates that reflected the most common types of documentation in the ScoopRoute knowledge base.</p>
-          <p>The templates needed to provide enough structure to improve consistency without forcing every article into an inflexible format. They also needed to help writers choose the right pattern, draft content more efficiently, and understand which sections were required, recommended, or optional.</p>
-          <p>The system had to work for both new content and older articles that would gradually be revised over time.</p>
+          <p>I needed to create a small set of reusable templates for our team that reflected the most common types of documentation in the ScoopRoute knowledge base.</p>
+          <p>I wanted our templates to provide enough structure to improve consistency without forcing every article into an inflexible format. I also needed them to help our writers choose the right pattern, draft content more efficiently, and understand which sections were required, recommended, or optional.</p>
+          <p>I designed our system to work for both new content and older articles that we would gradually revise over time.</p>
         </div>
       </div>
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Action</h2>
         <div class="stack">
-          <p>I reviewed existing article patterns, recurring writer workflows, and feedback from other technical writers to identify the structures the team used most often. That analysis led to three core templates.</p>
-          <p>The task based template centered on numbered steps and a clear expected result. It gave writers a predictable way to move users from an immediate goal through the actions required to complete it. The troubleshooting template separated the problem, possible causes, and resolution steps, helping writers distinguish diagnostic information from the actions users should take. The conceptual or overview template explained what a feature was, why it mattered, and which major components users needed to understand before moving into related procedures.</p>
-          <p>Each template defined required sections, recommended heading order, a standard introductory pattern, placement for notes and warnings, and guidance for related content or next steps. Required sections remained fixed, while writers could adapt wording, add optional sections, or adjust the structure when the topic demanded it.</p>
-          <p>I also documented when to use notes, warnings, and tips and included examples showing where they belonged. Heading levels were defined with some flexibility, and each section included placeholder prompts to guide drafting.</p>
-          <p>I created the initial system independently, then worked with the broader writing team to review and refine it. The team tested the templates by applying them to new articles and converting selected existing content. We also used informal feedback to identify where the structures felt too rigid or where older content did not fit cleanly.</p>
-          <p>Migration happened gradually. Articles were prioritized based on traffic, inconsistency, support impact, and upcoming release needs. During migration, writers revised heading structures, reordered procedures, removed repeated information, updated screenshots, and improved related links.</p>
-          <p>The templates were documented through an internal wiki page and reusable files in the authoring system. I introduced them through a team presentation, working sessions, direct coaching, and continued reinforcement during content reviews.</p>
+          <p>I looked at our existing article patterns, recurring writer workflows, and feedback from other technical writers to identify the structures we used most often. That analysis led me to three core templates.</p>
+          <p>I centered the task based template on numbered steps and a clear expected result, giving writers a predictable way to move users from an immediate goal through the actions required to complete it. I separated the troubleshooting template into the problem, possible causes, and resolution steps, helping writers distinguish diagnostic information from the actions users should take. I built the conceptual or overview template to explain what a feature was, why it mattered, and which major components users needed to understand before moving into related procedures.</p>
+          <p>I defined required sections, recommended heading order, a standard introductory pattern, placement for notes and warnings, and guidance for related content or next steps in each template. I kept required sections fixed while letting writers adapt wording, add optional sections, or adjust the structure when the topic demanded it.</p>
+          <p>I documented when to use notes, warnings, and tips, and included examples showing where they belonged. I defined heading levels with some flexibility and added placeholder prompts to each section to guide drafting.</p>
+          <p>I created the initial system independently, then worked with the broader writing team to review and refine it. We tested the templates by applying them to new articles and converting selected existing content, and I used informal feedback to identify where the structures felt too rigid or where older content didn't fit cleanly.</p>
+          <p>We migrated our content gradually, prioritizing articles based on traffic, inconsistency, support impact, and upcoming release needs. During migration, I revised heading structures, reordered procedures, removed repeated information, updated screenshots, and improved related links.</p>
+          <p>I documented the templates through an internal wiki page and reusable files in the authoring system, and I introduced them through a team presentation, working sessions, direct coaching, and continued reinforcement during content reviews.</p>
         </div>
       </div>
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Result</h2>
         <div class="stack">
-          <p>The template system gave writers a shared starting point for creating and revising ScoopRoute documentation.</p>
-          <p>Articles became more consistent in structure, easier to scan, and more complete. Reviews spent less time debating formatting or requesting the same organizational changes, and writers could focus more quickly on accuracy, usability, and the quality of the explanation.</p>
-          <p>The strongest improvements were visible qualitatively rather than through a single formal metric. The templates supported clearer article structures, fewer structural revision comments, easier maintenance, and more predictable drafting and review workflows.</p>
-          <p>Their value also became visible beyond the knowledge base. The structures were reused when documentation content was adapted for academy training, and they supported more consistent user experience reviews of the knowledge base.</p>
-          <p>The project demonstrated how a small editorial system can improve content operations, information architecture, governance, team enablement, and quality at scale.</p>
+          <p>I gave our writers a shared starting point for creating and revising ScoopRoute documentation.</p>
+          <p>I made our articles more consistent in structure, easier to scan, and more complete. Reviews spent less time debating formatting or requesting the same organizational changes, and writers could focus more quickly on accuracy, usability, and the quality of the explanation.</p>
+          <p>I saw the strongest improvements qualitatively rather than through a single formal metric — clearer article structures, fewer structural revision comments, easier maintenance, and more predictable drafting and review workflows.</p>
+          <p>I also saw the templates' value extend beyond the knowledge base. I reused the structures when documentation content was adapted for academy training, and they supported more consistent user experience reviews of the knowledge base.</p>
+          <p>This project showed me how a small editorial system can improve content operations, information architecture, governance, team enablement, and quality at scale.</p>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div id="artifact-gallery-slot" class="artifact-gallery-slot"></div>
     </div>
   </section>
   <section class="section">
@@ -149,5 +160,6 @@
   </div>
 </footer>
 <script src="../js/main.js"></script>
+<script src="../js/artifact-images.js"></script>
 </body>
 </html>
