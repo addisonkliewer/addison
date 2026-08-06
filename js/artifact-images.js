@@ -47,7 +47,8 @@
         {
           src: "../images/artifacts/releasehub/gallery-02.webp",
           alt: "The footer section of the Release Hub page",
-          caption: ""
+          caption: "",
+          objectPosition: "top left"
         }
       ],
       galleryPlaceholderCount: 0
@@ -87,6 +88,9 @@
     var img = document.createElement("img");
     img.src = image.src;
     img.alt = image.alt || "";
+    if (image.objectPosition) {
+      img.style.objectPosition = image.objectPosition;
+    }
     protectImage(img);
     figure.appendChild(img);
 
