@@ -7,7 +7,7 @@
 <meta name="description" content="A focused analytics review that combined Pendo product usage data with Doc360 documentation data to identify mobile content hotspots, validate assumptions, and guide smaller documentation audits.">
 <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-artifact-slug="pendodash">
 <header class="site-header">
   <div class="wrap">
     <a href="../index.html" class="brand">Addison Kliewer<span class="role">Senior Technical Writer &amp; Content Designer</span></a>
@@ -38,7 +38,10 @@
           <div class="stack">
             <span class="eyebrow">Artifact Brief</span>
             <h3 class="h3">Key context for this sample</h3>
-            <p class="muted">This artifact demonstrates how I used product analytics and documentation analytics together to investigate where ScoopRoute mobile content needed attention. I already used Doc360 data to understand what users searched for, which articles they viewed, and where they struggled to find answers. I began exploring Pendo so I could compare those information needs with actual product usage. The analysis focused on the ScoopRoute delivery driver mobile application. By comparing feature activity, user paths, article views, search behavior, feedback, and failed searches, I could identify workflows that were heavily used but weakly documented, content that did not match user behavior, and areas that deserved a closer audit. The resulting investigations were intentionally focused. Rather than auditing the entire mobile knowledge base, I used analytics to prioritize a group of approximately 30 articles connected to the strongest usage patterns and content gaps.</p>
+            <div class="stack">
+              <p class="muted">This artifact shows how I used product analytics and documentation analytics together to investigate where ScoopRoute mobile content needed attention. I already used Doc360 data to understand what users searched for, which articles they viewed, and where they struggled to find answers, so I began exploring Pendo to compare those information needs with actual product usage in the ScoopRoute delivery driver mobile application.</p>
+              <p class="muted">By comparing feature activity, user paths, article views, search behavior, feedback, and failed searches, I identified workflows that were heavily used but weakly documented, content that didn't match user behavior, and areas that deserved a closer audit. Rather than auditing the entire mobile knowledge base, I used analytics to prioritize a focused group of approximately 30 articles connected to the strongest usage patterns and content gaps.</p>
+            </div>
           </div>
           <div class="stack">
             <div>
@@ -78,15 +81,20 @@
       </div>
     </div>
   </section>
+  <section class="section artifact-hero-section">
+    <div class="wrap">
+      <div id="artifact-hero-slot" class="artifact-hero-slot"></div>
+    </div>
+  </section>
   <section class="section">
     <div class="wrap stack">
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Situation</h2>
         <div class="stack">
-          <p>The mobile documentation set contained dozens of articles covering frequently changing workflows, product behavior, troubleshooting, and driver tasks.</p>
-          <p>Doc360 analytics showed which articles users visited, what they searched for, and where they left negative feedback. However, those signals did not show how frequently the related features were actually used inside the product.</p>
-          <p>A low traffic article might indicate weak findability, but it might also cover a rarely used feature. A highly viewed article might reflect a common task, a confusing workflow, or both. I needed another source of evidence before deciding where to spend limited audit time.</p>
+          <p>I found the mobile documentation set contained dozens of articles covering frequently changing workflows, product behavior, troubleshooting, and driver tasks.</p>
+          <p>Doc360 analytics showed me which articles users visited, what they searched for, and where they left negative feedback, but those signals didn't show how frequently the related features were actually used inside the product.</p>
+          <p>I recognized a low traffic article might indicate weak findability, but it might also cover a rarely used feature, and a highly viewed article might reflect a common task, a confusing workflow, or both. I needed another source of evidence before deciding where to spend limited audit time.</p>
         </div>
       </div>
       <div class="card">
@@ -95,19 +103,17 @@
         <div class="stack">
           <p>I wanted to become more familiar with Pendo while also testing whether product usage data could strengthen my existing documentation analysis.</p>
           <p>My goal was to compare what users did in the ScoopRoute mobile application with what they searched for and read in Doc360. I needed to identify usage hotspots, uncover content gaps, and select a manageable set of articles for deeper review.</p>
-          <p>The work also needed to avoid treating every analytics pattern as a firm conclusion. Product activity could show where users went, but it could not fully explain their intent or whether they completed a task successfully.</p>
+          <p>I also wanted to avoid treating every analytics pattern as a firm conclusion — product activity could show where users went, but it couldn't fully explain their intent or whether they completed a task successfully.</p>
         </div>
       </div>
       <div class="card">
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Action</h2>
         <div class="stack">
-          <p>I used existing Pendo dashboards to review feature usage, user paths, and funnel behavior within the delivery driver mobile application.</p>
-          <p>I compared those patterns with Doc360 article views, search queries, failed searches, user feedback, and search demand. Pendo showed what users did and how frequently they moved through a workflow. Doc360 showed what they asked, which instructions they opened, and where they had difficulty finding useful guidance.</p>
-          <p>I treated mismatches between the two systems as investigation prompts. A heavily used feature with limited article traffic could suggest weak findability or missing guidance. High search demand paired with incomplete workflow coverage could indicate a content gap. Strong article traffic around a highly used task could signal that the content was important, but it could also justify checking whether the product experience was creating confusion.</p>
-          <p>I prioritized findings using product usage, user impact, search frequency, the size of the content gap, and available evidence. Each investigation focused on a single feature rather than attempting a broad review of the entire mobile library.</p>
-          <p>The resulting audit covered approximately 30 articles. I reviewed accuracy, screenshots, workflow completeness, alignment with current product behavior, and whether users could reach the content through expected search terms.</p>
-          <p>The investigation uncovered missing articles, incomplete procedures, weak troubleshooting guidance, and outdated screenshots. Some findings also pointed to product usability concerns rather than documentation problems.</p>
+          <p>I used existing Pendo dashboards to review feature usage, user paths, and funnel behavior within the delivery driver mobile application, then compared those patterns with Doc360 article views, search queries, failed searches, user feedback, and search demand. Pendo showed me what users did and how frequently they moved through a workflow, while Doc360 showed me what they asked, which instructions they opened, and where they had difficulty finding useful guidance.</p>
+          <p>I treated mismatches between the two systems as investigation prompts. A heavily used feature with limited article traffic suggested weak findability or missing guidance to me. High search demand paired with incomplete workflow coverage indicated a content gap. Strong article traffic around a highly used task signaled that the content was important, but it also justified checking whether the product experience was creating confusion.</p>
+          <p>I prioritized findings using product usage, user impact, search frequency, the size of the content gap, and available evidence, focusing each investigation on a single feature rather than attempting a broad review of the entire mobile library.</p>
+          <p>My resulting audit covered approximately 30 articles. I reviewed accuracy, screenshots, workflow completeness, alignment with current product behavior, and whether users could reach the content through expected search terms, and I uncovered missing articles, incomplete procedures, weak troubleshooting guidance, and outdated screenshots. Some findings also pointed to product usability concerns rather than documentation problems.</p>
           <p>To avoid overinterpreting the data, I compared multiple sources, treated patterns as hypotheses, reviewed trends over time, documented limitations, and used questions to guide follow up conversations when product context was missing.</p>
         </div>
       </div>
@@ -115,12 +121,17 @@
         <span class="eyebrow">Artifact Story</span>
         <h2 class="h2">Result</h2>
         <div class="stack">
-          <p>The combined analysis made documentation audits more focused and evidence based.</p>
-          <p>Instead of reviewing mobile content broadly, I could identify likely hotspots and concentrate on the articles connected to the most important user activity. This reduced time spent on low priority reviews and made it easier to explain why specific content needed revision.</p>
-          <p>The audit led to new articles, revised procedures, updated screenshots, stronger troubleshooting guidance, improved terminology, better linking, and metadata improvements.</p>
-          <p>The work also created a repeatable method for combining product behavior with documentation behavior. Pendo helped me understand what users were doing, while Doc360 helped me understand what they needed to know. Together, the tools supported faster gap identification, stronger mobile coverage, better prioritization, and more strategic use of writing time.</p>
+          <p>My combined analysis made documentation audits more focused and evidence based.</p>
+          <p>Instead of reviewing mobile content broadly, I could identify likely hotspots and concentrate on the articles connected to the most important user activity, which reduced time spent on low priority reviews and made it easier to explain why specific content needed revision.</p>
+          <p>My audit led to new articles, revised procedures, updated screenshots, stronger troubleshooting guidance, improved terminology, better linking, and metadata improvements.</p>
+          <p>I also created a repeatable method for combining product behavior with documentation behavior. Pendo helped me understand what users were doing, while Doc360 helped me understand what they needed to know. Together, the tools supported faster gap identification, stronger mobile coverage, better prioritization, and more strategic use of writing time.</p>
         </div>
       </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div id="artifact-gallery-slot" class="artifact-gallery-slot"></div>
     </div>
   </section>
   <section class="section">
@@ -148,5 +159,6 @@
   </div>
 </footer>
 <script src="../js/main.js"></script>
+<script src="../js/artifact-images.js"></script>
 </body>
 </html>
