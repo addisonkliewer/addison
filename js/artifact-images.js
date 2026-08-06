@@ -16,7 +16,7 @@
  */
 (function () {
   "use strict";
- 
+
   // Applied to any artifact record that doesn't specify a field, and to any
   // slug with no registry entry at all. This is what makes bulk migration
   // safe: every artifact page renders correctly (with placeholders) the
@@ -26,31 +26,34 @@
     galleryImages: [],
     galleryPlaceholderCount: 3
   };
- 
+
   // Single content registry for artifact hero/gallery images, keyed by slug
   // (the value of each page's data-artifact-slug attribute).
   var artifactImageRegistry = {
     // Add real per-artifact images here as they're ready. Any slug not
     // listed falls back to defaultArtifactImages above.
-    //
-    // Example:
-    // "firstrun": {
-    //   heroImage: {
-    //     src: "../images/artifacts/firstrun/hero.webp",
-    //     alt: "Recreated ScoopRoute first run guide shown across three product screens",
-    //     caption: ""
-    //   },
-    //   galleryImages: [
-    //     {
-    //       src: "../images/artifacts/firstrun/gallery-01.webp",
-    //       alt: "Opening message introducing the changed operations workflow",
-    //       caption: "The opening step establishes the reason for the guide."
-    //     }
-    //   ],
-    //   galleryPlaceholderCount: 3
-    // }
+    "releasehub": {
+      heroImage: {
+        src: "../images/artifacts/releasehub/hero.webp",
+        alt: "The Release Hub page showing the release announcement for the 4.8 Trail Mix Sundae update",
+        caption: ""
+      },
+      galleryImages: [
+        {
+          src: "../images/artifacts/releasehub/gallery-01.webp",
+          alt: "The article update list within the Release Hub",
+          caption: ""
+        },
+        {
+          src: "../images/artifacts/releasehub/gallery-02.webp",
+          alt: "The footer section of the Release Hub page",
+          caption: ""
+        }
+      ],
+      galleryPlaceholderCount: 0
+    }
   };
- 
+
   function getArtifactRecord(slug) {
     var record = artifactImageRegistry[slug] || {};
     return {
@@ -62,7 +65,7 @@
           : defaultArtifactImages.galleryPlaceholderCount
     };
   }
- 
+
   // Reusable image-protection component (vanilla-JS equivalent of the
   // React <ProtectedArtifactImage> pattern). Applied to every real hero
   // and gallery <img> — nowhere else on the site.
@@ -76,17 +79,17 @@
       event.preventDefault();
     });
   }
- 
+
   function buildFigure(image, extraClass) {
     var figure = document.createElement("figure");
     figure.className = extraClass;
- 
+
     var img = document.createElement("img");
     img.src = image.src;
     img.alt = image.alt || "";
     protectImage(img);
     figure.appendChild(img);
- 
+
     if (image.caption) {
       var figcaption = document.createElement("figcaption");
       figcaption.className = "artifact-image-caption";
@@ -95,77 +98,77 @@
     }
     return figure;
   }
- 
+
   function buildHeroPlaceholder(title) {
     var wrap = document.createElement("div");
     wrap.className = "artifact-hero-placeholder";
- 
+
     var label = document.createElement("span");
     label.className = "artifact-placeholder-label";
     label.textContent = "Hero Composition Placeholder";
- 
+
     var titleEl = document.createElement("span");
     titleEl.className = "artifact-placeholder-title";
     titleEl.textContent = title;
- 
+
     var meta = document.createElement("span");
     meta.className = "artifact-placeholder-meta";
     meta.textContent = "Recommended ratio: 16:10";
- 
+
     var note = document.createElement("span");
     note.className = "artifact-placeholder-note";
     note.textContent = "Final recreated artifact preview will appear here.";
- 
+
     wrap.appendChild(label);
     wrap.appendChild(titleEl);
     wrap.appendChild(meta);
     wrap.appendChild(note);
     return wrap;
   }
- 
+
   function buildGalleryPlaceholder(index) {
     var wrap = document.createElement("div");
     wrap.className = "artifact-gallery-placeholder";
- 
+
     var label = document.createElement("span");
     label.textContent = "Supporting Image " + index;
     wrap.appendChild(label);
     return wrap;
   }
- 
+
   function renderHero(slot, record, title) {
     if (!slot) return;
- 
+
     var container = document.createElement("div");
     container.className = "artifact-hero";
- 
+
     if (record.heroImage && record.heroImage.src) {
       container.appendChild(buildFigure(record.heroImage, "artifact-hero-media"));
     } else {
       container.appendChild(buildHeroPlaceholder(title));
     }
- 
+
     slot.appendChild(container);
   }
- 
+
   function renderGallery(slot, record) {
     if (!slot) return;
- 
+
     var images = record.galleryImages || [];
     var placeholderCount = Math.min(Math.max(record.galleryPlaceholderCount || 0, 0), 5);
     var count = images.length > 0 ? Math.min(images.length, 5) : placeholderCount;
- 
+
     if (count === 0) return;
- 
+
     var eyebrow = document.createElement("span");
     eyebrow.className = "eyebrow artifact-gallery-eyebrow";
     eyebrow.textContent = "Supporting Images";
     slot.appendChild(eyebrow);
- 
+
     var container = document.createElement("div");
     container.className = "artifact-gallery";
     container.setAttribute("data-count", String(count));
- 
+
     if (images.length > 0) {
       images.slice(0, 5).forEach(function (image) {
         container.appendChild(buildFigure(image, "artifact-gallery-item"));
@@ -178,26 +181,25 @@
         container.appendChild(item);
       }
     }
- 
+
     slot.appendChild(container);
   }
- 
+
   function init() {
     var slug = document.body.getAttribute("data-artifact-slug");
     if (!slug) return;
- 
+
     var record = getArtifactRecord(slug);
     var titleEl = document.querySelector("h1");
     var title = titleEl ? titleEl.textContent.trim() : slug;
- 
+
     renderHero(document.getElementById("artifact-hero-slot"), record, title);
     renderGallery(document.getElementById("artifact-gallery-slot"), record);
   }
- 
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
 })();
- 
