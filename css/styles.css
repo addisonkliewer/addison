@@ -352,8 +352,42 @@ a:focus-visible, button:focus-visible {
   gap: var(--space-8);
   align-items: start;
 }
+/* ---------- Utility ---------- */
+.stack { display: flex; flex-direction: column; gap: var(--space-4); }
+.row { display: flex; gap: var(--space-4); align-items: center; }
+.center { text-align: center; }
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-8);
+  align-items: start;
+}
 @media (max-width: 1199px) {
   .hero { grid-template-columns: 1fr; }
+
+}
+.about-capabilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.about-capabilities .check {
+  flex-shrink: 0;
+  color: var(--color-action-sage);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.about-capabilities .capability-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.about-capabilities .capability-content p {
+  margin: 0;
+
 }
 .stat-box {
   background: var(--color-surface-card);
