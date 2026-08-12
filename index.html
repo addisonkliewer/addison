@@ -41,6 +41,23 @@
     box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
     transform: translateY(-2px);
   }
+  .card.featured {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .card.featured:hover,
+  .card.featured:focus-visible {
+    border-color: var(--color-action-sage);
+    box-shadow: 6px 6px 0 rgba(23, 32, 42, 0.14);
+  }
+  html[data-theme="dark"] .card.featured:hover,
+  html[data-theme="dark"] .card.featured:focus-visible {
+    background: var(--color-surface-card-hover);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+  }
 </style>
 </head>
 <body>
@@ -90,16 +107,15 @@
         </div>
 </div>
       <div class="row" style="margin-top: var(--space-8); flex-wrap: wrap;">
-        <a href="case-studies/scooproute.html" class="btn btn-primary">View ScoopRoute case study →</a>
+        <a href="case-studies.html" class="btn btn-primary">View Case Studies →</a>
         <a href="artifacts.html" class="btn btn-secondary">Browse all artifacts →</a>
       </div>
     </div>
-    <div class="card featured">
+    <a class="card featured" href="case-studies/scooproute.html">
       <span class="eyebrow">Featured case study</span>
       <h3 style="font-size: 24px;">How I scaled Writing Practices at ScoopRoute</h3>
       <p>How I brought scattered product knowledge together into clear, consistent documentation across web, mobile, UX content, and releases.</p>
-      <a href="case-studies/scooproute.html" class="link">View case study →</a>
-<img src="images/IcecreamTruck.png" alt="Illustration of a ScoopRoute ice cream delivery truck with route markers" class="featured-truck-image">
+      <img src="images/IcecreamTruck.png" alt="Illustration of a ScoopRoute ice cream delivery truck with route markers" class="featured-truck-image">
       <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border-quiet);">
         <span class="tag">Content Strategy</span>
         <span class="tag">UX Writing</span>
@@ -107,7 +123,7 @@
         <span class="tag">Documentation Systems</span>
         <span class="tag">AI-Assisted Workflows</span>
       </div>
-    </div>
+    </a>
   </section>
   <!-- Selected artifacts -->
   <section class="wrap">
