@@ -41,29 +41,30 @@
   .about-section-title {
     margin-bottom: var(--space-6);
   }
-  /* Strengths cards: emoji sits in its own column so the title AND the
-     description both start on the same left edge. The grid lives on an
-     inner wrapper so it doesn't override .card's own display. */
-  .strength-card-inner {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    column-gap: var(--space-2);
-    align-items: start;
+  /* Strengths cards: emoji + title in a flex header row, description
+     full card width beneath. text-align: left keeps wrapped title lines
+     starting at the same left edge as the first line. */
+  .strength-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
   }
   .strength-card-icon {
     font-size: 20px;
     line-height: 1.3;
-  }
-  .strength-card-text {
-    min-width: 0;
+    flex-shrink: 0;
   }
   .strength-card h3 {
-    margin: 0 0 var(--space-3);
+    margin: 0;
     font-size: 18px;
     line-height: 1.3;
+    text-align: left;
+    text-wrap: pretty;
   }
   .strength-card p {
     margin: 0;
+    text-align: left;
   }
   /* What I bring: uneven two-column layout (capabilities | sidebar) */
   .about-details-grid {
@@ -261,58 +262,46 @@
     <h2 class="about-section-title">My Strengths</h2>
     <div class="grid grid-3">
       <article class="strength-card card">
-        <div class="strength-card-inner">
+        <div class="strength-card-header">
           <span class="strength-card-icon" aria-hidden="true">📖</span>
-          <div class="strength-card-text">
-            <h3>English Honors Foundation</h3>
-            <p>I have a deep grounding in language, rhetoric, and clear communication.</p>
-          </div>
+          <h3>English Honors Foundation</h3>
         </div>
+        <p>I have a deep grounding in language, rhetoric, and clear communication.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-inner">
+        <div class="strength-card-header">
           <span class="strength-card-icon" aria-hidden="true">🧑‍🏫</span>
-          <div class="strength-card-text">
-            <h3>Presenter &amp; Mentor</h3>
-            <p>I teach, present, and mentor writers to build skills and confidence.</p>
-          </div>
+          <h3>Presenter &amp; Mentor</h3>
         </div>
+        <p>I teach, present, and mentor writers to build skills and confidence.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-inner">
+        <div class="strength-card-header">
           <span class="strength-card-icon" aria-hidden="true">🦾</span>
-          <div class="strength-card-text">
-            <h3>AI-assisted workflow builder</h3>
-            <p>I design helpful AI workflows that save time and improve quality.</p>
-          </div>
+          <h3>AI-assisted workflow builder</h3>
         </div>
+        <p>I design helpful AI workflows that save time and improve quality.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-inner">
+        <div class="strength-card-header">
           <span class="strength-card-icon" aria-hidden="true">🗂</span>
-          <div class="strength-card-text">
-            <h3>Documentation and content systems thinker</h3>
-            <p>I design information architecture and systems that scale.</p>
-          </div>
+          <h3>Documentation and content systems thinker</h3>
         </div>
+        <p>I design information architecture and systems that scale.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-inner">
+        <div class="strength-card-header">
           <span class="strength-card-icon" aria-hidden="true">🤝</span>
-          <div class="strength-card-text">
-            <h3>Cross-functional collaborator</h3>
-            <p>I proactively work closely with PMs, engineers, designers, customer success and support teams.</p>
-          </div>
+          <h3>Cross-functional collaborator</h3>
         </div>
+        <p>I proactively work closely with PMs, engineers, designers, customer success and support teams.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-inner">
+        <div class="strength-card-header">
           <span class="strength-card-icon" aria-hidden="true">🗣</span>
-          <div class="strength-card-text">
-            <h3>Clear, Plain-Language Communicator</h3>
-            <p>I cut through jargon and make complex topics easy to understand.</p>
-          </div>
+          <h3>Clear, Plain-Language Communicator</h3>
         </div>
+        <p>I cut through jargon and make complex topics easy to understand.</p>
       </article>
     </div>
   </section>
@@ -392,7 +381,7 @@
               <span aria-hidden="true">🏅</span>
               <div class="recognition-item-text">
                 <strong>Binion Amerson Leadership Award</strong>
-                <span class="muted">2023· Vice President</span>
+                <span class="muted">2023 · VP</span>
               </div>
             </div>
             <div class="recognition-item">
@@ -405,8 +394,8 @@
             <div class="recognition-item">
               <span aria-hidden="true">🏅</span>
               <div class="recognition-item-text">
-                <strong>Titan Content Team: Be a Dream Team Member</strong>
-                <span class="muted">2025: Out of 32</span>
+                <strong>Be a Dream Team Member</strong>
+                <span class="muted">2025 · Out of 32</span>
               </div>
             </div>
           </div>
