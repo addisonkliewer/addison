@@ -30,7 +30,6 @@
     box-shadow: var(--shadow-card);
     border-radius: 50%;
   }
-
   /* Standardized section spacing: bigger gap above a heading than
      between the heading and its content beneath it */
   .about-section {
@@ -42,26 +41,30 @@
   .about-section-title {
     margin-bottom: var(--space-6);
   }
-
-  /* Strengths cards: icon + title grouped in a header row, description below */
-  .strength-card-header {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-2);
-    margin-bottom: var(--space-3);
+  /* Strengths cards: emoji sits in its own column so the title AND the
+     description both start on the same left edge. The grid lives on an
+     inner wrapper so it doesn't override .card's own display. */
+  .strength-card-inner {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: var(--space-2);
+    align-items: start;
   }
   .strength-card-icon {
     font-size: 20px;
     line-height: 1.3;
   }
+  .strength-card-text {
+    min-width: 0;
+  }
   .strength-card h3 {
-    margin: 0;
+    margin: 0 0 var(--space-3);
     font-size: 18px;
+    line-height: 1.3;
   }
   .strength-card p {
     margin: 0;
   }
-
   /* What I bring: uneven two-column layout (capabilities | sidebar) */
   .about-details-grid {
     display: grid;
@@ -81,7 +84,6 @@
   .about-capabilities {
     gap: var(--space-3);
   }
-
   /* Honors & Recognition: compact horizontal row on desktop */
   .recognition-grid {
     display: grid;
@@ -111,7 +113,6 @@
       grid-template-columns: 1fr;
     }
   }
-
   /* My philosophy: one compact card, five items in a row on desktop */
   .philosophy-card {
     padding-left: var(--space-4);
@@ -156,7 +157,6 @@
       grid-template-columns: 1fr;
     }
   }
-
   /* Where I add value — conservative refinements only; this page's
      .timeline* CSS wasn't available this session, so these are
      scoped, low-risk overrides. Verify once live. */
@@ -257,55 +257,65 @@
       </div>
     </div>
   </section>
-
   <section class="wrap about-section about-section-first">
     <h2 class="about-section-title">My Strengths</h2>
     <div class="grid grid-3">
       <article class="strength-card card">
-        <div class="strength-card-header">
+        <div class="strength-card-inner">
           <span class="strength-card-icon" aria-hidden="true">📖</span>
-          <h3>English Honors Foundation</h3>
+          <div class="strength-card-text">
+            <h3>English Honors Foundation</h3>
+            <p>I have a deep grounding in language, rhetoric, and clear communication.</p>
+          </div>
         </div>
-        <p>I have a deep grounding in language, rhetoric, and clear communication.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-header">
+        <div class="strength-card-inner">
           <span class="strength-card-icon" aria-hidden="true">🧑‍🏫</span>
-          <h3>Presenter &amp; Mentor</h3>
+          <div class="strength-card-text">
+            <h3>Presenter &amp; Mentor</h3>
+            <p>I teach, present, and mentor writers to build skills and confidence.</p>
+          </div>
         </div>
-        <p>I teach, present, and mentor writers to build skills and confidence.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-header">
+        <div class="strength-card-inner">
           <span class="strength-card-icon" aria-hidden="true">🦾</span>
-          <h3>AI-assisted workflow builder</h3>
+          <div class="strength-card-text">
+            <h3>AI-assisted workflow builder</h3>
+            <p>I design helpful AI workflows that save time and improve quality.</p>
+          </div>
         </div>
-        <p>I design helpful AI workflows that save time and improve quality.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-header">
+        <div class="strength-card-inner">
           <span class="strength-card-icon" aria-hidden="true">🗂</span>
-          <h3>Documentation and content systems thinker</h3>
+          <div class="strength-card-text">
+            <h3>Documentation and content systems thinker</h3>
+            <p>I design information architecture and systems that scale.</p>
+          </div>
         </div>
-        <p>I design information architecture and systems that scale.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-header">
+        <div class="strength-card-inner">
           <span class="strength-card-icon" aria-hidden="true">🤝</span>
-          <h3>Cross-functional collaborator</h3>
+          <div class="strength-card-text">
+            <h3>Cross-functional collaborator</h3>
+            <p>I proactively work closely with PMs, engineers, designers, customer success and support teams.</p>
+          </div>
         </div>
-        <p>I proactively work closely with PMs, engineers, designers, customer success and support teams.</p>
       </article>
       <article class="strength-card card">
-        <div class="strength-card-header">
+        <div class="strength-card-inner">
           <span class="strength-card-icon" aria-hidden="true">🗣</span>
-          <h3>Clear, Plain-Language Communicator</h3>
+          <div class="strength-card-text">
+            <h3>Clear, Plain-Language Communicator</h3>
+            <p>I cut through jargon and make complex topics easy to understand.</p>
+          </div>
         </div>
-        <p>I cut through jargon and make complex topics easy to understand.</p>
       </article>
     </div>
   </section>
-
   <section class="wrap about-section">
     <h2 class="about-section-title">What I bring</h2>
     <div class="about-columns">
@@ -362,7 +372,7 @@
             <div class="row" style="align-items:flex-start;">
               <span class="icon-badge">🎓</span>
               <div>
-                <strong>Master's in Professional and Technical Communication</strong>
+                <strong>M.A. in Professional and Technical Communication</strong>
                 <p class="muted">University of North Texas</p>
               </div>
             </div>
@@ -382,6 +392,7 @@
               <span aria-hidden="true">🏅</span>
               <div class="recognition-item-text">
                 <strong>Binion Amerson Leadership Award</strong>
+                <span class="muted">2023</span>
               </div>
             </div>
             <div class="recognition-item">
@@ -400,6 +411,8 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
   </section>
 </main>
 <footer class="site-footer">
